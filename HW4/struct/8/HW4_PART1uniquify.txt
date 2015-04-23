@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : area
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:27:28 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           32
+Number of nets:                            47
+Number of cells:                           25
+Number of combinational cells:              9
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                      17
+
+Combinational area:                 58.388402
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                    58.388402
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:27:28 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+No paths.
+
+1

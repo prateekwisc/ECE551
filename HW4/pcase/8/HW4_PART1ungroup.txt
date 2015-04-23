@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : area
+Design : add3_parcase
+Version: H-2013.03-SP3
+Date   : Thu Oct 31 13:42:23 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           32
+Number of nets:                           135
+Number of cells:                          113
+Number of combinational cells:            113
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          8
+Number of references:                      10
+
+Combinational area:                130.359604
+Buf/Inv area:                        4.233600
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   130.359604
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_parcase
+Version: H-2013.03-SP3
+Date   : Thu Oct 31 13:42:23 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_parcase       ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  even.fa0[0]/U14/ZN (CKND2D0BWP)          0.03       0.03 r
+  even.fa0[0]/U13/ZN (OAI21D0BWP)          0.05       0.08 f
+  even.fa0[0]/U11/Z (CKMUX2D0BWP)          0.08       0.16 f
+  even.fa0[0]/U7/ZN (CKND2D0BWP)           0.03       0.18 r
+  even.fa0[1]/U10/ZN (CKND0BWP)            0.04       0.22 f
+  even.fa0[1]/U9/ZN (IAO21D0BWP)           0.05       0.27 r
+  even.fa0[1]/U8/ZN (OAI21D0BWP)           0.05       0.32 f
+  even.fa0[1]/U7/ZN (CKND2D0BWP)           0.03       0.34 r
+  even.fa0[2]/U10/ZN (CKND0BWP)            0.04       0.38 f
+  even.fa0[2]/U9/ZN (IAO21D0BWP)           0.05       0.43 r
+  even.fa0[2]/U2/ZN (NR2D0BWP)             0.03       0.47 f
+  even.fa0[2]/U1/Z (CKXOR2D0BWP)           0.08       0.55 r
+  even.fa1[2]/U14/ZN (CKND2D0BWP)          0.05       0.60 f
+  even.fa1[2]/U13/ZN (OAI21D0BWP)          0.04       0.64 r
+  even.fa1[2]/U11/Z (CKMUX2D0BWP)          0.07       0.71 r
+  even.fa1[2]/U7/ZN (CKND2D0BWP)           0.03       0.74 f
+  even.fa1[3]/U10/ZN (CKND0BWP)            0.04       0.78 r
+  even.fa1[3]/U9/ZN (IAO21D0BWP)           0.03       0.81 f
+  even.fa1[3]/U2/ZN (NR2D0BWP)             0.05       0.86 r
+  even.fa1[3]/U1/Z (CKXOR2D0BWP)           0.07       0.94 f
+  y[7] (out)                               0.00       0.94 f
+  data arrival time                                   0.94
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,50 @@
+###################################################################
+
+# Created by write_script -format dctcl on Wed Oct 30 17:14:57 2013
+
+###################################################################
+remove_design -designs
+analyze -format verilog {/filespace/people/p/prateek/ece551/modelsim/tutorial/HW4/hw4_add3_pcase.v}
+elaborate add3_parcase -architecture verilog -library WORK
+# Set the current_design #
+current_design add3_parcase
+
+set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
+remove_wire_load_model
+set_local_link_library {tcbn40lpbwptc.db,tpfn45gsgv18tc.db,tcbn40lpbwptc.db}
+set_fix_multiple_port_nets -all
+set_max_area 0
+set_input_delay 0  [get_ports {b[1]}]
+set_input_delay 0  [get_ports {a[1]}]
+set_input_delay 0  [get_ports {b[0]}]
+set_input_delay 0  [get_ports {a[0]}]
+set_input_delay 0  [get_ports c]
+set_output_delay 0  [get_ports {y[1]}]
+set_output_delay 0  [get_ports {y[0]}]
+1
+compile -exact_map -area_effort low
+check_design
+report_area -nosplit > HW4_PART2.txt
+report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group >> HW4_PART1.txt
+#Compile again, but this time with aggressive mapping effort
+
+#compile -exact_map -area_effort low
+#check_design
+#uniquify
+#report_area -nosplit > HW4_PART1uniquify.txt
+#report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group >> HW4_PART1uniquify.txt
+
+#Compile with ungroup
+#compile -exact_map -area_effort low
+#check_design
+#ungroup -all
+#report_area -nosplit > HW4_PART1ungroup.txt
+#report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group >> HW4_PART1ungroup.txt
+
+
+#Compile with compile ultra
+#compile_ultra
+#check_design
+#report_area -nosplit > HW4_PART1ultra.txt
+#report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group >> HW4_PART1ultra.txt
+

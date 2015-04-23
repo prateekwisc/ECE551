@@ -1,0 +1,418 @@
+
+Warning:  Site Information is not available ... Have you run install_site?
+
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version H-2013.03-SP3 for RHEL64 -- Jul 21, 2013
+               Copyright (c) 1988-2013 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> 1
+dc_shell> Running PRESTO HDLC
+Compiling source file /filespace/people/p/prateek/ece551/modelsim/tutorial/HW4/hw4_add3_pcase.v
+Presto compilation completed successfully.
+Loading db file '/cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db'
+Loading db file '/cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db'
+1
+dc_shell> Loading db file '/cae/apps/data/synopsys-2013/H-2013.03-SP3/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2013/H-2013.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'tcbn40lpbwptc'
+  Loading link library 'tpfn45gsgv18tc'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'add3_parcase'.
+Information: Building the design 'bit2_FA'. (HDL-193)
+
+Statistics for case statements in always block at line 39 in file
+	'/filespace/people/p/prateek/ece551/modelsim/tutorial/HW4/hw4_add3_pcase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            43            |    auto/user     |
+===============================================
+Presto compilation completed successfully.
+1
+dc_shell> dc_shell> {add3_parcase}
+dc_shell> dc_shell> 1
+dc_shell> 1
+dc_shell> 1
+dc_shell> 1
+dc_shell> 1
+dc_shell> Warning: Specifying an input delay without an associated clock
+	can cause the port's timing to be analyzed incorrectly. (UID-402)
+1
+dc_shell> Warning: Specifying an input delay without an associated clock
+	can cause the port's timing to be analyzed incorrectly. (UID-402)
+1
+dc_shell> Warning: Specifying an input delay without an associated clock
+	can cause the port's timing to be analyzed incorrectly. (UID-402)
+1
+dc_shell> Warning: Specifying an input delay without an associated clock
+	can cause the port's timing to be analyzed incorrectly. (UID-402)
+1
+dc_shell> Warning: Specifying an input delay without an associated clock
+	can cause the port's timing to be analyzed incorrectly. (UID-402)
+1
+dc_shell> 1
+dc_shell> 1
+dc_shell> [1]
+dc_shell> Warning: Ignoring compile_fix_multiple_port_nets = TRUE. (UIO-60)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | H-2013.03-DWBB_201303.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: IO pad 'PVSS3DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS2DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2POC' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PCLAMP2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PCLAMP1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: Operating condition NCCOM set on design add3_parcase has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'bit2_FA_0'
+Warning: The trip points for the library named tpfn45gsgv18tc differ from those in the library named tcbn40lpbwptc. (TIM-164)
+  Processing 'add3_parcase'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'bit2_FA_126'
+  Mapping 'bit2_FA_126'
+  Structuring 'bit2_FA_125'
+  Mapping 'bit2_FA_125'
+  Structuring 'bit2_FA_124'
+  Mapping 'bit2_FA_124'
+  Structuring 'bit2_FA_123'
+  Mapping 'bit2_FA_123'
+  Structuring 'bit2_FA_122'
+  Mapping 'bit2_FA_122'
+  Structuring 'bit2_FA_121'
+  Mapping 'bit2_FA_121'
+  Structuring 'bit2_FA_120'
+  Mapping 'bit2_FA_120'
+  Structuring 'bit2_FA_119'
+  Mapping 'bit2_FA_119'
+  Structuring 'bit2_FA_118'
+  Mapping 'bit2_FA_118'
+  Structuring 'bit2_FA_117'
+  Mapping 'bit2_FA_117'
+  Structuring 'bit2_FA_116'
+  Mapping 'bit2_FA_116'
+  Structuring 'bit2_FA_115'
+  Mapping 'bit2_FA_115'
+  Structuring 'bit2_FA_114'
+  Mapping 'bit2_FA_114'
+  Structuring 'bit2_FA_113'
+  Mapping 'bit2_FA_113'
+  Structuring 'bit2_FA_112'
+  Mapping 'bit2_FA_112'
+  Structuring 'bit2_FA_111'
+  Mapping 'bit2_FA_111'
+  Structuring 'bit2_FA_110'
+  Mapping 'bit2_FA_110'
+  Structuring 'bit2_FA_109'
+  Mapping 'bit2_FA_109'
+  Structuring 'bit2_FA_108'
+  Mapping 'bit2_FA_108'
+  Structuring 'bit2_FA_107'
+  Mapping 'bit2_FA_107'
+  Structuring 'bit2_FA_106'
+  Mapping 'bit2_FA_106'
+  Structuring 'bit2_FA_105'
+  Mapping 'bit2_FA_105'
+  Structuring 'bit2_FA_104'
+  Mapping 'bit2_FA_104'
+  Structuring 'bit2_FA_103'
+  Mapping 'bit2_FA_103'
+  Structuring 'bit2_FA_102'
+  Mapping 'bit2_FA_102'
+  Structuring 'bit2_FA_101'
+  Mapping 'bit2_FA_101'
+  Structuring 'bit2_FA_100'
+  Mapping 'bit2_FA_100'
+  Structuring 'bit2_FA_99'
+  Mapping 'bit2_FA_99'
+  Structuring 'bit2_FA_98'
+  Mapping 'bit2_FA_98'
+  Structuring 'bit2_FA_97'
+  Mapping 'bit2_FA_97'
+  Structuring 'bit2_FA_96'
+  Mapping 'bit2_FA_96'
+  Structuring 'bit2_FA_95'
+  Mapping 'bit2_FA_95'
+  Structuring 'bit2_FA_94'
+  Mapping 'bit2_FA_94'
+  Structuring 'bit2_FA_93'
+  Mapping 'bit2_FA_93'
+  Structuring 'bit2_FA_92'
+  Mapping 'bit2_FA_92'
+  Structuring 'bit2_FA_91'
+  Mapping 'bit2_FA_91'
+  Structuring 'bit2_FA_90'
+  Mapping 'bit2_FA_90'
+  Structuring 'bit2_FA_89'
+  Mapping 'bit2_FA_89'
+  Structuring 'bit2_FA_88'
+  Mapping 'bit2_FA_88'
+  Structuring 'bit2_FA_87'
+  Mapping 'bit2_FA_87'
+  Structuring 'bit2_FA_86'
+  Mapping 'bit2_FA_86'
+  Structuring 'bit2_FA_85'
+  Mapping 'bit2_FA_85'
+  Structuring 'bit2_FA_84'
+  Mapping 'bit2_FA_84'
+  Structuring 'bit2_FA_83'
+  Mapping 'bit2_FA_83'
+  Structuring 'bit2_FA_82'
+  Mapping 'bit2_FA_82'
+  Structuring 'bit2_FA_81'
+  Mapping 'bit2_FA_81'
+  Structuring 'bit2_FA_80'
+  Mapping 'bit2_FA_80'
+  Structuring 'bit2_FA_79'
+  Mapping 'bit2_FA_79'
+  Structuring 'bit2_FA_78'
+  Mapping 'bit2_FA_78'
+  Structuring 'bit2_FA_77'
+  Mapping 'bit2_FA_77'
+  Structuring 'bit2_FA_76'
+  Mapping 'bit2_FA_76'
+  Structuring 'bit2_FA_75'
+  Mapping 'bit2_FA_75'
+  Structuring 'bit2_FA_74'
+  Mapping 'bit2_FA_74'
+  Structuring 'bit2_FA_73'
+  Mapping 'bit2_FA_73'
+  Structuring 'bit2_FA_72'
+  Mapping 'bit2_FA_72'
+  Structuring 'bit2_FA_71'
+  Mapping 'bit2_FA_71'
+  Structuring 'bit2_FA_70'
+  Mapping 'bit2_FA_70'
+  Structuring 'bit2_FA_69'
+  Mapping 'bit2_FA_69'
+  Structuring 'bit2_FA_68'
+  Mapping 'bit2_FA_68'
+  Structuring 'bit2_FA_67'
+  Mapping 'bit2_FA_67'
+  Structuring 'bit2_FA_66'
+  Mapping 'bit2_FA_66'
+  Structuring 'bit2_FA_65'
+  Mapping 'bit2_FA_65'
+  Structuring 'bit2_FA_0'
+  Mapping 'bit2_FA_0'
+  Structuring 'bit2_FA_64'
+  Mapping 'bit2_FA_64'
+  Structuring 'bit2_FA_63'
+  Mapping 'bit2_FA_63'
+  Structuring 'bit2_FA_62'
+  Mapping 'bit2_FA_62'
+  Structuring 'bit2_FA_61'
+  Mapping 'bit2_FA_61'
+  Structuring 'bit2_FA_60'
+  Mapping 'bit2_FA_60'
+  Structuring 'bit2_FA_59'
+  Mapping 'bit2_FA_59'
+  Structuring 'bit2_FA_58'
+  Mapping 'bit2_FA_58'
+  Structuring 'bit2_FA_57'
+  Mapping 'bit2_FA_57'
+  Structuring 'bit2_FA_56'
+  Mapping 'bit2_FA_56'
+  Structuring 'bit2_FA_55'
+  Mapping 'bit2_FA_55'
+  Structuring 'bit2_FA_54'
+  Mapping 'bit2_FA_54'
+  Structuring 'bit2_FA_53'
+  Mapping 'bit2_FA_53'
+  Structuring 'bit2_FA_52'
+  Mapping 'bit2_FA_52'
+  Structuring 'bit2_FA_51'
+  Mapping 'bit2_FA_51'
+  Structuring 'bit2_FA_50'
+  Mapping 'bit2_FA_50'
+  Structuring 'bit2_FA_49'
+  Mapping 'bit2_FA_49'
+  Structuring 'bit2_FA_48'
+  Mapping 'bit2_FA_48'
+  Structuring 'bit2_FA_47'
+  Mapping 'bit2_FA_47'
+  Structuring 'bit2_FA_46'
+  Mapping 'bit2_FA_46'
+  Structuring 'bit2_FA_45'
+  Mapping 'bit2_FA_45'
+  Structuring 'bit2_FA_44'
+  Mapping 'bit2_FA_44'
+  Structuring 'bit2_FA_43'
+  Mapping 'bit2_FA_43'
+  Structuring 'bit2_FA_42'
+  Mapping 'bit2_FA_42'
+  Structuring 'bit2_FA_41'
+  Mapping 'bit2_FA_41'
+  Structuring 'bit2_FA_40'
+  Mapping 'bit2_FA_40'
+  Structuring 'bit2_FA_39'
+  Mapping 'bit2_FA_39'
+  Structuring 'bit2_FA_38'
+  Mapping 'bit2_FA_38'
+  Structuring 'bit2_FA_37'
+  Mapping 'bit2_FA_37'
+  Structuring 'bit2_FA_36'
+  Mapping 'bit2_FA_36'
+  Structuring 'bit2_FA_35'
+  Mapping 'bit2_FA_35'
+  Structuring 'bit2_FA_34'
+  Mapping 'bit2_FA_34'
+  Structuring 'bit2_FA_33'
+  Mapping 'bit2_FA_33'
+  Structuring 'bit2_FA_32'
+  Mapping 'bit2_FA_32'
+  Structuring 'bit2_FA_31'
+  Mapping 'bit2_FA_31'
+  Structuring 'bit2_FA_30'
+  Mapping 'bit2_FA_30'
+  Structuring 'bit2_FA_29'
+  Mapping 'bit2_FA_29'
+  Structuring 'bit2_FA_28'
+  Mapping 'bit2_FA_28'
+  Structuring 'bit2_FA_27'
+  Mapping 'bit2_FA_27'
+  Structuring 'bit2_FA_26'
+  Mapping 'bit2_FA_26'
+  Structuring 'bit2_FA_25'
+  Mapping 'bit2_FA_25'
+  Structuring 'bit2_FA_24'
+  Mapping 'bit2_FA_24'
+  Structuring 'bit2_FA_23'
+  Mapping 'bit2_FA_23'
+  Structuring 'bit2_FA_22'
+  Mapping 'bit2_FA_22'
+  Structuring 'bit2_FA_21'
+  Mapping 'bit2_FA_21'
+  Structuring 'bit2_FA_20'
+  Mapping 'bit2_FA_20'
+  Structuring 'bit2_FA_19'
+  Mapping 'bit2_FA_19'
+  Structuring 'bit2_FA_18'
+  Mapping 'bit2_FA_18'
+  Structuring 'bit2_FA_17'
+  Mapping 'bit2_FA_17'
+  Structuring 'bit2_FA_16'
+  Mapping 'bit2_FA_16'
+  Structuring 'bit2_FA_15'
+  Mapping 'bit2_FA_15'
+  Structuring 'bit2_FA_14'
+  Mapping 'bit2_FA_14'
+  Structuring 'bit2_FA_13'
+  Mapping 'bit2_FA_13'
+  Structuring 'bit2_FA_12'
+  Mapping 'bit2_FA_12'
+  Structuring 'bit2_FA_11'
+  Mapping 'bit2_FA_11'
+  Structuring 'bit2_FA_10'
+  Mapping 'bit2_FA_10'
+  Structuring 'bit2_FA_9'
+  Mapping 'bit2_FA_9'
+  Structuring 'bit2_FA_8'
+  Mapping 'bit2_FA_8'
+  Structuring 'bit2_FA_7'
+  Mapping 'bit2_FA_7'
+  Structuring 'bit2_FA_6'
+  Mapping 'bit2_FA_6'
+  Structuring 'bit2_FA_5'
+  Mapping 'bit2_FA_5'
+  Structuring 'bit2_FA_4'
+  Mapping 'bit2_FA_4'
+  Structuring 'bit2_FA_3'
+  Mapping 'bit2_FA_3'
+  Structuring 'bit2_FA_2'
+  Mapping 'bit2_FA_2'
+  Structuring 'bit2_FA_1'
+  Mapping 'bit2_FA_1'
+  Structuring 'bit2_FA_127'
+  Mapping 'bit2_FA_127'
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    2077.3      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+    0:00:05    2077.8      0.00       0.0       0.0                          
+
+  Optimization Complete
+  ---------------------
+1
+dc_shell> 1
+dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> 
+Thank you...

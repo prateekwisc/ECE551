@@ -1,0 +1,75 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 13:10:14 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_operator      ZeroWireload          tcbn40lpbwptc
+  add3_operator_DW01_add_1
+                     ZeroWireload          tcbn40lpbwptc
+  add3_operator_DW01_add_0
+                     ZeroWireload          tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  a[1] (in)                                               0.00       0.00 f
+  add_8/A[1] (add3_operator_DW01_add_1)                   0.00       0.00 f
+  add_8/U1_1/CO (FA1D0BWP)                                0.14       0.14 f
+  add_8/U1_2/CO (FA1D0BWP)                                0.08       0.22 f
+  add_8/U1_3/CO (FA1D0BWP)                                0.08       0.29 f
+  add_8/U1_4/CO (FA1D0BWP)                                0.08       0.37 f
+  add_8/U1_5/CO (FA1D0BWP)                                0.08       0.45 f
+  add_8/U1_6/CO (FA1D0BWP)                                0.08       0.53 f
+  add_8/U1_7/CO (FA1D0BWP)                                0.08       0.61 f
+  add_8/U1_8/CO (FA1D0BWP)                                0.08       0.69 f
+  add_8/U1_9/CO (FA1D0BWP)                                0.08       0.76 f
+  add_8/U1_10/CO (FA1D0BWP)                               0.08       0.84 f
+  add_8/U1_11/CO (FA1D0BWP)                               0.08       0.92 f
+  add_8/U1_12/CO (FA1D0BWP)                               0.08       1.00 f
+  add_8/U1_13/CO (FA1D0BWP)                               0.08       1.08 f
+  add_8/U1_14/CO (FA1D0BWP)                               0.08       1.15 f
+  add_8/U1_15/CO (FA1D0BWP)                               0.08       1.23 f
+  add_8/U1_16/CO (FA1D0BWP)                               0.08       1.31 f
+  add_8/U1_17/CO (FA1D0BWP)                               0.08       1.39 f
+  add_8/U1_18/CO (FA1D0BWP)                               0.08       1.47 f
+  add_8/U1_19/CO (FA1D0BWP)                               0.08       1.55 f
+  add_8/U1_20/CO (FA1D0BWP)                               0.08       1.62 f
+  add_8/U1_21/CO (FA1D0BWP)                               0.08       1.70 f
+  add_8/U1_22/CO (FA1D0BWP)                               0.08       1.78 f
+  add_8/U1_23/CO (FA1D0BWP)                               0.08       1.86 f
+  add_8/U1_24/CO (FA1D0BWP)                               0.08       1.94 f
+  add_8/U1_25/CO (FA1D0BWP)                               0.08       2.02 f
+  add_8/U1_26/CO (FA1D0BWP)                               0.08       2.09 f
+  add_8/U1_27/CO (FA1D0BWP)                               0.08       2.17 f
+  add_8/U1_28/CO (FA1D0BWP)                               0.08       2.25 f
+  add_8/U1_29/CO (FA1D0BWP)                               0.08       2.33 f
+  add_8/U1_30/S (FA1D0BWP)                                0.09       2.42 r
+  add_8/SUM[30] (add3_operator_DW01_add_1)                0.00       2.42 r
+  add_8_2/A[30] (add3_operator_DW01_add_0)                0.00       2.42 r
+  add_8_2/U1_30/CO (FA1D0BWP)                             0.13       2.55 r
+  add_8_2/U1_31/Z (XOR3D1BWP)                             0.09       2.64 f
+  add_8_2/SUM[31] (add3_operator_DW01_add_0)              0.00       2.64 f
+  y[31] (out)                                             0.00       2.64 f
+  data arrival time                                                  2.64
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

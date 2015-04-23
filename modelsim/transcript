@@ -1,0 +1,60 @@
+# //  ModelSim SE 10.0c_1 Aug 26 2011 Linux 2.6.42-4-amd64
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project tutorial
+#  
+# Compile of queue_final.v was successful.
+vsim -novopt work.t_queue
+# vsim -novopt work.t_queue 
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.t_queue
+# Loading work.t_queue
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.queue
+# Loading work.queue
+add wave sim:/t_queue/*
+run
+# Compile of queue_final.v failed with 1 errors.
+# Compile of queue_f.v was successful.
+vsim -novopt work.t_queue
+# vsim -novopt work.t_queue 
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.t_queue
+# Loading work.t_queue
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.queue
+# Loading work.queue
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.q1_queue
+# Loading work.q1_queue
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(19): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(44).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(19): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_out'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(44).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(19): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'full'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(44).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(19): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'empty'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v(44).
+#         Region: /t_queue/queue_unit/genblk1/q2
+add wave sim:/t_queue/*
+run
+# Compile of queue_final.v was successful.
+vsim -novopt work.t_queue
+# vsim -novopt work.t_queue 
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.t_queue
+# Loading work.t_queue
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.queue
+# Loading work.queue
+# Refreshing /filespace/people/p/prateek/ece551/modelsim/tutorial/work.q1_queue
+# Loading work.q1_queue
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(20): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(47).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(20): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_out'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(47).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(20): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'full'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(47).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Error: (vsim-3053) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(20): Illegal output or inout port connection for "port 'empty'".
+#         Region: /t_queue/queue_unit/genblk1/q2
+# ** Warning: (vsim-3015) /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(20): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'empty'. The port definition is at: /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v(47).
+#         Region: /t_queue/queue_unit/genblk1/q2
+# Error loading design

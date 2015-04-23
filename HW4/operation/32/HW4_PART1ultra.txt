@@ -1,0 +1,99 @@
+ 
+****************************************
+Report : area
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 13:21:45 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          128
+Number of nets:                           220
+Number of cells:                           64
+Number of combinational cells:             64
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       5
+
+Combinational area:                273.243591
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   273.243591
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 13:21:45 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: c[0] (input port)
+  Endpoint: y[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_operator      ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  c[0] (in)                                0.00       0.00 r
+  U62/CO (FA1D0BWP)                        0.13       0.13 r
+  U61/CO (FA1D0BWP)                        0.12       0.24 r
+  U60/CO (FA1D0BWP)                        0.14       0.38 r
+  U59/CO (FA1D0BWP)                        0.12       0.50 r
+  U58/CO (FA1D0BWP)                        0.12       0.62 r
+  U57/CO (FA1D0BWP)                        0.12       0.75 r
+  U56/CO (FA1D0BWP)                        0.12       0.87 r
+  U55/CO (FA1D0BWP)                        0.12       0.99 r
+  U54/CO (FA1D0BWP)                        0.12       1.12 r
+  U53/CO (FA1D0BWP)                        0.12       1.24 r
+  U52/CO (FA1D0BWP)                        0.12       1.36 r
+  U51/CO (FA1D0BWP)                        0.12       1.49 r
+  U50/CO (FA1D0BWP)                        0.12       1.61 r
+  U49/CO (FA1D0BWP)                        0.12       1.73 r
+  U48/CO (FA1D0BWP)                        0.12       1.86 r
+  U47/CO (FA1D0BWP)                        0.12       1.98 r
+  U46/CO (FA1D0BWP)                        0.12       2.10 r
+  U45/CO (FA1D0BWP)                        0.12       2.22 r
+  U44/CO (FA1D0BWP)                        0.12       2.35 r
+  U43/CO (FA1D0BWP)                        0.12       2.47 r
+  U42/CO (FA1D0BWP)                        0.12       2.59 r
+  U41/CO (FA1D0BWP)                        0.12       2.72 r
+  U40/CO (FA1D0BWP)                        0.12       2.84 r
+  U39/CO (FA1D0BWP)                        0.12       2.96 r
+  U38/CO (FA1D0BWP)                        0.12       3.09 r
+  U37/CO (FA1D0BWP)                        0.12       3.21 r
+  U36/CO (FA1D0BWP)                        0.12       3.33 r
+  U35/CO (FA1D0BWP)                        0.12       3.46 r
+  U34/CO (FA1D0BWP)                        0.12       3.58 r
+  U33/CO (FA1D0BWP)                        0.12       3.70 r
+  U64/CO (FA1D0BWP)                        0.11       3.82 r
+  U1/ZN (XNR4D0BWP)                        0.17       3.99 f
+  U2/ZN (XNR2D0BWP)                        0.08       4.07 r
+  y[31] (out)                              0.00       4.07 r
+  data arrival time                                   4.07
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

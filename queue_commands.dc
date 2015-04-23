@@ -1,0 +1,58 @@
+###################################################################
+
+# Created by write_script -format dctcl on Tue Oct 22 14:00:36 2013
+
+###################################################################
+
+# Set the current_design #
+current_design queue
+
+set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
+set_operating_conditions NCCOM -library tcbn40lpbwptc
+set_wire_load_mode top
+set_wire_load_model -name TSMC512K_Lowk_Aggresive -library tcbn40lpbwptc
+set_max_area 0
+set_local_link_library {tcbn40lpbwptc.db,tpfn45gsgv18tc.db,tcbn40lpbwptc.db}
+set_fix_multiple_port_nets -all
+create_clock [get_ports clk]  -name clock  -period 4  -waveform {0 2}
+set_dont_touch_network [get_clocks clock]
+set_input_delay -clock clock  2  [get_ports {data_in[3]}]
+set_input_delay -clock clock  2  [get_ports rd]
+set_input_delay -clock clock  2  [get_ports {data_in[7]}]
+set_input_delay -clock clock  2  [get_ports reset]
+set_input_delay -clock clock  2  [get_ports {data_in[2]}]
+set_input_delay -clock clock  2  [get_ports {data_in[1]}]
+set_input_delay -clock clock  2  [get_ports {data_in[0]}]
+set_input_delay -clock clock  2  [get_ports wr]
+set_input_delay -clock clock  2  [get_ports {data_in[6]}]
+set_input_delay -clock clock  2  [get_ports {data_in[5]}]
+set_input_delay -clock clock  2  [get_ports {data_in[4]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[7]}]
+set_output_delay -clock clock  0.5  [get_ports empty]
+set_output_delay -clock clock  0.5  [get_ports {data_out[0]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[2]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[1]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[4]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[3]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[6]}]
+set_output_delay -clock clock  0.5  [get_ports {data_out[5]}]
+set_output_delay -clock clock  0.5  [get_ports full]
+#Compile with low mapping effort, and report area and timing
+compile -map_effort low
+check_design
+report_area
+report_constraint
+report_design
+report_timing -path full -delay max -nworst 3
+report_timing -path full -delay min -nworst 3
+
+#Compile again, but this time with aggressive mapping effort
+ungroup -all
+uniquify
+compile -map_effort high
+report_area > area.txt
+report_constraint > constraint.txt
+report_design > design.txt
+report_timing -path full -delay max -nworst 3 > timing.txt
+report_timing -path full -delay min -nworst 3 >> timing.txt
+1

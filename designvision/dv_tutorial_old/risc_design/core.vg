@@ -1,0 +1,2239 @@
+
+module ALU_DW01_add_1 ( A, B, CI, SUM, CO );
+  input [15:0] A;
+  input [15:0] B;
+  output [15:0] SUM;
+  input CI;
+  output CO;
+  wire   \carry[15] , \carry[14] , \carry[13] , \carry[12] , \carry[11] ,
+         \carry[10] , \carry[9] , \carry[8] , \carry[7] , \carry[6] ,
+         \carry[5] , \carry[4] , \carry[3] , \carry[2] , \carry[1] ;
+
+  FA1AM1P U1_14 ( .A(A[14]), .B(B[14]), .CI(\carry[14] ), .CO(\carry[15] ), 
+        .S(SUM[14]) );
+  FA1AM1P U1_13 ( .A(A[13]), .B(B[13]), .CI(\carry[13] ), .CO(\carry[14] ), 
+        .S(SUM[13]) );
+  FA1AM1P U1_12 ( .A(A[12]), .B(B[12]), .CI(\carry[12] ), .CO(\carry[13] ), 
+        .S(SUM[12]) );
+  FA1AM1P U1_11 ( .A(A[11]), .B(B[11]), .CI(\carry[11] ), .CO(\carry[12] ), 
+        .S(SUM[11]) );
+  FA1AM1P U1_10 ( .A(A[10]), .B(B[10]), .CI(\carry[10] ), .CO(\carry[11] ), 
+        .S(SUM[10]) );
+  FA1AM1P U1_9 ( .A(A[9]), .B(B[9]), .CI(\carry[9] ), .CO(\carry[10] ), .S(
+        SUM[9]) );
+  FA1AM1P U1_8 ( .A(A[8]), .B(B[8]), .CI(\carry[8] ), .CO(\carry[9] ), .S(
+        SUM[8]) );
+  FA1AM1P U1_7 ( .A(A[7]), .B(B[7]), .CI(\carry[7] ), .CO(\carry[8] ), .S(
+        SUM[7]) );
+  FA1AM1P U1_6 ( .A(A[6]), .B(B[6]), .CI(\carry[6] ), .CO(\carry[7] ), .S(
+        SUM[6]) );
+  FA1AM1P U1_5 ( .A(A[5]), .B(B[5]), .CI(\carry[5] ), .CO(\carry[6] ), .S(
+        SUM[5]) );
+  FA1AM1P U1_4 ( .A(A[4]), .B(B[4]), .CI(\carry[4] ), .CO(\carry[5] ), .S(
+        SUM[4]) );
+  FA1AM1P U1_3 ( .A(A[3]), .B(B[3]), .CI(\carry[3] ), .CO(\carry[4] ), .S(
+        SUM[3]) );
+  FA1AM1P U1_2 ( .A(A[2]), .B(B[2]), .CI(\carry[2] ), .CO(\carry[3] ), .S(
+        SUM[2]) );
+  FA1AM1P U1_1 ( .A(A[1]), .B(B[1]), .CI(\carry[1] ), .CO(\carry[2] ), .S(
+        SUM[1]) );
+  EO3M1P U1_15 ( .A(A[15]), .B(B[15]), .C(\carry[15] ), .Z(SUM[15]) );
+  AND2M1P U1 ( .A(B[0]), .B(A[0]), .Z(\carry[1] ) );
+  EOFM1P U2 ( .A(A[0]), .B(B[0]), .Z(SUM[0]) );
+endmodule
+
+
+module ALU_DW01_add_0 ( A, B, CI, SUM, CO );
+  input [15:0] A;
+  input [15:0] B;
+  output [15:0] SUM;
+  input CI;
+  output CO;
+  wire   \carry[15] , \carry[14] , \carry[13] , \carry[12] , \carry[11] ,
+         \carry[10] , \carry[9] , \carry[8] , \carry[7] , \carry[6] ,
+         \carry[5] , \carry[4] , \carry[3] , \carry[2] , \carry[1] ;
+
+  FA1AM1P U1_14 ( .A(A[14]), .B(B[14]), .CI(\carry[14] ), .CO(\carry[15] ), 
+        .S(SUM[14]) );
+  FA1AM1P U1_13 ( .A(A[13]), .B(B[13]), .CI(\carry[13] ), .CO(\carry[14] ), 
+        .S(SUM[13]) );
+  FA1AM1P U1_12 ( .A(A[12]), .B(B[12]), .CI(\carry[12] ), .CO(\carry[13] ), 
+        .S(SUM[12]) );
+  FA1AM1P U1_11 ( .A(A[11]), .B(B[11]), .CI(\carry[11] ), .CO(\carry[12] ), 
+        .S(SUM[11]) );
+  FA1AM1P U1_10 ( .A(A[10]), .B(B[10]), .CI(\carry[10] ), .CO(\carry[11] ), 
+        .S(SUM[10]) );
+  FA1AM1P U1_9 ( .A(A[9]), .B(B[9]), .CI(\carry[9] ), .CO(\carry[10] ), .S(
+        SUM[9]) );
+  FA1AM1P U1_8 ( .A(A[8]), .B(B[8]), .CI(\carry[8] ), .CO(\carry[9] ), .S(
+        SUM[8]) );
+  FA1AM1P U1_7 ( .A(A[7]), .B(B[7]), .CI(\carry[7] ), .CO(\carry[8] ), .S(
+        SUM[7]) );
+  FA1AM1P U1_6 ( .A(A[6]), .B(B[6]), .CI(\carry[6] ), .CO(\carry[7] ), .S(
+        SUM[6]) );
+  FA1AM1P U1_5 ( .A(A[5]), .B(B[5]), .CI(\carry[5] ), .CO(\carry[6] ), .S(
+        SUM[5]) );
+  FA1AM1P U1_4 ( .A(A[4]), .B(B[4]), .CI(\carry[4] ), .CO(\carry[5] ), .S(
+        SUM[4]) );
+  FA1AM1P U1_3 ( .A(A[3]), .B(B[3]), .CI(\carry[3] ), .CO(\carry[4] ), .S(
+        SUM[3]) );
+  FA1AM1P U1_2 ( .A(A[2]), .B(B[2]), .CI(\carry[2] ), .CO(\carry[3] ), .S(
+        SUM[2]) );
+  FA1AM1P U1_1 ( .A(A[1]), .B(B[1]), .CI(\carry[1] ), .CO(\carry[2] ), .S(
+        SUM[1]) );
+  EO3M1P U1_15 ( .A(A[15]), .B(B[15]), .C(\carry[15] ), .Z(SUM[15]) );
+  OR2M1P U1 ( .A(A[0]), .B(B[0]), .Z(\carry[1] ) );
+  ENFM1P U2 ( .A(B[0]), .B(A[0]), .Z(SUM[0]) );
+endmodule
+
+
+module ALU_DW01_inc_0 ( A, SUM );
+  input [15:0] A;
+  output [15:0] SUM;
+  wire   \carry[15] , \carry[14] , \carry[13] , \carry[12] , \carry[11] ,
+         \carry[10] , \carry[9] , \carry[8] , \carry[7] , \carry[6] ,
+         \carry[5] , \carry[4] , \carry[3] , \carry[2] ;
+
+  HA1M1P U1_1_14 ( .A(A[14]), .B(\carry[14] ), .CO(\carry[15] ), .S(SUM[14])
+         );
+  HA1M1P U1_1_12 ( .A(A[12]), .B(\carry[12] ), .CO(\carry[13] ), .S(SUM[12])
+         );
+  HA1M1P U1_1_11 ( .A(A[11]), .B(\carry[11] ), .CO(\carry[12] ), .S(SUM[11])
+         );
+  HA1M1P U1_1_10 ( .A(A[10]), .B(\carry[10] ), .CO(\carry[11] ), .S(SUM[10])
+         );
+  HA1M1P U1_1_13 ( .A(A[13]), .B(\carry[13] ), .CO(\carry[14] ), .S(SUM[13])
+         );
+  HA1M1P U1_1_3 ( .A(A[3]), .B(\carry[3] ), .CO(\carry[4] ), .S(SUM[3]) );
+  HA1M1P U1_1_2 ( .A(A[2]), .B(\carry[2] ), .CO(\carry[3] ), .S(SUM[2]) );
+  HA1M1P U1_1_9 ( .A(A[9]), .B(\carry[9] ), .CO(\carry[10] ), .S(SUM[9]) );
+  HA1M1P U1_1_8 ( .A(A[8]), .B(\carry[8] ), .CO(\carry[9] ), .S(SUM[8]) );
+  HA1M1P U1_1_7 ( .A(A[7]), .B(\carry[7] ), .CO(\carry[8] ), .S(SUM[7]) );
+  HA1M1P U1_1_6 ( .A(A[6]), .B(\carry[6] ), .CO(\carry[7] ), .S(SUM[6]) );
+  HA1M1P U1_1_5 ( .A(A[5]), .B(\carry[5] ), .CO(\carry[6] ), .S(SUM[5]) );
+  HA1M1P U1_1_4 ( .A(A[4]), .B(\carry[4] ), .CO(\carry[5] ), .S(SUM[4]) );
+  HA1M1P U1_1_1 ( .A(A[1]), .B(A[0]), .CO(\carry[2] ), .S(SUM[1]) );
+  EOFM1P U1 ( .A(\carry[15] ), .B(A[15]), .Z(SUM[15]) );
+  N1M1P U2 ( .A(A[0]), .Z(SUM[0]) );
+endmodule
+
+
+module ALU_DW01_sub_1 ( A, B, CI, DIFF, CO );
+  input [15:0] A;
+  input [15:0] B;
+  output [15:0] DIFF;
+  input CI;
+  output CO;
+  wire   \carry[15] , \carry[14] , \carry[13] , \carry[12] , \carry[11] ,
+         \carry[10] , \carry[9] , \carry[8] , \carry[7] , \carry[6] ,
+         \carry[5] , \carry[4] , \carry[3] , \carry[2] , \carry[1] ,
+         \B_not[15] , \B_not[14] , \B_not[13] , \B_not[12] , \B_not[11] ,
+         \B_not[10] , \B_not[9] , \B_not[8] , \B_not[7] , \B_not[6] ,
+         \B_not[5] , \B_not[4] , \B_not[3] , \B_not[2] , \B_not[1] ,
+         \B_not[0] ;
+
+  FA1AM1P U2_14 ( .A(A[14]), .B(\B_not[14] ), .CI(\carry[14] ), .CO(
+        \carry[15] ), .S(DIFF[14]) );
+  FA1AM1P U2_13 ( .A(A[13]), .B(\B_not[13] ), .CI(\carry[13] ), .CO(
+        \carry[14] ), .S(DIFF[13]) );
+  FA1AM1P U2_12 ( .A(A[12]), .B(\B_not[12] ), .CI(\carry[12] ), .CO(
+        \carry[13] ), .S(DIFF[12]) );
+  FA1AM1P U2_11 ( .A(A[11]), .B(\B_not[11] ), .CI(\carry[11] ), .CO(
+        \carry[12] ), .S(DIFF[11]) );
+  FA1AM1P U2_10 ( .A(A[10]), .B(\B_not[10] ), .CI(\carry[10] ), .CO(
+        \carry[11] ), .S(DIFF[10]) );
+  FA1AM1P U2_9 ( .A(A[9]), .B(\B_not[9] ), .CI(\carry[9] ), .CO(\carry[10] ), 
+        .S(DIFF[9]) );
+  FA1AM1P U2_8 ( .A(A[8]), .B(\B_not[8] ), .CI(\carry[8] ), .CO(\carry[9] ), 
+        .S(DIFF[8]) );
+  FA1AM1P U2_7 ( .A(A[7]), .B(\B_not[7] ), .CI(\carry[7] ), .CO(\carry[8] ), 
+        .S(DIFF[7]) );
+  FA1AM1P U2_6 ( .A(A[6]), .B(\B_not[6] ), .CI(\carry[6] ), .CO(\carry[7] ), 
+        .S(DIFF[6]) );
+  FA1AM1P U2_5 ( .A(A[5]), .B(\B_not[5] ), .CI(\carry[5] ), .CO(\carry[6] ), 
+        .S(DIFF[5]) );
+  FA1AM1P U2_4 ( .A(A[4]), .B(\B_not[4] ), .CI(\carry[4] ), .CO(\carry[5] ), 
+        .S(DIFF[4]) );
+  FA1AM1P U2_3 ( .A(A[3]), .B(\B_not[3] ), .CI(\carry[3] ), .CO(\carry[4] ), 
+        .S(DIFF[3]) );
+  FA1AM1P U2_2 ( .A(A[2]), .B(\B_not[2] ), .CI(\carry[2] ), .CO(\carry[3] ), 
+        .S(DIFF[2]) );
+  FA1AM1P U2_1 ( .A(A[1]), .B(\B_not[1] ), .CI(\carry[1] ), .CO(\carry[2] ), 
+        .S(DIFF[1]) );
+  EO3M1P U2_15 ( .A(A[15]), .B(\B_not[15] ), .C(\carry[15] ), .Z(DIFF[15]) );
+  OR2M1P U1 ( .A(A[0]), .B(\B_not[0] ), .Z(\carry[1] ) );
+  ENFM1P U2 ( .A(\B_not[0] ), .B(A[0]), .Z(DIFF[0]) );
+  N1M1P U3 ( .A(B[9]), .Z(\B_not[9] ) );
+  N1M1P U4 ( .A(B[8]), .Z(\B_not[8] ) );
+  N1M1P U5 ( .A(B[7]), .Z(\B_not[7] ) );
+  N1M1P U6 ( .A(B[6]), .Z(\B_not[6] ) );
+  N1M1P U7 ( .A(B[5]), .Z(\B_not[5] ) );
+  N1M1P U8 ( .A(B[4]), .Z(\B_not[4] ) );
+  N1M1P U9 ( .A(B[3]), .Z(\B_not[3] ) );
+  N1M1P U10 ( .A(B[2]), .Z(\B_not[2] ) );
+  N1M1P U11 ( .A(B[1]), .Z(\B_not[1] ) );
+  N1M1P U12 ( .A(B[15]), .Z(\B_not[15] ) );
+  N1M1P U13 ( .A(B[14]), .Z(\B_not[14] ) );
+  N1M1P U14 ( .A(B[13]), .Z(\B_not[13] ) );
+  N1M1P U15 ( .A(B[12]), .Z(\B_not[12] ) );
+  N1M1P U16 ( .A(B[11]), .Z(\B_not[11] ) );
+  N1M1P U17 ( .A(B[10]), .Z(\B_not[10] ) );
+  N1M1P U18 ( .A(B[0]), .Z(\B_not[0] ) );
+endmodule
+
+
+module ALU_DW01_sub_0 ( A, B, CI, DIFF, CO );
+  input [15:0] A;
+  input [15:0] B;
+  output [15:0] DIFF;
+  input CI;
+  output CO;
+  wire   \carry[15] , \carry[14] , \carry[13] , \carry[12] , \carry[11] ,
+         \carry[10] , \carry[9] , \carry[8] , \carry[7] , \carry[6] ,
+         \carry[5] , \carry[4] , \carry[3] , \carry[2] , \carry[1] ,
+         \B_not[15] , \B_not[14] , \B_not[13] , \B_not[12] , \B_not[11] ,
+         \B_not[10] , \B_not[9] , \B_not[8] , \B_not[7] , \B_not[6] ,
+         \B_not[5] , \B_not[4] , \B_not[3] , \B_not[2] , \B_not[1] ,
+         \B_not[0] ;
+
+  FA1AM1P U2_14 ( .A(A[14]), .B(\B_not[14] ), .CI(\carry[14] ), .CO(
+        \carry[15] ), .S(DIFF[14]) );
+  FA1AM1P U2_13 ( .A(A[13]), .B(\B_not[13] ), .CI(\carry[13] ), .CO(
+        \carry[14] ), .S(DIFF[13]) );
+  FA1AM1P U2_12 ( .A(A[12]), .B(\B_not[12] ), .CI(\carry[12] ), .CO(
+        \carry[13] ), .S(DIFF[12]) );
+  FA1AM1P U2_11 ( .A(A[11]), .B(\B_not[11] ), .CI(\carry[11] ), .CO(
+        \carry[12] ), .S(DIFF[11]) );
+  FA1AM1P U2_10 ( .A(A[10]), .B(\B_not[10] ), .CI(\carry[10] ), .CO(
+        \carry[11] ), .S(DIFF[10]) );
+  FA1AM1P U2_9 ( .A(A[9]), .B(\B_not[9] ), .CI(\carry[9] ), .CO(\carry[10] ), 
+        .S(DIFF[9]) );
+  FA1AM1P U2_8 ( .A(A[8]), .B(\B_not[8] ), .CI(\carry[8] ), .CO(\carry[9] ), 
+        .S(DIFF[8]) );
+  FA1AM1P U2_7 ( .A(A[7]), .B(\B_not[7] ), .CI(\carry[7] ), .CO(\carry[8] ), 
+        .S(DIFF[7]) );
+  FA1AM1P U2_6 ( .A(A[6]), .B(\B_not[6] ), .CI(\carry[6] ), .CO(\carry[7] ), 
+        .S(DIFF[6]) );
+  FA1AM1P U2_5 ( .A(A[5]), .B(\B_not[5] ), .CI(\carry[5] ), .CO(\carry[6] ), 
+        .S(DIFF[5]) );
+  FA1AM1P U2_4 ( .A(A[4]), .B(\B_not[4] ), .CI(\carry[4] ), .CO(\carry[5] ), 
+        .S(DIFF[4]) );
+  FA1AM1P U2_3 ( .A(A[3]), .B(\B_not[3] ), .CI(\carry[3] ), .CO(\carry[4] ), 
+        .S(DIFF[3]) );
+  FA1AM1P U2_2 ( .A(A[2]), .B(\B_not[2] ), .CI(\carry[2] ), .CO(\carry[3] ), 
+        .S(DIFF[2]) );
+  FA1AM1P U2_1 ( .A(A[1]), .B(\B_not[1] ), .CI(\carry[1] ), .CO(\carry[2] ), 
+        .S(DIFF[1]) );
+  EO3M1P U2_15 ( .A(A[15]), .B(\B_not[15] ), .C(\carry[15] ), .Z(DIFF[15]) );
+  AND2M1P U1 ( .A(\B_not[0] ), .B(A[0]), .Z(\carry[1] ) );
+  EOFM1P U2 ( .A(A[0]), .B(\B_not[0] ), .Z(DIFF[0]) );
+  N1M1P U3 ( .A(B[9]), .Z(\B_not[9] ) );
+  N1M1P U4 ( .A(B[8]), .Z(\B_not[8] ) );
+  N1M1P U5 ( .A(B[7]), .Z(\B_not[7] ) );
+  N1M1P U6 ( .A(B[6]), .Z(\B_not[6] ) );
+  N1M1P U7 ( .A(B[5]), .Z(\B_not[5] ) );
+  N1M1P U8 ( .A(B[4]), .Z(\B_not[4] ) );
+  N1M1P U9 ( .A(B[3]), .Z(\B_not[3] ) );
+  N1M1P U10 ( .A(B[2]), .Z(\B_not[2] ) );
+  N1M1P U11 ( .A(B[1]), .Z(\B_not[1] ) );
+  N1M1P U12 ( .A(B[15]), .Z(\B_not[15] ) );
+  N1M1P U13 ( .A(B[14]), .Z(\B_not[14] ) );
+  N1M1P U14 ( .A(B[13]), .Z(\B_not[13] ) );
+  N1M1P U15 ( .A(B[12]), .Z(\B_not[12] ) );
+  N1M1P U16 ( .A(B[11]), .Z(\B_not[11] ) );
+  N1M1P U17 ( .A(B[10]), .Z(\B_not[10] ) );
+  N1M1P U18 ( .A(B[0]), .Z(\B_not[0] ) );
+endmodule
+
+
+module ALU_DW01_dec_0 ( A, SUM );
+  input [15:0] A;
+  output [15:0] SUM;
+  wire   n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16,
+         n17, n18, n19, n20, n21, n22, n23, n24, n25, n26, n27, n28;
+
+  AO21M1P U1 ( .A(n1), .B(A[9]), .C(n2), .Z(SUM[9]) );
+  AO21M1P U2 ( .A(n3), .B(A[8]), .C(n4), .Z(SUM[8]) );
+  AO21M1P U3 ( .A(n5), .B(A[7]), .C(n6), .Z(SUM[7]) );
+  AO21M1P U4 ( .A(n7), .B(A[6]), .C(n8), .Z(SUM[6]) );
+  AO21M1P U5 ( .A(n9), .B(A[5]), .C(n10), .Z(SUM[5]) );
+  AO21M1P U6 ( .A(n11), .B(A[4]), .C(n12), .Z(SUM[4]) );
+  AO21M1P U7 ( .A(n13), .B(A[3]), .C(n14), .Z(SUM[3]) );
+  AO21M1P U8 ( .A(n15), .B(A[2]), .C(n16), .Z(SUM[2]) );
+  AO21M1P U9 ( .A(A[0]), .B(A[1]), .C(n17), .Z(SUM[1]) );
+  EOFM1P U10 ( .A(A[15]), .B(n18), .Z(SUM[15]) );
+  NR2M1P U11 ( .A(A[14]), .B(n19), .Z(n18) );
+  EOFM1P U12 ( .A(A[14]), .B(n20), .Z(SUM[14]) );
+  AO21CNM1P U13 ( .A(n21), .B(A[13]), .C(n19), .Z(SUM[13]) );
+  N1M1P U14 ( .A(n20), .Z(n19) );
+  NR2M1P U15 ( .A(n21), .B(A[13]), .Z(n20) );
+  OAI21M1P U16 ( .A(n22), .B(n23), .C(n21), .Z(SUM[12]) );
+  ND2M1P U17 ( .A(n22), .B(n23), .Z(n21) );
+  N1M1P U18 ( .A(A[12]), .Z(n23) );
+  N1M1P U19 ( .A(n24), .Z(n22) );
+  OAI21M1P U20 ( .A(n25), .B(n26), .C(n24), .Z(SUM[11]) );
+  ND2M1P U21 ( .A(n25), .B(n26), .Z(n24) );
+  N1M1P U22 ( .A(A[11]), .Z(n26) );
+  N1M1P U23 ( .A(n27), .Z(n25) );
+  OAI21M1P U24 ( .A(n2), .B(n28), .C(n27), .Z(SUM[10]) );
+  ND2M1P U25 ( .A(n2), .B(n28), .Z(n27) );
+  N1M1P U26 ( .A(A[10]), .Z(n28) );
+  NR2M1P U27 ( .A(n1), .B(A[9]), .Z(n2) );
+  N1M1P U28 ( .A(n4), .Z(n1) );
+  NR2M1P U29 ( .A(n3), .B(A[8]), .Z(n4) );
+  N1M1P U30 ( .A(n6), .Z(n3) );
+  NR2M1P U31 ( .A(n5), .B(A[7]), .Z(n6) );
+  N1M1P U32 ( .A(n8), .Z(n5) );
+  NR2M1P U33 ( .A(n7), .B(A[6]), .Z(n8) );
+  N1M1P U34 ( .A(n10), .Z(n7) );
+  NR2M1P U35 ( .A(n9), .B(A[5]), .Z(n10) );
+  N1M1P U36 ( .A(n12), .Z(n9) );
+  NR2M1P U37 ( .A(n11), .B(A[4]), .Z(n12) );
+  N1M1P U38 ( .A(n14), .Z(n11) );
+  NR2M1P U39 ( .A(n13), .B(A[3]), .Z(n14) );
+  N1M1P U40 ( .A(n16), .Z(n13) );
+  NR2M1P U41 ( .A(n15), .B(A[2]), .Z(n16) );
+  N1M1P U42 ( .A(n17), .Z(n15) );
+  NR2M1P U43 ( .A(A[1]), .B(A[0]), .Z(n17) );
+  N1M1P U44 ( .A(A[0]), .Z(SUM[0]) );
+endmodule
+
+
+module PRGRM_CNT_DW01_inc_0 ( A, SUM );
+  input [7:0] A;
+  output [7:0] SUM;
+  wire   \carry[7] , \carry[6] , \carry[5] , \carry[4] , \carry[3] ,
+         \carry[2] ;
+
+  HA1M1P U1_1_6 ( .A(A[6]), .B(\carry[6] ), .CO(\carry[7] ), .S(SUM[6]) );
+  HA1M1P U1_1_5 ( .A(A[5]), .B(\carry[5] ), .CO(\carry[6] ), .S(SUM[5]) );
+  HA1M1P U1_1_4 ( .A(A[4]), .B(\carry[4] ), .CO(\carry[5] ), .S(SUM[4]) );
+  HA1M1P U1_1_3 ( .A(A[3]), .B(\carry[3] ), .CO(\carry[4] ), .S(SUM[3]) );
+  HA1M1P U1_1_2 ( .A(A[2]), .B(\carry[2] ), .CO(\carry[3] ), .S(SUM[2]) );
+  HA1M1P U1_1_1 ( .A(A[1]), .B(A[0]), .CO(\carry[2] ), .S(SUM[1]) );
+  EOFM1P U1 ( .A(\carry[7] ), .B(A[7]), .Z(SUM[7]) );
+  N1M1P U2 ( .A(A[0]), .Z(SUM[0]) );
+endmodule
+
+
+module STACK_MEM_2 ( Clk, PushEnbl, PopEnbl, Stack_Full, TOS, PushDataIn, 
+        PopDataOut );
+  input [0:2] TOS;
+  input [3:0] PushDataIn;
+  output [3:0] PopDataOut;
+  input Clk, PushEnbl, PopEnbl, Stack_Full;
+  wire   \Stack_Mem[0][3] , \Stack_Mem[0][2] , \Stack_Mem[0][1] ,
+         \Stack_Mem[0][0] , \Stack_Mem[1][3] , \Stack_Mem[1][2] ,
+         \Stack_Mem[1][1] , \Stack_Mem[1][0] , \Stack_Mem[2][3] ,
+         \Stack_Mem[2][2] , \Stack_Mem[2][1] , \Stack_Mem[2][0] ,
+         \Stack_Mem[3][3] , \Stack_Mem[3][2] , \Stack_Mem[3][1] ,
+         \Stack_Mem[3][0] , \Stack_Mem[4][3] , \Stack_Mem[4][2] ,
+         \Stack_Mem[4][1] , \Stack_Mem[4][0] , \Stack_Mem[5][3] ,
+         \Stack_Mem[5][2] , \Stack_Mem[5][1] , \Stack_Mem[5][0] ,
+         \Stack_Mem[6][3] , \Stack_Mem[6][2] , \Stack_Mem[6][1] ,
+         \Stack_Mem[6][0] , \Stack_Mem[7][3] , \Stack_Mem[7][2] ,
+         \Stack_Mem[7][1] , \Stack_Mem[7][0] , N32, N36, N40, N44, N48, N52,
+         N56, N60, N76, N77, N78, N79, n1, n39, n40, n41, n42, n43, n44, n45,
+         n46, n47, n48, n49, n50, n51, n52, n53, n54, n55, n56, n57, n58, n59,
+         n60, n61, n62, n63, n64, n65, n66, n67, n68, n69, n70, n71, n72, n73,
+         n74, n75, n76;
+
+  AND4M1P U48 ( .A(PushEnbl), .B(n1), .C(n40), .D(n41), .Z(N56) );
+  AND4M1P U49 ( .A(PushEnbl), .B(TOS[1]), .C(n40), .D(n39), .Z(N52) );
+  AND4M1P U50 ( .A(PushEnbl), .B(n1), .C(TOS[1]), .D(n40), .Z(N48) );
+  AND4M1P U51 ( .A(PushEnbl), .B(TOS[0]), .C(n41), .D(n39), .Z(N44) );
+  AND4M1P U52 ( .A(PushEnbl), .B(n1), .C(TOS[0]), .D(n41), .Z(N40) );
+  FD1LQM1P \PopDataOut_reg[3]  ( .D(N76), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[3]) );
+  FD1LQM1P \PopDataOut_reg[2]  ( .D(N77), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[2]) );
+  FD1LQM1P \PopDataOut_reg[1]  ( .D(N78), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[1]) );
+  FD1LQM1P \PopDataOut_reg[0]  ( .D(N79), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[0]) );
+  FD1LQM1P \Stack_Mem_reg[0][3]  ( .D(PushDataIn[3]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][3] ) );
+  FD1LQM1P \Stack_Mem_reg[0][2]  ( .D(PushDataIn[2]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][2] ) );
+  FD1LQM1P \Stack_Mem_reg[0][1]  ( .D(PushDataIn[1]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][1] ) );
+  FD1LQM1P \Stack_Mem_reg[0][0]  ( .D(PushDataIn[0]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][0] ) );
+  FD1LQM1P \Stack_Mem_reg[2][3]  ( .D(PushDataIn[3]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][3] ) );
+  FD1LQM1P \Stack_Mem_reg[2][2]  ( .D(PushDataIn[2]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][2] ) );
+  FD1LQM1P \Stack_Mem_reg[2][1]  ( .D(PushDataIn[1]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][1] ) );
+  FD1LQM1P \Stack_Mem_reg[2][0]  ( .D(PushDataIn[0]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][0] ) );
+  FD1LQM1P \Stack_Mem_reg[4][3]  ( .D(PushDataIn[3]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][3] ) );
+  FD1LQM1P \Stack_Mem_reg[4][2]  ( .D(PushDataIn[2]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][2] ) );
+  FD1LQM1P \Stack_Mem_reg[4][1]  ( .D(PushDataIn[1]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][1] ) );
+  FD1LQM1P \Stack_Mem_reg[4][0]  ( .D(PushDataIn[0]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][0] ) );
+  FD1LQM1P \Stack_Mem_reg[6][3]  ( .D(PushDataIn[3]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][3] ) );
+  FD1LQM1P \Stack_Mem_reg[6][2]  ( .D(PushDataIn[2]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][2] ) );
+  FD1LQM1P \Stack_Mem_reg[6][1]  ( .D(PushDataIn[1]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][1] ) );
+  FD1LQM1P \Stack_Mem_reg[6][0]  ( .D(PushDataIn[0]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][0] ) );
+  FD1LQM1P \Stack_Mem_reg[1][3]  ( .D(PushDataIn[3]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][3] ) );
+  FD1LQM1P \Stack_Mem_reg[1][2]  ( .D(PushDataIn[2]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][2] ) );
+  FD1LQM1P \Stack_Mem_reg[1][1]  ( .D(PushDataIn[1]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][1] ) );
+  FD1LQM1P \Stack_Mem_reg[1][0]  ( .D(PushDataIn[0]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][0] ) );
+  FD1LQM1P \Stack_Mem_reg[3][3]  ( .D(PushDataIn[3]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][3] ) );
+  FD1LQM1P \Stack_Mem_reg[3][2]  ( .D(PushDataIn[2]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][2] ) );
+  FD1LQM1P \Stack_Mem_reg[3][1]  ( .D(PushDataIn[1]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][1] ) );
+  FD1LQM1P \Stack_Mem_reg[3][0]  ( .D(PushDataIn[0]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][0] ) );
+  FD1LQM1P \Stack_Mem_reg[5][3]  ( .D(PushDataIn[3]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][3] ) );
+  FD1LQM1P \Stack_Mem_reg[5][2]  ( .D(PushDataIn[2]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][2] ) );
+  FD1LQM1P \Stack_Mem_reg[5][1]  ( .D(PushDataIn[1]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][1] ) );
+  FD1LQM1P \Stack_Mem_reg[5][0]  ( .D(PushDataIn[0]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][0] ) );
+  FD1LQM1P \Stack_Mem_reg[7][3]  ( .D(PushDataIn[3]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][3] ) );
+  FD1LQM1P \Stack_Mem_reg[7][2]  ( .D(PushDataIn[2]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][2] ) );
+  FD1LQM1P \Stack_Mem_reg[7][1]  ( .D(PushDataIn[1]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][1] ) );
+  FD1LQM1P \Stack_Mem_reg[7][0]  ( .D(PushDataIn[0]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][0] ) );
+  AOI21M1P U3 ( .A(Stack_Full), .B(n1), .C(n42), .Z(n49) );
+  NR3M1P U4 ( .A(TOS[1]), .B(n1), .C(TOS[0]), .Z(n43) );
+  AND3M1P U5 ( .A(PushEnbl), .B(n1), .C(n45), .Z(N32) );
+  AOI211M1P U6 ( .A(n46), .B(TOS[0]), .C(n45), .D(n44), .Z(n51) );
+  NR2M1P U7 ( .A(n1), .B(Stack_Full), .Z(n42) );
+  N1M1P U8 ( .A(n39), .Z(n1) );
+  N1M1P U9 ( .A(TOS[2]), .Z(n39) );
+  NR3M1P U10 ( .A(n48), .B(n50), .C(n47), .Z(n65) );
+  NR3M1P U11 ( .A(n50), .B(n52), .C(n47), .Z(n67) );
+  N1M1P U12 ( .A(n48), .Z(n52) );
+  NR3M1P U13 ( .A(n49), .B(n51), .C(n52), .Z(n72) );
+  NR3M1P U14 ( .A(n49), .B(n51), .C(n48), .Z(n70) );
+  NR3M1P U15 ( .A(n48), .B(n49), .C(n47), .Z(n66) );
+  NR3M1P U16 ( .A(n52), .B(n49), .C(n47), .Z(n68) );
+  NR3M1P U17 ( .A(n52), .B(n51), .C(n50), .Z(n71) );
+  NR3M1P U18 ( .A(n50), .B(n51), .C(n48), .Z(n69) );
+  ENFM1P U19 ( .A(n41), .B(n42), .Z(n48) );
+  N1M1P U20 ( .A(n51), .Z(n47) );
+  NR2M1P U21 ( .A(n41), .B(n40), .Z(n45) );
+  AND3M1P U22 ( .A(PushEnbl), .B(n39), .C(n45), .Z(N36) );
+  N1M1P U23 ( .A(n49), .Z(n50) );
+  AND2M1P U24 ( .A(PushEnbl), .B(n43), .Z(N60) );
+  N1M1P U25 ( .A(n42), .Z(n46) );
+  NR2BNM1P U26 ( .B(n43), .A(Stack_Full), .Z(n44) );
+  N1M1P U27 ( .A(TOS[0]), .Z(n40) );
+  N1M1P U28 ( .A(TOS[1]), .Z(n41) );
+  AOI22M1P U29 ( .A(\Stack_Mem[3][0] ), .B(n68), .C(\Stack_Mem[2][0] ), .D(n67), .Z(n75) );
+  AOI22M1P U30 ( .A(\Stack_Mem[3][1] ), .B(n68), .C(\Stack_Mem[2][1] ), .D(n67), .Z(n63) );
+  AOI22M1P U31 ( .A(\Stack_Mem[3][2] ), .B(n68), .C(\Stack_Mem[2][2] ), .D(n67), .Z(n59) );
+  AOI22M1P U32 ( .A(\Stack_Mem[3][3] ), .B(n68), .C(\Stack_Mem[2][3] ), .D(n67), .Z(n55) );
+  ND4M1P U33 ( .A(n76), .B(n75), .C(n74), .D(n73), .Z(N79) );
+  AOI22M1P U34 ( .A(\Stack_Mem[5][0] ), .B(n70), .C(\Stack_Mem[4][0] ), .D(n69), .Z(n74) );
+  AOI22M1P U35 ( .A(\Stack_Mem[7][0] ), .B(n72), .C(\Stack_Mem[6][0] ), .D(n71), .Z(n73) );
+  AOI22M1P U36 ( .A(\Stack_Mem[1][0] ), .B(n66), .C(\Stack_Mem[0][0] ), .D(n65), .Z(n76) );
+  ND4M1P U37 ( .A(n64), .B(n63), .C(n62), .D(n61), .Z(N78) );
+  AOI22M1P U38 ( .A(\Stack_Mem[5][1] ), .B(n70), .C(\Stack_Mem[4][1] ), .D(n69), .Z(n62) );
+  AOI22M1P U39 ( .A(\Stack_Mem[7][1] ), .B(n72), .C(\Stack_Mem[6][1] ), .D(n71), .Z(n61) );
+  AOI22M1P U40 ( .A(\Stack_Mem[1][1] ), .B(n66), .C(\Stack_Mem[0][1] ), .D(n65), .Z(n64) );
+  ND4M1P U41 ( .A(n60), .B(n59), .C(n58), .D(n57), .Z(N77) );
+  AOI22M1P U42 ( .A(\Stack_Mem[5][2] ), .B(n70), .C(\Stack_Mem[4][2] ), .D(n69), .Z(n58) );
+  AOI22M1P U43 ( .A(\Stack_Mem[7][2] ), .B(n72), .C(\Stack_Mem[6][2] ), .D(n71), .Z(n57) );
+  AOI22M1P U44 ( .A(\Stack_Mem[1][2] ), .B(n66), .C(\Stack_Mem[0][2] ), .D(n65), .Z(n60) );
+  ND4M1P U45 ( .A(n56), .B(n55), .C(n54), .D(n53), .Z(N76) );
+  AOI22M1P U46 ( .A(\Stack_Mem[5][3] ), .B(n70), .C(\Stack_Mem[4][3] ), .D(n69), .Z(n54) );
+  AOI22M1P U47 ( .A(\Stack_Mem[7][3] ), .B(n72), .C(\Stack_Mem[6][3] ), .D(n71), .Z(n53) );
+  AOI22M1P U53 ( .A(\Stack_Mem[1][3] ), .B(n66), .C(\Stack_Mem[0][3] ), .D(n65), .Z(n56) );
+endmodule
+
+
+module STACK_MEM_1 ( Clk, PushEnbl, PopEnbl, Stack_Full, TOS, PushDataIn, 
+        PopDataOut );
+  input [0:2] TOS;
+  input [3:0] PushDataIn;
+  output [3:0] PopDataOut;
+  input Clk, PushEnbl, PopEnbl, Stack_Full;
+  wire   \Stack_Mem[0][3] , \Stack_Mem[0][2] , \Stack_Mem[0][1] ,
+         \Stack_Mem[0][0] , \Stack_Mem[1][3] , \Stack_Mem[1][2] ,
+         \Stack_Mem[1][1] , \Stack_Mem[1][0] , \Stack_Mem[2][3] ,
+         \Stack_Mem[2][2] , \Stack_Mem[2][1] , \Stack_Mem[2][0] ,
+         \Stack_Mem[3][3] , \Stack_Mem[3][2] , \Stack_Mem[3][1] ,
+         \Stack_Mem[3][0] , \Stack_Mem[4][3] , \Stack_Mem[4][2] ,
+         \Stack_Mem[4][1] , \Stack_Mem[4][0] , \Stack_Mem[5][3] ,
+         \Stack_Mem[5][2] , \Stack_Mem[5][1] , \Stack_Mem[5][0] ,
+         \Stack_Mem[6][3] , \Stack_Mem[6][2] , \Stack_Mem[6][1] ,
+         \Stack_Mem[6][0] , \Stack_Mem[7][3] , \Stack_Mem[7][2] ,
+         \Stack_Mem[7][1] , \Stack_Mem[7][0] , N32, N36, N40, N44, N48, N52,
+         N56, N60, N76, N77, N78, N79, n1, n39, n40, n41, n42, n43, n44, n45,
+         n46, n47, n48, n49, n50, n51, n52, n53, n54, n55, n56, n57, n58, n59,
+         n60, n61, n62, n63, n64, n65, n66, n67, n68, n69, n70, n71, n72, n73,
+         n74, n75, n76;
+
+  AND4M1P U48 ( .A(PushEnbl), .B(n1), .C(n40), .D(n41), .Z(N56) );
+  AND4M1P U49 ( .A(PushEnbl), .B(TOS[1]), .C(n40), .D(n39), .Z(N52) );
+  AND4M1P U50 ( .A(PushEnbl), .B(n1), .C(TOS[1]), .D(n40), .Z(N48) );
+  AND4M1P U51 ( .A(PushEnbl), .B(TOS[0]), .C(n41), .D(n39), .Z(N44) );
+  AND4M1P U52 ( .A(PushEnbl), .B(n1), .C(TOS[0]), .D(n41), .Z(N40) );
+  FD1LQM1P \PopDataOut_reg[2]  ( .D(N77), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[2]) );
+  FD1LQM1P \PopDataOut_reg[1]  ( .D(N78), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[1]) );
+  FD1LQM1P \PopDataOut_reg[0]  ( .D(N79), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[0]) );
+  FD1LQM1P \Stack_Mem_reg[0][3]  ( .D(PushDataIn[3]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][3] ) );
+  FD1LQM1P \Stack_Mem_reg[0][2]  ( .D(PushDataIn[2]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][2] ) );
+  FD1LQM1P \Stack_Mem_reg[0][1]  ( .D(PushDataIn[1]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][1] ) );
+  FD1LQM1P \Stack_Mem_reg[0][0]  ( .D(PushDataIn[0]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][0] ) );
+  FD1LQM1P \Stack_Mem_reg[2][3]  ( .D(PushDataIn[3]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][3] ) );
+  FD1LQM1P \Stack_Mem_reg[2][2]  ( .D(PushDataIn[2]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][2] ) );
+  FD1LQM1P \Stack_Mem_reg[2][1]  ( .D(PushDataIn[1]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][1] ) );
+  FD1LQM1P \Stack_Mem_reg[2][0]  ( .D(PushDataIn[0]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][0] ) );
+  FD1LQM1P \Stack_Mem_reg[4][3]  ( .D(PushDataIn[3]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][3] ) );
+  FD1LQM1P \Stack_Mem_reg[4][2]  ( .D(PushDataIn[2]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][2] ) );
+  FD1LQM1P \Stack_Mem_reg[4][1]  ( .D(PushDataIn[1]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][1] ) );
+  FD1LQM1P \Stack_Mem_reg[4][0]  ( .D(PushDataIn[0]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][0] ) );
+  FD1LQM1P \Stack_Mem_reg[6][3]  ( .D(PushDataIn[3]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][3] ) );
+  FD1LQM1P \Stack_Mem_reg[6][2]  ( .D(PushDataIn[2]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][2] ) );
+  FD1LQM1P \Stack_Mem_reg[6][1]  ( .D(PushDataIn[1]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][1] ) );
+  FD1LQM1P \Stack_Mem_reg[6][0]  ( .D(PushDataIn[0]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][0] ) );
+  FD1LQM1P \Stack_Mem_reg[1][3]  ( .D(PushDataIn[3]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][3] ) );
+  FD1LQM1P \Stack_Mem_reg[1][2]  ( .D(PushDataIn[2]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][2] ) );
+  FD1LQM1P \Stack_Mem_reg[1][1]  ( .D(PushDataIn[1]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][1] ) );
+  FD1LQM1P \Stack_Mem_reg[1][0]  ( .D(PushDataIn[0]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][0] ) );
+  FD1LQM1P \Stack_Mem_reg[3][3]  ( .D(PushDataIn[3]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][3] ) );
+  FD1LQM1P \Stack_Mem_reg[3][2]  ( .D(PushDataIn[2]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][2] ) );
+  FD1LQM1P \Stack_Mem_reg[3][1]  ( .D(PushDataIn[1]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][1] ) );
+  FD1LQM1P \Stack_Mem_reg[3][0]  ( .D(PushDataIn[0]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][0] ) );
+  FD1LQM1P \Stack_Mem_reg[5][3]  ( .D(PushDataIn[3]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][3] ) );
+  FD1LQM1P \Stack_Mem_reg[5][2]  ( .D(PushDataIn[2]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][2] ) );
+  FD1LQM1P \Stack_Mem_reg[5][1]  ( .D(PushDataIn[1]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][1] ) );
+  FD1LQM1P \Stack_Mem_reg[5][0]  ( .D(PushDataIn[0]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][0] ) );
+  FD1LQM1P \Stack_Mem_reg[7][3]  ( .D(PushDataIn[3]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][3] ) );
+  FD1LQM1P \Stack_Mem_reg[7][2]  ( .D(PushDataIn[2]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][2] ) );
+  FD1LQM1P \Stack_Mem_reg[7][1]  ( .D(PushDataIn[1]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][1] ) );
+  FD1LQM1P \Stack_Mem_reg[7][0]  ( .D(PushDataIn[0]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][0] ) );
+  FD1LQM1P \PopDataOut_reg[3]  ( .D(N76), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[3]) );
+  AOI21M1P U3 ( .A(Stack_Full), .B(n1), .C(n42), .Z(n49) );
+  NR3M1P U4 ( .A(TOS[1]), .B(n1), .C(TOS[0]), .Z(n43) );
+  AND3M1P U5 ( .A(PushEnbl), .B(n1), .C(n45), .Z(N32) );
+  AOI211M1P U6 ( .A(n46), .B(TOS[0]), .C(n45), .D(n44), .Z(n51) );
+  NR2M1P U7 ( .A(n1), .B(Stack_Full), .Z(n42) );
+  N1M1P U8 ( .A(n39), .Z(n1) );
+  N1M1P U9 ( .A(TOS[2]), .Z(n39) );
+  NR3M1P U10 ( .A(n48), .B(n50), .C(n47), .Z(n65) );
+  NR3M1P U11 ( .A(n50), .B(n52), .C(n47), .Z(n67) );
+  N1M1P U12 ( .A(n48), .Z(n52) );
+  NR3M1P U13 ( .A(n49), .B(n51), .C(n52), .Z(n72) );
+  NR3M1P U14 ( .A(n49), .B(n51), .C(n48), .Z(n70) );
+  NR3M1P U15 ( .A(n48), .B(n49), .C(n47), .Z(n66) );
+  NR3M1P U16 ( .A(n52), .B(n49), .C(n47), .Z(n68) );
+  NR3M1P U17 ( .A(n52), .B(n51), .C(n50), .Z(n71) );
+  NR3M1P U18 ( .A(n50), .B(n51), .C(n48), .Z(n69) );
+  ENFM1P U19 ( .A(n41), .B(n42), .Z(n48) );
+  N1M1P U20 ( .A(n51), .Z(n47) );
+  NR2M1P U21 ( .A(n41), .B(n40), .Z(n45) );
+  AND3M1P U22 ( .A(PushEnbl), .B(n39), .C(n45), .Z(N36) );
+  N1M1P U23 ( .A(n49), .Z(n50) );
+  AND2M1P U24 ( .A(PushEnbl), .B(n43), .Z(N60) );
+  N1M1P U25 ( .A(n42), .Z(n46) );
+  NR2BNM1P U26 ( .B(n43), .A(Stack_Full), .Z(n44) );
+  N1M1P U27 ( .A(TOS[0]), .Z(n40) );
+  N1M1P U28 ( .A(TOS[1]), .Z(n41) );
+  AOI22M1P U29 ( .A(\Stack_Mem[3][0] ), .B(n68), .C(\Stack_Mem[2][0] ), .D(n67), .Z(n75) );
+  AOI22M1P U30 ( .A(\Stack_Mem[3][1] ), .B(n68), .C(\Stack_Mem[2][1] ), .D(n67), .Z(n63) );
+  AOI22M1P U31 ( .A(\Stack_Mem[3][2] ), .B(n68), .C(\Stack_Mem[2][2] ), .D(n67), .Z(n59) );
+  AOI22M1P U32 ( .A(\Stack_Mem[3][3] ), .B(n68), .C(\Stack_Mem[2][3] ), .D(n67), .Z(n55) );
+  ND4M1P U33 ( .A(n76), .B(n75), .C(n74), .D(n73), .Z(N79) );
+  AOI22M1P U34 ( .A(\Stack_Mem[5][0] ), .B(n70), .C(\Stack_Mem[4][0] ), .D(n69), .Z(n74) );
+  AOI22M1P U35 ( .A(\Stack_Mem[7][0] ), .B(n72), .C(\Stack_Mem[6][0] ), .D(n71), .Z(n73) );
+  AOI22M1P U36 ( .A(\Stack_Mem[1][0] ), .B(n66), .C(\Stack_Mem[0][0] ), .D(n65), .Z(n76) );
+  ND4M1P U37 ( .A(n64), .B(n63), .C(n62), .D(n61), .Z(N78) );
+  AOI22M1P U38 ( .A(\Stack_Mem[5][1] ), .B(n70), .C(\Stack_Mem[4][1] ), .D(n69), .Z(n62) );
+  AOI22M1P U39 ( .A(\Stack_Mem[7][1] ), .B(n72), .C(\Stack_Mem[6][1] ), .D(n71), .Z(n61) );
+  AOI22M1P U40 ( .A(\Stack_Mem[1][1] ), .B(n66), .C(\Stack_Mem[0][1] ), .D(n65), .Z(n64) );
+  ND4M1P U41 ( .A(n60), .B(n59), .C(n58), .D(n57), .Z(N77) );
+  AOI22M1P U42 ( .A(\Stack_Mem[5][2] ), .B(n70), .C(\Stack_Mem[4][2] ), .D(n69), .Z(n58) );
+  AOI22M1P U43 ( .A(\Stack_Mem[7][2] ), .B(n72), .C(\Stack_Mem[6][2] ), .D(n71), .Z(n57) );
+  AOI22M1P U44 ( .A(\Stack_Mem[1][2] ), .B(n66), .C(\Stack_Mem[0][2] ), .D(n65), .Z(n60) );
+  ND4M1P U45 ( .A(n56), .B(n55), .C(n54), .D(n53), .Z(N76) );
+  AOI22M1P U46 ( .A(\Stack_Mem[5][3] ), .B(n70), .C(\Stack_Mem[4][3] ), .D(n69), .Z(n54) );
+  AOI22M1P U47 ( .A(\Stack_Mem[7][3] ), .B(n72), .C(\Stack_Mem[6][3] ), .D(n71), .Z(n53) );
+  AOI22M1P U53 ( .A(\Stack_Mem[1][3] ), .B(n66), .C(\Stack_Mem[0][3] ), .D(n65), .Z(n56) );
+endmodule
+
+
+module STACK_MEM_0 ( Clk, PushEnbl, PopEnbl, Stack_Full, TOS, PushDataIn, 
+        PopDataOut );
+  input [0:2] TOS;
+  input [3:0] PushDataIn;
+  output [3:0] PopDataOut;
+  input Clk, PushEnbl, PopEnbl, Stack_Full;
+  wire   \Stack_Mem[0][3] , \Stack_Mem[0][2] , \Stack_Mem[0][1] ,
+         \Stack_Mem[0][0] , \Stack_Mem[1][3] , \Stack_Mem[1][2] ,
+         \Stack_Mem[1][1] , \Stack_Mem[1][0] , \Stack_Mem[2][3] ,
+         \Stack_Mem[2][2] , \Stack_Mem[2][1] , \Stack_Mem[2][0] ,
+         \Stack_Mem[3][3] , \Stack_Mem[3][2] , \Stack_Mem[3][1] ,
+         \Stack_Mem[3][0] , \Stack_Mem[4][3] , \Stack_Mem[4][2] ,
+         \Stack_Mem[4][1] , \Stack_Mem[4][0] , \Stack_Mem[5][3] ,
+         \Stack_Mem[5][2] , \Stack_Mem[5][1] , \Stack_Mem[5][0] ,
+         \Stack_Mem[6][3] , \Stack_Mem[6][2] , \Stack_Mem[6][1] ,
+         \Stack_Mem[6][0] , \Stack_Mem[7][3] , \Stack_Mem[7][2] ,
+         \Stack_Mem[7][1] , \Stack_Mem[7][0] , N32, N36, N40, N44, N48, N52,
+         N56, N60, N76, N77, N78, N79, n2, n3, n4, n5, n6, n7, n8, n9, n10,
+         n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, n24,
+         n25, n26, n27, n28, n29, n30, n31, n32, n33, n34, n35, n36, n37, n38,
+         n1, n39;
+
+  AND4M1P U48 ( .A(PushEnbl), .B(n1), .C(n38), .D(n37), .Z(N56) );
+  AND4M1P U49 ( .A(PushEnbl), .B(TOS[1]), .C(n38), .D(n39), .Z(N52) );
+  AND4M1P U50 ( .A(PushEnbl), .B(n1), .C(TOS[1]), .D(n38), .Z(N48) );
+  AND4M1P U51 ( .A(PushEnbl), .B(TOS[0]), .C(n37), .D(n39), .Z(N44) );
+  AND4M1P U52 ( .A(PushEnbl), .B(n1), .C(TOS[0]), .D(n37), .Z(N40) );
+  FD1LQM1P \PopDataOut_reg[3]  ( .D(N76), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[3]) );
+  FD1LQM1P \PopDataOut_reg[2]  ( .D(N77), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[2]) );
+  FD1LQM1P \PopDataOut_reg[1]  ( .D(N78), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[1]) );
+  FD1LQM1P \PopDataOut_reg[0]  ( .D(N79), .LD(PopEnbl), .CP(Clk), .Q(
+        PopDataOut[0]) );
+  FD1LQM1P \Stack_Mem_reg[0][3]  ( .D(PushDataIn[3]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][3] ) );
+  FD1LQM1P \Stack_Mem_reg[0][2]  ( .D(PushDataIn[2]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][2] ) );
+  FD1LQM1P \Stack_Mem_reg[0][1]  ( .D(PushDataIn[1]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][1] ) );
+  FD1LQM1P \Stack_Mem_reg[0][0]  ( .D(PushDataIn[0]), .LD(N60), .CP(Clk), .Q(
+        \Stack_Mem[0][0] ) );
+  FD1LQM1P \Stack_Mem_reg[2][3]  ( .D(PushDataIn[3]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][3] ) );
+  FD1LQM1P \Stack_Mem_reg[2][2]  ( .D(PushDataIn[2]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][2] ) );
+  FD1LQM1P \Stack_Mem_reg[2][1]  ( .D(PushDataIn[1]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][1] ) );
+  FD1LQM1P \Stack_Mem_reg[2][0]  ( .D(PushDataIn[0]), .LD(N52), .CP(Clk), .Q(
+        \Stack_Mem[2][0] ) );
+  FD1LQM1P \Stack_Mem_reg[4][3]  ( .D(PushDataIn[3]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][3] ) );
+  FD1LQM1P \Stack_Mem_reg[4][2]  ( .D(PushDataIn[2]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][2] ) );
+  FD1LQM1P \Stack_Mem_reg[4][1]  ( .D(PushDataIn[1]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][1] ) );
+  FD1LQM1P \Stack_Mem_reg[4][0]  ( .D(PushDataIn[0]), .LD(N44), .CP(Clk), .Q(
+        \Stack_Mem[4][0] ) );
+  FD1LQM1P \Stack_Mem_reg[6][3]  ( .D(PushDataIn[3]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][3] ) );
+  FD1LQM1P \Stack_Mem_reg[6][2]  ( .D(PushDataIn[2]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][2] ) );
+  FD1LQM1P \Stack_Mem_reg[6][1]  ( .D(PushDataIn[1]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][1] ) );
+  FD1LQM1P \Stack_Mem_reg[6][0]  ( .D(PushDataIn[0]), .LD(N36), .CP(Clk), .Q(
+        \Stack_Mem[6][0] ) );
+  FD1LQM1P \Stack_Mem_reg[1][3]  ( .D(PushDataIn[3]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][3] ) );
+  FD1LQM1P \Stack_Mem_reg[1][2]  ( .D(PushDataIn[2]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][2] ) );
+  FD1LQM1P \Stack_Mem_reg[1][1]  ( .D(PushDataIn[1]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][1] ) );
+  FD1LQM1P \Stack_Mem_reg[1][0]  ( .D(PushDataIn[0]), .LD(N56), .CP(Clk), .Q(
+        \Stack_Mem[1][0] ) );
+  FD1LQM1P \Stack_Mem_reg[3][3]  ( .D(PushDataIn[3]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][3] ) );
+  FD1LQM1P \Stack_Mem_reg[3][2]  ( .D(PushDataIn[2]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][2] ) );
+  FD1LQM1P \Stack_Mem_reg[3][1]  ( .D(PushDataIn[1]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][1] ) );
+  FD1LQM1P \Stack_Mem_reg[3][0]  ( .D(PushDataIn[0]), .LD(N48), .CP(Clk), .Q(
+        \Stack_Mem[3][0] ) );
+  FD1LQM1P \Stack_Mem_reg[5][3]  ( .D(PushDataIn[3]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][3] ) );
+  FD1LQM1P \Stack_Mem_reg[5][2]  ( .D(PushDataIn[2]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][2] ) );
+  FD1LQM1P \Stack_Mem_reg[5][1]  ( .D(PushDataIn[1]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][1] ) );
+  FD1LQM1P \Stack_Mem_reg[5][0]  ( .D(PushDataIn[0]), .LD(N40), .CP(Clk), .Q(
+        \Stack_Mem[5][0] ) );
+  FD1LQM1P \Stack_Mem_reg[7][3]  ( .D(PushDataIn[3]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][3] ) );
+  FD1LQM1P \Stack_Mem_reg[7][2]  ( .D(PushDataIn[2]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][2] ) );
+  FD1LQM1P \Stack_Mem_reg[7][1]  ( .D(PushDataIn[1]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][1] ) );
+  FD1LQM1P \Stack_Mem_reg[7][0]  ( .D(PushDataIn[0]), .LD(N32), .CP(Clk), .Q(
+        \Stack_Mem[7][0] ) );
+  AOI21M1P U3 ( .A(Stack_Full), .B(n1), .C(n36), .Z(n29) );
+  NR3M1P U4 ( .A(TOS[1]), .B(n1), .C(TOS[0]), .Z(n35) );
+  AND3M1P U5 ( .A(PushEnbl), .B(n1), .C(n33), .Z(N32) );
+  AOI211M1P U6 ( .A(n32), .B(TOS[0]), .C(n33), .D(n34), .Z(n27) );
+  NR2M1P U7 ( .A(n1), .B(Stack_Full), .Z(n36) );
+  N1M1P U8 ( .A(n39), .Z(n1) );
+  N1M1P U9 ( .A(TOS[2]), .Z(n39) );
+  NR3M1P U10 ( .A(n30), .B(n28), .C(n31), .Z(n13) );
+  NR3M1P U11 ( .A(n28), .B(n26), .C(n31), .Z(n11) );
+  N1M1P U12 ( .A(n30), .Z(n26) );
+  NR3M1P U13 ( .A(n29), .B(n27), .C(n26), .Z(n6) );
+  NR3M1P U14 ( .A(n29), .B(n27), .C(n30), .Z(n8) );
+  NR3M1P U15 ( .A(n30), .B(n29), .C(n31), .Z(n12) );
+  NR3M1P U16 ( .A(n26), .B(n29), .C(n31), .Z(n10) );
+  NR3M1P U17 ( .A(n26), .B(n27), .C(n28), .Z(n7) );
+  NR3M1P U18 ( .A(n28), .B(n27), .C(n30), .Z(n9) );
+  ENFM1P U19 ( .A(n37), .B(n36), .Z(n30) );
+  N1M1P U20 ( .A(n27), .Z(n31) );
+  NR2M1P U21 ( .A(n37), .B(n38), .Z(n33) );
+  AND3M1P U22 ( .A(PushEnbl), .B(n39), .C(n33), .Z(N36) );
+  N1M1P U23 ( .A(n29), .Z(n28) );
+  AND2M1P U24 ( .A(PushEnbl), .B(n35), .Z(N60) );
+  N1M1P U25 ( .A(n36), .Z(n32) );
+  NR2BNM1P U26 ( .B(n35), .A(Stack_Full), .Z(n34) );
+  N1M1P U27 ( .A(TOS[0]), .Z(n38) );
+  N1M1P U28 ( .A(TOS[1]), .Z(n37) );
+  AOI22M1P U29 ( .A(\Stack_Mem[3][0] ), .B(n10), .C(\Stack_Mem[2][0] ), .D(n11), .Z(n3) );
+  AOI22M1P U30 ( .A(\Stack_Mem[3][1] ), .B(n10), .C(\Stack_Mem[2][1] ), .D(n11), .Z(n15) );
+  AOI22M1P U31 ( .A(\Stack_Mem[3][2] ), .B(n10), .C(\Stack_Mem[2][2] ), .D(n11), .Z(n19) );
+  AOI22M1P U32 ( .A(\Stack_Mem[3][3] ), .B(n10), .C(\Stack_Mem[2][3] ), .D(n11), .Z(n23) );
+  ND4M1P U33 ( .A(n2), .B(n3), .C(n4), .D(n5), .Z(N79) );
+  AOI22M1P U34 ( .A(\Stack_Mem[5][0] ), .B(n8), .C(\Stack_Mem[4][0] ), .D(n9), 
+        .Z(n4) );
+  AOI22M1P U35 ( .A(\Stack_Mem[7][0] ), .B(n6), .C(\Stack_Mem[6][0] ), .D(n7), 
+        .Z(n5) );
+  AOI22M1P U36 ( .A(\Stack_Mem[1][0] ), .B(n12), .C(\Stack_Mem[0][0] ), .D(n13), .Z(n2) );
+  ND4M1P U37 ( .A(n14), .B(n15), .C(n16), .D(n17), .Z(N78) );
+  AOI22M1P U38 ( .A(\Stack_Mem[5][1] ), .B(n8), .C(\Stack_Mem[4][1] ), .D(n9), 
+        .Z(n16) );
+  AOI22M1P U39 ( .A(\Stack_Mem[7][1] ), .B(n6), .C(\Stack_Mem[6][1] ), .D(n7), 
+        .Z(n17) );
+  AOI22M1P U40 ( .A(\Stack_Mem[1][1] ), .B(n12), .C(\Stack_Mem[0][1] ), .D(n13), .Z(n14) );
+  ND4M1P U41 ( .A(n18), .B(n19), .C(n20), .D(n21), .Z(N77) );
+  AOI22M1P U42 ( .A(\Stack_Mem[5][2] ), .B(n8), .C(\Stack_Mem[4][2] ), .D(n9), 
+        .Z(n20) );
+  AOI22M1P U43 ( .A(\Stack_Mem[7][2] ), .B(n6), .C(\Stack_Mem[6][2] ), .D(n7), 
+        .Z(n21) );
+  AOI22M1P U44 ( .A(\Stack_Mem[1][2] ), .B(n12), .C(\Stack_Mem[0][2] ), .D(n13), .Z(n18) );
+  ND4M1P U45 ( .A(n22), .B(n23), .C(n24), .D(n25), .Z(N76) );
+  AOI22M1P U46 ( .A(\Stack_Mem[5][3] ), .B(n8), .C(\Stack_Mem[4][3] ), .D(n9), 
+        .Z(n24) );
+  AOI22M1P U47 ( .A(\Stack_Mem[7][3] ), .B(n6), .C(\Stack_Mem[6][3] ), .D(n7), 
+        .Z(n25) );
+  AOI22M1P U53 ( .A(\Stack_Mem[1][3] ), .B(n12), .C(\Stack_Mem[0][3] ), .D(n13), .Z(n22) );
+endmodule
+
+
+module STACK_FSM ( Reset, Clk, PushEnbl, PopEnbl, TOS, STACK_FULL );
+  output [0:2] TOS;
+  input Reset, Clk, PushEnbl, PopEnbl;
+  output STACK_FULL;
+  wire   N68, N69, N70, N71, N72, N73, N74, n2, n3, n4, n5, n6, n7, n8, n9,
+         n10, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, n24,
+         n25, n26, n27, n28, n29, n30, n31, n33, n34, n35, n36, n37, n38, n39,
+         n40, n1, n11, n32;
+  wire   [1:0] Crnt_Stack;
+
+  FD1QM1P \TOS_int_reg[2]  ( .D(N71), .CP(Clk), .Q(TOS[2]) );
+  FD1QM1P \Crnt_Stack_reg[0]  ( .D(N69), .CP(Clk), .Q(Crnt_Stack[0]) );
+  FD1QM1P \Crnt_Stack_reg[1]  ( .D(N70), .CP(Clk), .Q(Crnt_Stack[1]) );
+  FD1QM1P \TOS_int_reg[1]  ( .D(N72), .CP(Clk), .Q(TOS[1]) );
+  FD1QM1P \TOS_int_reg[0]  ( .D(N73), .CP(Clk), .Q(TOS[0]) );
+  OAI22CDNM1P U48 ( .A(n31), .B(n32), .C(Crnt_Stack[0]), .D(n25), .Z(n30) );
+  FD1LQM1P STACK_FULL_reg ( .D(N68), .LD(N74), .CP(Clk), .Q(STACK_FULL) );
+  AOI21M1P U3 ( .A(n8), .B(n32), .C(n12), .Z(n9) );
+  ENFM1P U4 ( .A(n24), .B(TOS[2]), .Z(n8) );
+  NR2M1P U5 ( .A(n12), .B(TOS[2]), .Z(n25) );
+  NR2M1P U6 ( .A(n32), .B(n12), .Z(n28) );
+  N1M1P U7 ( .A(n11), .Z(n32) );
+  N1M1P U8 ( .A(n23), .Z(n16) );
+  N1M1P U9 ( .A(n14), .Z(n18) );
+  OAI22M1P U10 ( .A(n2), .B(n3), .C(n4), .D(n5), .Z(N73) );
+  ND2M1P U11 ( .A(n6), .B(N74), .Z(n3) );
+  OAI22M1P U12 ( .A(n7), .B(n8), .C(n9), .D(n10), .Z(n6) );
+  ND2BNM1P U13 ( .B(n28), .A(N74), .Z(n4) );
+  NR3M1P U14 ( .A(PopEnbl), .B(n11), .C(n2), .Z(n29) );
+  AOI211M1P U15 ( .A(n25), .B(n24), .C(n26), .D(n14), .Z(n21) );
+  NR2M1P U16 ( .A(PopEnbl), .B(n24), .Z(n26) );
+  N1M1P U17 ( .A(PopEnbl), .Z(n12) );
+  AOI22M1P U18 ( .A(n13), .B(n14), .C(n15), .D(n32), .Z(n7) );
+  ND2M1P U19 ( .A(n16), .B(n17), .Z(n15) );
+  NR2M1P U20 ( .A(PopEnbl), .B(n32), .Z(n13) );
+  ND3M1P U21 ( .A(n18), .B(n10), .C(PopEnbl), .Z(n17) );
+  BUFM1P U22 ( .A(PushEnbl), .Z(n11) );
+  NR2M1P U23 ( .A(n24), .B(n1), .Z(n14) );
+  NR2M1P U24 ( .A(n18), .B(n10), .Z(n23) );
+  NR2M1P U25 ( .A(n2), .B(n16), .Z(n40) );
+  N1M1P U26 ( .A(Reset), .Z(N74) );
+  NR2M1P U27 ( .A(Reset), .B(n37), .Z(N69) );
+  AOI211M1P U28 ( .A(PopEnbl), .B(n38), .C(n39), .D(n29), .Z(n37) );
+  ND4M1P U29 ( .A(Crnt_Stack[0]), .B(TOS[2]), .C(n10), .D(n24), .Z(n38) );
+  OAI22M1P U30 ( .A(n5), .B(n2), .C(n40), .D(n32), .Z(n39) );
+  NR2M1P U31 ( .A(Reset), .B(n33), .Z(N70) );
+  NR3M1P U32 ( .A(n34), .B(n28), .C(n35), .Z(n33) );
+  ENFM1P U33 ( .A(n5), .B(n36), .Z(n34) );
+  NR3M1P U34 ( .A(n16), .B(n32), .C(n2), .Z(n35) );
+  NR2M1P U35 ( .A(n27), .B(n4), .Z(N71) );
+  AOI211M1P U36 ( .A(n29), .B(TOS[2]), .C(n30), .D(Crnt_Stack[1]), .Z(n27) );
+  NR3M1P U37 ( .A(n2), .B(n23), .C(n1), .Z(n31) );
+  NR2M1P U38 ( .A(n19), .B(n4), .Z(N72) );
+  AOI21M1P U39 ( .A(Crnt_Stack[0]), .B(n20), .C(Crnt_Stack[1]), .Z(n19) );
+  OAI22M1P U40 ( .A(n11), .B(n21), .C(n22), .D(n32), .Z(n20) );
+  NR2M1P U41 ( .A(n23), .B(n8), .Z(n22) );
+  NR2M1P U42 ( .A(Crnt_Stack[0]), .B(n12), .Z(n36) );
+  N1M1P U43 ( .A(TOS[2]), .Z(n1) );
+  N1M1P U44 ( .A(TOS[0]), .Z(n10) );
+  N1M1P U45 ( .A(TOS[1]), .Z(n24) );
+  N1M1P U46 ( .A(Crnt_Stack[0]), .Z(n2) );
+  N1M1P U47 ( .A(Crnt_Stack[1]), .Z(n5) );
+  NR3M1P U49 ( .A(n16), .B(Crnt_Stack[0]), .C(n5), .Z(N68) );
+endmodule
+
+
+module PRGRM_CNT ( Reset, Clk, Incrmnt_PC, Ld_Brnch_Addr, Ld_Rtn_Addr, 
+        Imm_Addr, Return_Addr, PC );
+  input [7:0] Imm_Addr;
+  input [7:0] Return_Addr;
+  output [7:0] PC;
+  input Reset, Clk, Incrmnt_PC, Ld_Brnch_Addr, Ld_Rtn_Addr;
+  wire   N9, N10, N11, N12, N13, N14, N15, N16, N51, N53, N55, N57, N59, N61,
+         N63, N64, N65, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13;
+
+  AO21CNM1P U16 ( .A(Return_Addr[7]), .B(n2), .C(n3), .Z(N65) );
+  AO21CNM1P U17 ( .A(Return_Addr[6]), .B(n2), .C(n6), .Z(N63) );
+  AO21CNM1P U18 ( .A(Return_Addr[5]), .B(n2), .C(n7), .Z(N61) );
+  AO21CNM1P U19 ( .A(Return_Addr[4]), .B(n2), .C(n8), .Z(N59) );
+  AO21CNM1P U20 ( .A(Return_Addr[3]), .B(n2), .C(n9), .Z(N57) );
+  AO21CNM1P U21 ( .A(Return_Addr[2]), .B(n2), .C(n10), .Z(N55) );
+  AO21CNM1P U22 ( .A(Return_Addr[1]), .B(n2), .C(n11), .Z(N53) );
+  AO21CNM1P U23 ( .A(Return_Addr[0]), .B(n2), .C(n12), .Z(N51) );
+  PRGRM_CNT_DW01_inc_0 add_37 ( .A(PC), .SUM({N16, N15, N14, N13, N12, N11, 
+        N10, N9}) );
+  FD1LQM1P \PCint_reg[7]  ( .D(N65), .LD(N64), .CP(Clk), .Q(PC[7]) );
+  FD1LQM1P \PCint_reg[1]  ( .D(N53), .LD(N64), .CP(Clk), .Q(PC[1]) );
+  FD1LQM1P \PCint_reg[2]  ( .D(N55), .LD(N64), .CP(Clk), .Q(PC[2]) );
+  FD1LQM1P \PCint_reg[3]  ( .D(N57), .LD(N64), .CP(Clk), .Q(PC[3]) );
+  FD1LQM1P \PCint_reg[4]  ( .D(N59), .LD(N64), .CP(Clk), .Q(PC[4]) );
+  FD1LQM1P \PCint_reg[5]  ( .D(N61), .LD(N64), .CP(Clk), .Q(PC[5]) );
+  FD1LQM1P \PCint_reg[6]  ( .D(N63), .LD(N64), .CP(Clk), .Q(PC[6]) );
+  FD1LQM1P \PCint_reg[0]  ( .D(N51), .LD(N64), .CP(Clk), .Q(PC[0]) );
+  NR2BNM1P U3 ( .B(n13), .A(Ld_Rtn_Addr), .Z(n5) );
+  AND2M1P U4 ( .A(Ld_Rtn_Addr), .B(n13), .Z(n2) );
+  NR2BNM1P U5 ( .B(Incrmnt_PC), .A(Reset), .Z(n4) );
+  OR4M1P U6 ( .A(Ld_Brnch_Addr), .B(Incrmnt_PC), .C(Ld_Rtn_Addr), .D(Reset), 
+        .Z(N64) );
+  NR2M1P U7 ( .A(Incrmnt_PC), .B(Reset), .Z(n13) );
+  AOI22M1P U8 ( .A(N16), .B(n4), .C(Imm_Addr[7]), .D(n5), .Z(n3) );
+  AOI22M1P U9 ( .A(N15), .B(n4), .C(Imm_Addr[6]), .D(n5), .Z(n6) );
+  AOI22M1P U10 ( .A(N14), .B(n4), .C(Imm_Addr[5]), .D(n5), .Z(n7) );
+  AOI22M1P U11 ( .A(N13), .B(n4), .C(Imm_Addr[4]), .D(n5), .Z(n8) );
+  AOI22M1P U12 ( .A(N12), .B(n4), .C(Imm_Addr[3]), .D(n5), .Z(n9) );
+  AOI22M1P U13 ( .A(N11), .B(n4), .C(Imm_Addr[2]), .D(n5), .Z(n10) );
+  AOI22M1P U14 ( .A(N10), .B(n4), .C(Imm_Addr[1]), .D(n5), .Z(n11) );
+  AOI22M1P U15 ( .A(N9), .B(n4), .C(Imm_Addr[0]), .D(n5), .Z(n12) );
+endmodule
+
+
+module PRGRM_DECODE ( Zro_Flag, Carry_Flag, Neg_Flag, .CurrentState({
+        \CurrentState[2] , \CurrentState[1] , \CurrentState[0] }), Crnt_Instrn, 
+        Incrmnt_PC, Ld_Brnch_Addr, Ld_Rtn_Addr );
+  input [31:0] Crnt_Instrn;
+  input Zro_Flag, Carry_Flag, Neg_Flag, \CurrentState[2] , \CurrentState[1] ,
+         \CurrentState[0] ;
+  output Incrmnt_PC, Ld_Brnch_Addr, Ld_Rtn_Addr;
+  wire   Crnt_Instrn_31, Crnt_Instrn_30, Crnt_Instrn_29, Crnt_Instrn_28,
+         Crnt_Instrn_27, Crnt_Instrn_25, n7, n8, n9, n10, n11, n12, n13, n14,
+         n15, n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26;
+  assign Crnt_Instrn_31 = Crnt_Instrn[31];
+  assign Crnt_Instrn_30 = Crnt_Instrn[30];
+  assign Crnt_Instrn_29 = Crnt_Instrn[29];
+  assign Crnt_Instrn_28 = Crnt_Instrn[28];
+  assign Crnt_Instrn_27 = Crnt_Instrn[27];
+  assign Crnt_Instrn_25 = Crnt_Instrn[25];
+
+  OR3M1P U25 ( .A(Crnt_Instrn[21]), .B(Crnt_Instrn[23]), .C(Crnt_Instrn[22]), 
+        .Z(n25) );
+  NR3M1P U3 ( .A(n7), .B(Ld_Rtn_Addr), .C(Ld_Brnch_Addr), .Z(Incrmnt_PC) );
+  AOI211M1P U4 ( .A(Neg_Flag), .B(n13), .C(n14), .D(n15), .Z(n12) );
+  N1M1P U5 ( .A(n23), .Z(n13) );
+  OAI22M1P U6 ( .A(n17), .B(n18), .C(n19), .D(n20), .Z(n14) );
+  NR2BNM1P U7 ( .B(Zro_Flag), .A(n16), .Z(n15) );
+  ND3M1P U8 ( .A(n22), .B(n21), .C(n24), .Z(n23) );
+  N1M1P U9 ( .A(Carry_Flag), .Z(n18) );
+  NR3M1P U10 ( .A(Crnt_Instrn_31), .B(Crnt_Instrn_30), .C(n7), .Z(n9) );
+  AND2M1P U11 ( .A(Crnt_Instrn_27), .B(n9), .Z(Ld_Rtn_Addr) );
+  ND2M1P U12 ( .A(n26), .B(CurrentState[2]), .Z(n7) );
+  NR2M1P U13 ( .A(CurrentState[1]), .B(CurrentState[0]), .Z(n26) );
+  NR4M1P U14 ( .A(Crnt_Instrn[19]), .B(Crnt_Instrn[20]), .C(Crnt_Instrn[18]), 
+        .D(n25), .Z(n24) );
+  ND3M1P U15 ( .A(Crnt_Instrn[16]), .B(n21), .C(n24), .Z(n16) );
+  ND3M1P U16 ( .A(Crnt_Instrn[17]), .B(n22), .C(n24), .Z(n17) );
+  ND4M1P U17 ( .A(Crnt_Instrn[21]), .B(Crnt_Instrn[20]), .C(Crnt_Instrn[19]), 
+        .D(Crnt_Instrn[18]), .Z(n20) );
+  OA211M1P U18 ( .A(Crnt_Instrn_28), .B(Crnt_Instrn_29), .C(n8), .D(n9), .Z(
+        Ld_Brnch_Addr) );
+  OAI22M1P U19 ( .A(n10), .B(n11), .C(Crnt_Instrn_25), .D(n12), .Z(n8) );
+  N1M1P U20 ( .A(Crnt_Instrn_25), .Z(n11) );
+  OA222M1P U21 ( .A(n23), .B(Neg_Flag), .C(n17), .D(Carry_Flag), .E(n16), .F(
+        Zro_Flag), .Z(n10) );
+  N1M1P U22 ( .A(Crnt_Instrn[16]), .Z(n22) );
+  N1M1P U23 ( .A(Crnt_Instrn[17]), .Z(n21) );
+  OR4M1P U24 ( .A(n21), .B(n22), .C(Crnt_Instrn[22]), .D(Crnt_Instrn[23]), .Z(
+        n19) );
+endmodule
+
+
+module PRGRM_FSM ( Clk, Reset, .CurrentState({\CurrentState[2] , 
+        \CurrentState[1] , \CurrentState[0] }) );
+  input Clk, Reset;
+  output \CurrentState[2] , \CurrentState[1] , \CurrentState[0] ;
+  wire   N7, N8, N9, n2, n3;
+
+  FD1QM1P \Current_State_reg[0]  ( .D(N7), .CP(Clk), .Q(CurrentState[0]) );
+  FD1QM1P \Current_State_reg[1]  ( .D(N8), .CP(Clk), .Q(CurrentState[1]) );
+  FD1QM1P \Current_State_reg[2]  ( .D(N9), .CP(Clk), .Q(CurrentState[2]) );
+  ND4CDNM1P U7 ( .C(CurrentState[2]), .D(Reset), .A(CurrentState[1]), .B(
+        CurrentState[0]), .Z(n2) );
+  AOI211M1P U3 ( .A(CurrentState[2]), .B(CurrentState[1]), .C(Reset), .D(
+        CurrentState[0]), .Z(N7) );
+  NR3M1P U4 ( .A(n3), .B(Reset), .C(CurrentState[2]), .Z(N8) );
+  ENFM1P U5 ( .A(CurrentState[0]), .B(CurrentState[1]), .Z(n3) );
+  N1M1P U6 ( .A(n2), .Z(N9) );
+endmodule
+
+
+module STACK_TOP ( Reset, Clk, PushEnbl, PopEnbl, PushDataIn, PopDataOut, 
+        STACK_FULL );
+  input [11:0] PushDataIn;
+  output [11:0] PopDataOut;
+  input Reset, Clk, PushEnbl, PopEnbl;
+  output STACK_FULL;
+  wire   n1, n2;
+  wire   [0:2] TOS;
+
+  STACK_FSM I_STACK_FSM ( .Reset(Reset), .Clk(Clk), .PushEnbl(n2), .PopEnbl(
+        PopEnbl), .TOS(TOS), .STACK_FULL(STACK_FULL) );
+  STACK_MEM_0 I1_STACK_MEM ( .Clk(Clk), .PushEnbl(n2), .PopEnbl(PopEnbl), 
+        .Stack_Full(STACK_FULL), .TOS({TOS[0:1], n1}), .PushDataIn(
+        PushDataIn[3:0]), .PopDataOut(PopDataOut[3:0]) );
+  STACK_MEM_2 I2_STACK_MEM ( .Clk(Clk), .PushEnbl(n2), .PopEnbl(PopEnbl), 
+        .Stack_Full(STACK_FULL), .TOS({TOS[0:1], n1}), .PushDataIn(
+        PushDataIn[7:4]), .PopDataOut(PopDataOut[7:4]) );
+  STACK_MEM_1 I3_STACK_MEM ( .Clk(Clk), .PushEnbl(n2), .PopEnbl(PopEnbl), 
+        .Stack_Full(STACK_FULL), .TOS({TOS[0:1], n1}), .PushDataIn(
+        PushDataIn[11:8]), .PopDataOut(PopDataOut[11:8]) );
+  BUFM1P U1 ( .A(TOS[2]), .Z(n1) );
+  BUFM1P U2 ( .A(PushEnbl), .Z(n2) );
+endmodule
+
+
+module REG_FILE ( Reset, Clk, Addr_A, Addr_B, Addr_C, RegPort_C, Write_RegC, 
+        RegPort_A, RegPort_B );
+  input [6:0] Addr_A;
+  input [6:0] Addr_B;
+  input [6:0] Addr_C;
+  input [15:0] RegPort_C;
+  output [15:0] RegPort_A;
+  output [15:0] RegPort_B;
+  input Reset, Clk, Write_RegC;
+  wire   \Reg_Array[0][15] , \Reg_Array[0][14] , \Reg_Array[0][13] ,
+         \Reg_Array[0][12] , \Reg_Array[0][11] , \Reg_Array[0][10] ,
+         \Reg_Array[0][9] , \Reg_Array[0][8] , \Reg_Array[0][7] ,
+         \Reg_Array[0][6] , \Reg_Array[0][5] , \Reg_Array[0][4] ,
+         \Reg_Array[0][3] , \Reg_Array[0][2] , \Reg_Array[0][1] ,
+         \Reg_Array[0][0] , \Reg_Array[1][15] , \Reg_Array[1][14] ,
+         \Reg_Array[1][13] , \Reg_Array[1][12] , \Reg_Array[1][11] ,
+         \Reg_Array[1][10] , \Reg_Array[1][9] , \Reg_Array[1][8] ,
+         \Reg_Array[1][7] , \Reg_Array[1][6] , \Reg_Array[1][5] ,
+         \Reg_Array[1][4] , \Reg_Array[1][3] , \Reg_Array[1][2] ,
+         \Reg_Array[1][1] , \Reg_Array[1][0] , \Reg_Array[2][15] ,
+         \Reg_Array[2][14] , \Reg_Array[2][13] , \Reg_Array[2][12] ,
+         \Reg_Array[2][11] , \Reg_Array[2][10] , \Reg_Array[2][9] ,
+         \Reg_Array[2][8] , \Reg_Array[2][7] , \Reg_Array[2][6] ,
+         \Reg_Array[2][5] , \Reg_Array[2][4] , \Reg_Array[2][3] ,
+         \Reg_Array[2][2] , \Reg_Array[2][1] , \Reg_Array[2][0] ,
+         \Reg_Array[3][15] , \Reg_Array[3][14] , \Reg_Array[3][13] ,
+         \Reg_Array[3][12] , \Reg_Array[3][11] , \Reg_Array[3][10] ,
+         \Reg_Array[3][9] , \Reg_Array[3][8] , \Reg_Array[3][7] ,
+         \Reg_Array[3][6] , \Reg_Array[3][5] , \Reg_Array[3][4] ,
+         \Reg_Array[3][3] , \Reg_Array[3][2] , \Reg_Array[3][1] ,
+         \Reg_Array[3][0] , N144, N146, N148, N150, N152, N154, N156, N158,
+         N160, N162, N164, N166, N168, N170, N172, N174, N176, N178, N180,
+         N182, N184, N186, N188, N190, N192, N194, N196, N198, N200, N202,
+         N204, N206, N208, N210, N212, N214, N216, N218, N220, N222, N224,
+         N226, N228, N230, N232, N234, N236, N238, N240, N242, N244, N246,
+         N248, N250, N252, N254, N256, N258, N260, N262, N264, N266, N268,
+         N270, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15,
+         n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26, n27, n28, n29,
+         n30, n31, n32, n33, n34, n35, n36, n37, n38, n39, n40, n41, n42, n43,
+         n44, n45, n46, n47, n48, n49, n50, n51, n52, n53, n54, n55, n56, n57,
+         n58, n59, n60, n61, n62, n63, n64, n65, n66, n67, n68, n69, n70, n71,
+         n72, n73, n74, n75, n77, n78, n79, n80, n81, n82, n83, n84, n85, n86,
+         n87, n88, n89, n90, n91, n92, n93, n94, n95, n1, n76, n96, n97, n98,
+         n99, n100, n101, n102, n103, n104, n105;
+
+  FD1LQM1P \Reg_Array_reg[0][15]  ( .D(N270), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][15] ) );
+  FD1LQM1P \Reg_Array_reg[0][14]  ( .D(N268), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][14] ) );
+  FD1LQM1P \Reg_Array_reg[0][13]  ( .D(N266), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][13] ) );
+  FD1LQM1P \Reg_Array_reg[0][12]  ( .D(N264), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][12] ) );
+  FD1LQM1P \Reg_Array_reg[0][11]  ( .D(N262), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][11] ) );
+  FD1LQM1P \Reg_Array_reg[0][10]  ( .D(N260), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][10] ) );
+  FD1LQM1P \Reg_Array_reg[0][9]  ( .D(N258), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][9] ) );
+  FD1LQM1P \Reg_Array_reg[0][8]  ( .D(N256), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][8] ) );
+  FD1LQM1P \Reg_Array_reg[0][7]  ( .D(N254), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][7] ) );
+  FD1LQM1P \Reg_Array_reg[0][6]  ( .D(N252), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][6] ) );
+  FD1LQM1P \Reg_Array_reg[0][5]  ( .D(N250), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][5] ) );
+  FD1LQM1P \Reg_Array_reg[0][4]  ( .D(N248), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][4] ) );
+  FD1LQM1P \Reg_Array_reg[0][3]  ( .D(N246), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][3] ) );
+  FD1LQM1P \Reg_Array_reg[0][2]  ( .D(N244), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][2] ) );
+  FD1LQM1P \Reg_Array_reg[0][1]  ( .D(N242), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][1] ) );
+  FD1LQM1P \Reg_Array_reg[0][0]  ( .D(N240), .LD(n97), .CP(Clk), .Q(
+        \Reg_Array[0][0] ) );
+  FD1LQM1P \Reg_Array_reg[2][15]  ( .D(N206), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][15] ) );
+  FD1LQM1P \Reg_Array_reg[2][14]  ( .D(N204), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][14] ) );
+  FD1LQM1P \Reg_Array_reg[2][13]  ( .D(N202), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][13] ) );
+  FD1LQM1P \Reg_Array_reg[2][12]  ( .D(N200), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][12] ) );
+  FD1LQM1P \Reg_Array_reg[2][11]  ( .D(N198), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][11] ) );
+  FD1LQM1P \Reg_Array_reg[2][10]  ( .D(N196), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][10] ) );
+  FD1LQM1P \Reg_Array_reg[2][9]  ( .D(N194), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][9] ) );
+  FD1LQM1P \Reg_Array_reg[2][8]  ( .D(N192), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][8] ) );
+  FD1LQM1P \Reg_Array_reg[2][7]  ( .D(N190), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][7] ) );
+  FD1LQM1P \Reg_Array_reg[2][6]  ( .D(N188), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][6] ) );
+  FD1LQM1P \Reg_Array_reg[2][5]  ( .D(N186), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][5] ) );
+  FD1LQM1P \Reg_Array_reg[2][4]  ( .D(N184), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][4] ) );
+  FD1LQM1P \Reg_Array_reg[2][3]  ( .D(N182), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][3] ) );
+  FD1LQM1P \Reg_Array_reg[2][2]  ( .D(N180), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][2] ) );
+  FD1LQM1P \Reg_Array_reg[2][1]  ( .D(N178), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][1] ) );
+  FD1LQM1P \Reg_Array_reg[2][0]  ( .D(N176), .LD(n96), .CP(Clk), .Q(
+        \Reg_Array[2][0] ) );
+  FD1LQM1P \Reg_Array_reg[1][15]  ( .D(N238), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][15] ) );
+  FD1LQM1P \Reg_Array_reg[1][14]  ( .D(N236), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][14] ) );
+  FD1LQM1P \Reg_Array_reg[1][13]  ( .D(N234), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][13] ) );
+  FD1LQM1P \Reg_Array_reg[1][12]  ( .D(N232), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][12] ) );
+  FD1LQM1P \Reg_Array_reg[1][11]  ( .D(N230), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][11] ) );
+  FD1LQM1P \Reg_Array_reg[1][10]  ( .D(N228), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][10] ) );
+  FD1LQM1P \Reg_Array_reg[1][9]  ( .D(N226), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][9] ) );
+  FD1LQM1P \Reg_Array_reg[1][8]  ( .D(N224), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][8] ) );
+  FD1LQM1P \Reg_Array_reg[1][7]  ( .D(N222), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][7] ) );
+  FD1LQM1P \Reg_Array_reg[1][6]  ( .D(N220), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][6] ) );
+  FD1LQM1P \Reg_Array_reg[1][5]  ( .D(N218), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][5] ) );
+  FD1LQM1P \Reg_Array_reg[1][4]  ( .D(N216), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][4] ) );
+  FD1LQM1P \Reg_Array_reg[1][3]  ( .D(N214), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][3] ) );
+  FD1LQM1P \Reg_Array_reg[1][2]  ( .D(N212), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][2] ) );
+  FD1LQM1P \Reg_Array_reg[1][1]  ( .D(N210), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][1] ) );
+  FD1LQM1P \Reg_Array_reg[1][0]  ( .D(N208), .LD(n76), .CP(Clk), .Q(
+        \Reg_Array[1][0] ) );
+  FD1LQM1P \Reg_Array_reg[3][15]  ( .D(N174), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][15] ) );
+  FD1LQM1P \Reg_Array_reg[3][14]  ( .D(N172), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][14] ) );
+  FD1LQM1P \Reg_Array_reg[3][13]  ( .D(N170), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][13] ) );
+  FD1LQM1P \Reg_Array_reg[3][12]  ( .D(N168), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][12] ) );
+  FD1LQM1P \Reg_Array_reg[3][11]  ( .D(N166), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][11] ) );
+  FD1LQM1P \Reg_Array_reg[3][10]  ( .D(N164), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][10] ) );
+  FD1LQM1P \Reg_Array_reg[3][9]  ( .D(N162), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][9] ) );
+  FD1LQM1P \Reg_Array_reg[3][8]  ( .D(N160), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][8] ) );
+  FD1LQM1P \Reg_Array_reg[3][7]  ( .D(N158), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][7] ) );
+  FD1LQM1P \Reg_Array_reg[3][6]  ( .D(N156), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][6] ) );
+  FD1LQM1P \Reg_Array_reg[3][5]  ( .D(N154), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][5] ) );
+  FD1LQM1P \Reg_Array_reg[3][4]  ( .D(N152), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][4] ) );
+  FD1LQM1P \Reg_Array_reg[3][3]  ( .D(N150), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][3] ) );
+  FD1LQM1P \Reg_Array_reg[3][2]  ( .D(N148), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][2] ) );
+  FD1LQM1P \Reg_Array_reg[3][1]  ( .D(N146), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][1] ) );
+  FD1LQM1P \Reg_Array_reg[3][0]  ( .D(N144), .LD(n1), .CP(Clk), .Q(
+        \Reg_Array[3][0] ) );
+  ND2M1P U3 ( .A(n93), .B(n99), .Z(n1) );
+  ND2M1P U4 ( .A(n93), .B(n101), .Z(n76) );
+  ND2M1P U5 ( .A(n93), .B(n100), .Z(n96) );
+  ND2M1P U6 ( .A(n93), .B(n98), .Z(n97) );
+  ND3M1P U7 ( .A(n94), .B(n95), .C(Write_RegC), .Z(n98) );
+  ND3M1P U8 ( .A(Addr_C[0]), .B(Write_RegC), .C(Addr_C[1]), .Z(n99) );
+  ND3M1P U9 ( .A(Write_RegC), .B(n94), .C(Addr_C[1]), .Z(n100) );
+  ND3M1P U10 ( .A(Write_RegC), .B(n95), .C(Addr_C[0]), .Z(n101) );
+  NR2M1P U11 ( .A(Addr_B[0]), .B(Addr_B[1]), .Z(n7) );
+  BUFM1P U12 ( .A(n43), .Z(n102) );
+  BUFM1P U13 ( .A(n43), .Z(n103) );
+  BUFM1P U14 ( .A(n44), .Z(n104) );
+  BUFM1P U15 ( .A(n44), .Z(n105) );
+  AND2M1P U16 ( .A(Addr_A[1]), .B(n75), .Z(n42) );
+  NR2M1P U17 ( .A(n75), .B(Addr_A[1]), .Z(n43) );
+  NR2M1P U18 ( .A(Addr_A[0]), .B(Addr_A[1]), .Z(n44) );
+  N1M1P U19 ( .A(Addr_A[0]), .Z(n75) );
+  AND2M1P U20 ( .A(Addr_A[1]), .B(Addr_A[0]), .Z(n41) );
+  NR2M1P U21 ( .A(n98), .B(n77), .Z(N270) );
+  NR2M1P U22 ( .A(n98), .B(n79), .Z(N266) );
+  NR2M1P U23 ( .A(n98), .B(n92), .Z(N240) );
+  NR2M1P U24 ( .A(n98), .B(n91), .Z(N242) );
+  NR2M1P U25 ( .A(n98), .B(n90), .Z(N244) );
+  NR2M1P U26 ( .A(n98), .B(n89), .Z(N246) );
+  NR2M1P U27 ( .A(n98), .B(n88), .Z(N248) );
+  NR2M1P U28 ( .A(n98), .B(n87), .Z(N250) );
+  NR2M1P U29 ( .A(n98), .B(n86), .Z(N252) );
+  NR2M1P U30 ( .A(n98), .B(n85), .Z(N254) );
+  NR2M1P U31 ( .A(n98), .B(n84), .Z(N256) );
+  NR2M1P U32 ( .A(n98), .B(n83), .Z(N258) );
+  NR2M1P U33 ( .A(n98), .B(n82), .Z(N260) );
+  NR2M1P U34 ( .A(n98), .B(n81), .Z(N262) );
+  NR2M1P U35 ( .A(n98), .B(n80), .Z(N264) );
+  NR2M1P U36 ( .A(n98), .B(n78), .Z(N268) );
+  NR2M1P U37 ( .A(n92), .B(n99), .Z(N144) );
+  NR2M1P U38 ( .A(n91), .B(n99), .Z(N146) );
+  NR2M1P U39 ( .A(n90), .B(n99), .Z(N148) );
+  NR2M1P U40 ( .A(n89), .B(n99), .Z(N150) );
+  NR2M1P U41 ( .A(n88), .B(n99), .Z(N152) );
+  NR2M1P U42 ( .A(n87), .B(n99), .Z(N154) );
+  NR2M1P U43 ( .A(n86), .B(n99), .Z(N156) );
+  NR2M1P U44 ( .A(n85), .B(n99), .Z(N158) );
+  NR2M1P U45 ( .A(n84), .B(n99), .Z(N160) );
+  NR2M1P U46 ( .A(n82), .B(n99), .Z(N164) );
+  NR2M1P U47 ( .A(n81), .B(n99), .Z(N166) );
+  NR2M1P U48 ( .A(n80), .B(n99), .Z(N168) );
+  NR2M1P U49 ( .A(n79), .B(n99), .Z(N170) );
+  NR2M1P U50 ( .A(n78), .B(n99), .Z(N172) );
+  NR2M1P U51 ( .A(n92), .B(n100), .Z(N176) );
+  NR2M1P U52 ( .A(n91), .B(n100), .Z(N178) );
+  NR2M1P U53 ( .A(n90), .B(n100), .Z(N180) );
+  NR2M1P U54 ( .A(n89), .B(n100), .Z(N182) );
+  NR2M1P U55 ( .A(n88), .B(n100), .Z(N184) );
+  NR2M1P U56 ( .A(n87), .B(n100), .Z(N186) );
+  NR2M1P U57 ( .A(n86), .B(n100), .Z(N188) );
+  NR2M1P U58 ( .A(n85), .B(n100), .Z(N190) );
+  NR2M1P U59 ( .A(n84), .B(n100), .Z(N192) );
+  NR2M1P U60 ( .A(n82), .B(n100), .Z(N196) );
+  NR2M1P U61 ( .A(n81), .B(n100), .Z(N198) );
+  NR2M1P U62 ( .A(n80), .B(n100), .Z(N200) );
+  NR2M1P U63 ( .A(n79), .B(n100), .Z(N202) );
+  NR2M1P U64 ( .A(n78), .B(n100), .Z(N204) );
+  NR2M1P U65 ( .A(n92), .B(n101), .Z(N208) );
+  NR2M1P U66 ( .A(n91), .B(n101), .Z(N210) );
+  NR2M1P U67 ( .A(n90), .B(n101), .Z(N212) );
+  NR2M1P U68 ( .A(n89), .B(n101), .Z(N214) );
+  NR2M1P U69 ( .A(n88), .B(n101), .Z(N216) );
+  NR2M1P U70 ( .A(n87), .B(n101), .Z(N218) );
+  NR2M1P U71 ( .A(n86), .B(n101), .Z(N220) );
+  NR2M1P U72 ( .A(n85), .B(n101), .Z(N222) );
+  NR2M1P U73 ( .A(n84), .B(n101), .Z(N224) );
+  NR2M1P U74 ( .A(n82), .B(n101), .Z(N228) );
+  NR2M1P U75 ( .A(n81), .B(n101), .Z(N230) );
+  NR2M1P U76 ( .A(n80), .B(n101), .Z(N232) );
+  NR2M1P U77 ( .A(n79), .B(n101), .Z(N234) );
+  NR2M1P U78 ( .A(n78), .B(n101), .Z(N236) );
+  NR2M1P U79 ( .A(n83), .B(n99), .Z(N162) );
+  NR2M1P U80 ( .A(n83), .B(n100), .Z(N194) );
+  NR2M1P U81 ( .A(n83), .B(n101), .Z(N226) );
+  NR2M1P U82 ( .A(n77), .B(n99), .Z(N174) );
+  NR2M1P U83 ( .A(n77), .B(n100), .Z(N206) );
+  NR2M1P U84 ( .A(n77), .B(n101), .Z(N238) );
+  N1M1P U85 ( .A(Reset), .Z(n93) );
+  ND2M1P U86 ( .A(n73), .B(n74), .Z(RegPort_A[0]) );
+  AOI22M1P U87 ( .A(n41), .B(\Reg_Array[3][0] ), .C(n42), .D(\Reg_Array[2][0] ), .Z(n74) );
+  AOI22M1P U88 ( .A(n103), .B(\Reg_Array[1][0] ), .C(n105), .D(
+        \Reg_Array[0][0] ), .Z(n73) );
+  ND2M1P U89 ( .A(n59), .B(n60), .Z(RegPort_A[1]) );
+  AOI22M1P U90 ( .A(n41), .B(\Reg_Array[3][1] ), .C(n42), .D(\Reg_Array[2][1] ), .Z(n60) );
+  AOI22M1P U91 ( .A(n102), .B(\Reg_Array[1][1] ), .C(n104), .D(
+        \Reg_Array[0][1] ), .Z(n59) );
+  ND2M1P U92 ( .A(n57), .B(n58), .Z(RegPort_A[2]) );
+  AOI22M1P U93 ( .A(n41), .B(\Reg_Array[3][2] ), .C(n42), .D(\Reg_Array[2][2] ), .Z(n58) );
+  AOI22M1P U94 ( .A(n102), .B(\Reg_Array[1][2] ), .C(n104), .D(
+        \Reg_Array[0][2] ), .Z(n57) );
+  ND2M1P U95 ( .A(n55), .B(n56), .Z(RegPort_A[3]) );
+  AOI22M1P U96 ( .A(n41), .B(\Reg_Array[3][3] ), .C(n42), .D(\Reg_Array[2][3] ), .Z(n56) );
+  AOI22M1P U97 ( .A(n102), .B(\Reg_Array[1][3] ), .C(n104), .D(
+        \Reg_Array[0][3] ), .Z(n55) );
+  ND2M1P U98 ( .A(n53), .B(n54), .Z(RegPort_A[4]) );
+  AOI22M1P U99 ( .A(n41), .B(\Reg_Array[3][4] ), .C(n42), .D(\Reg_Array[2][4] ), .Z(n54) );
+  AOI22M1P U100 ( .A(n102), .B(\Reg_Array[1][4] ), .C(n104), .D(
+        \Reg_Array[0][4] ), .Z(n53) );
+  ND2M1P U101 ( .A(n51), .B(n52), .Z(RegPort_A[5]) );
+  AOI22M1P U102 ( .A(n41), .B(\Reg_Array[3][5] ), .C(n42), .D(
+        \Reg_Array[2][5] ), .Z(n52) );
+  AOI22M1P U103 ( .A(n102), .B(\Reg_Array[1][5] ), .C(n104), .D(
+        \Reg_Array[0][5] ), .Z(n51) );
+  ND2M1P U104 ( .A(n49), .B(n50), .Z(RegPort_A[6]) );
+  AOI22M1P U105 ( .A(n41), .B(\Reg_Array[3][6] ), .C(n42), .D(
+        \Reg_Array[2][6] ), .Z(n50) );
+  AOI22M1P U106 ( .A(n102), .B(\Reg_Array[1][6] ), .C(n104), .D(
+        \Reg_Array[0][6] ), .Z(n49) );
+  ND2M1P U107 ( .A(n47), .B(n48), .Z(RegPort_A[7]) );
+  AOI22M1P U108 ( .A(n41), .B(\Reg_Array[3][7] ), .C(n42), .D(
+        \Reg_Array[2][7] ), .Z(n48) );
+  AOI22M1P U109 ( .A(n102), .B(\Reg_Array[1][7] ), .C(n104), .D(
+        \Reg_Array[0][7] ), .Z(n47) );
+  ND2M1P U110 ( .A(n45), .B(n46), .Z(RegPort_A[8]) );
+  AOI22M1P U111 ( .A(n41), .B(\Reg_Array[3][8] ), .C(n42), .D(
+        \Reg_Array[2][8] ), .Z(n46) );
+  AOI22M1P U112 ( .A(n102), .B(\Reg_Array[1][8] ), .C(n104), .D(
+        \Reg_Array[0][8] ), .Z(n45) );
+  ND2M1P U113 ( .A(n39), .B(n40), .Z(RegPort_A[9]) );
+  AOI22M1P U114 ( .A(n41), .B(\Reg_Array[3][9] ), .C(n42), .D(
+        \Reg_Array[2][9] ), .Z(n40) );
+  AOI22M1P U115 ( .A(n103), .B(\Reg_Array[1][9] ), .C(n105), .D(
+        \Reg_Array[0][9] ), .Z(n39) );
+  ND2M1P U116 ( .A(n71), .B(n72), .Z(RegPort_A[10]) );
+  AOI22M1P U117 ( .A(n41), .B(\Reg_Array[3][10] ), .C(n42), .D(
+        \Reg_Array[2][10] ), .Z(n72) );
+  AOI22M1P U118 ( .A(n103), .B(\Reg_Array[1][10] ), .C(n105), .D(
+        \Reg_Array[0][10] ), .Z(n71) );
+  ND2M1P U119 ( .A(n69), .B(n70), .Z(RegPort_A[11]) );
+  AOI22M1P U120 ( .A(n41), .B(\Reg_Array[3][11] ), .C(n42), .D(
+        \Reg_Array[2][11] ), .Z(n70) );
+  AOI22M1P U121 ( .A(n103), .B(\Reg_Array[1][11] ), .C(n105), .D(
+        \Reg_Array[0][11] ), .Z(n69) );
+  ND2M1P U122 ( .A(n67), .B(n68), .Z(RegPort_A[12]) );
+  AOI22M1P U123 ( .A(n41), .B(\Reg_Array[3][12] ), .C(n42), .D(
+        \Reg_Array[2][12] ), .Z(n68) );
+  AOI22M1P U124 ( .A(n103), .B(\Reg_Array[1][12] ), .C(n105), .D(
+        \Reg_Array[0][12] ), .Z(n67) );
+  ND2M1P U125 ( .A(n65), .B(n66), .Z(RegPort_A[13]) );
+  AOI22M1P U126 ( .A(n41), .B(\Reg_Array[3][13] ), .C(n42), .D(
+        \Reg_Array[2][13] ), .Z(n66) );
+  AOI22M1P U127 ( .A(n103), .B(\Reg_Array[1][13] ), .C(n105), .D(
+        \Reg_Array[0][13] ), .Z(n65) );
+  ND2M1P U128 ( .A(n63), .B(n64), .Z(RegPort_A[14]) );
+  AOI22M1P U129 ( .A(n41), .B(\Reg_Array[3][14] ), .C(n42), .D(
+        \Reg_Array[2][14] ), .Z(n64) );
+  AOI22M1P U130 ( .A(n103), .B(\Reg_Array[1][14] ), .C(n105), .D(
+        \Reg_Array[0][14] ), .Z(n63) );
+  ND2M1P U131 ( .A(n61), .B(n62), .Z(RegPort_A[15]) );
+  AOI22M1P U132 ( .A(n41), .B(\Reg_Array[3][15] ), .C(n42), .D(
+        \Reg_Array[2][15] ), .Z(n62) );
+  AOI22M1P U133 ( .A(n103), .B(\Reg_Array[1][15] ), .C(n105), .D(
+        \Reg_Array[0][15] ), .Z(n61) );
+  N1M1P U134 ( .A(Addr_B[0]), .Z(n38) );
+  NR2M2P U135 ( .A(n38), .B(Addr_B[1]), .Z(n6) );
+  AND2M1P U136 ( .A(Addr_B[1]), .B(Addr_B[0]), .Z(n4) );
+  AND2M1P U137 ( .A(Addr_B[1]), .B(n38), .Z(n5) );
+  N1M1P U138 ( .A(RegPort_C[15]), .Z(n77) );
+  N1M1P U139 ( .A(RegPort_C[13]), .Z(n79) );
+  N1M1P U140 ( .A(RegPort_C[0]), .Z(n92) );
+  N1M1P U141 ( .A(RegPort_C[1]), .Z(n91) );
+  N1M1P U142 ( .A(RegPort_C[2]), .Z(n90) );
+  N1M1P U143 ( .A(RegPort_C[3]), .Z(n89) );
+  N1M1P U144 ( .A(RegPort_C[4]), .Z(n88) );
+  N1M1P U145 ( .A(RegPort_C[5]), .Z(n87) );
+  N1M1P U146 ( .A(RegPort_C[6]), .Z(n86) );
+  N1M1P U147 ( .A(RegPort_C[7]), .Z(n85) );
+  N1M1P U148 ( .A(RegPort_C[8]), .Z(n84) );
+  N1M1P U149 ( .A(RegPort_C[9]), .Z(n83) );
+  N1M1P U150 ( .A(RegPort_C[10]), .Z(n82) );
+  N1M1P U151 ( .A(RegPort_C[11]), .Z(n81) );
+  N1M1P U152 ( .A(RegPort_C[12]), .Z(n80) );
+  N1M1P U153 ( .A(RegPort_C[14]), .Z(n78) );
+  ND2M1P U154 ( .A(n36), .B(n37), .Z(RegPort_B[0]) );
+  AOI22M1P U155 ( .A(\Reg_Array[1][0] ), .B(n6), .C(\Reg_Array[0][0] ), .D(n7), 
+        .Z(n36) );
+  AOI22M1P U156 ( .A(\Reg_Array[3][0] ), .B(n4), .C(\Reg_Array[2][0] ), .D(n5), 
+        .Z(n37) );
+  ND2M1P U157 ( .A(n22), .B(n23), .Z(RegPort_B[1]) );
+  AOI22M1P U158 ( .A(\Reg_Array[1][1] ), .B(n6), .C(\Reg_Array[0][1] ), .D(n7), 
+        .Z(n22) );
+  AOI22M1P U159 ( .A(\Reg_Array[3][1] ), .B(n4), .C(\Reg_Array[2][1] ), .D(n5), 
+        .Z(n23) );
+  ND2M1P U160 ( .A(n20), .B(n21), .Z(RegPort_B[2]) );
+  AOI22M1P U161 ( .A(\Reg_Array[1][2] ), .B(n6), .C(\Reg_Array[0][2] ), .D(n7), 
+        .Z(n20) );
+  AOI22M1P U162 ( .A(\Reg_Array[3][2] ), .B(n4), .C(\Reg_Array[2][2] ), .D(n5), 
+        .Z(n21) );
+  ND2M1P U163 ( .A(n18), .B(n19), .Z(RegPort_B[3]) );
+  AOI22M1P U164 ( .A(\Reg_Array[1][3] ), .B(n6), .C(\Reg_Array[0][3] ), .D(n7), 
+        .Z(n18) );
+  AOI22M1P U165 ( .A(\Reg_Array[3][3] ), .B(n4), .C(\Reg_Array[2][3] ), .D(n5), 
+        .Z(n19) );
+  ND2M1P U166 ( .A(n16), .B(n17), .Z(RegPort_B[4]) );
+  AOI22M1P U167 ( .A(\Reg_Array[1][4] ), .B(n6), .C(\Reg_Array[0][4] ), .D(n7), 
+        .Z(n16) );
+  AOI22M1P U168 ( .A(\Reg_Array[3][4] ), .B(n4), .C(\Reg_Array[2][4] ), .D(n5), 
+        .Z(n17) );
+  ND2M1P U169 ( .A(n14), .B(n15), .Z(RegPort_B[5]) );
+  AOI22M1P U170 ( .A(\Reg_Array[1][5] ), .B(n6), .C(\Reg_Array[0][5] ), .D(n7), 
+        .Z(n14) );
+  AOI22M1P U171 ( .A(\Reg_Array[3][5] ), .B(n4), .C(\Reg_Array[2][5] ), .D(n5), 
+        .Z(n15) );
+  ND2M1P U172 ( .A(n12), .B(n13), .Z(RegPort_B[6]) );
+  AOI22M1P U173 ( .A(\Reg_Array[1][6] ), .B(n6), .C(\Reg_Array[0][6] ), .D(n7), 
+        .Z(n12) );
+  AOI22M1P U174 ( .A(\Reg_Array[3][6] ), .B(n4), .C(\Reg_Array[2][6] ), .D(n5), 
+        .Z(n13) );
+  ND2M1P U175 ( .A(n10), .B(n11), .Z(RegPort_B[7]) );
+  AOI22M1P U176 ( .A(\Reg_Array[1][7] ), .B(n6), .C(\Reg_Array[0][7] ), .D(n7), 
+        .Z(n10) );
+  AOI22M1P U177 ( .A(\Reg_Array[3][7] ), .B(n4), .C(\Reg_Array[2][7] ), .D(n5), 
+        .Z(n11) );
+  N1M1P U178 ( .A(Addr_C[1]), .Z(n95) );
+  N1M1P U179 ( .A(Addr_C[0]), .Z(n94) );
+  ND2M1P U180 ( .A(n8), .B(n9), .Z(RegPort_B[8]) );
+  AOI22M1P U181 ( .A(\Reg_Array[1][8] ), .B(n6), .C(\Reg_Array[0][8] ), .D(n7), 
+        .Z(n8) );
+  AOI22M1P U182 ( .A(\Reg_Array[3][8] ), .B(n4), .C(\Reg_Array[2][8] ), .D(n5), 
+        .Z(n9) );
+  ND2M1P U183 ( .A(n2), .B(n3), .Z(RegPort_B[9]) );
+  AOI22M1P U184 ( .A(\Reg_Array[1][9] ), .B(n6), .C(\Reg_Array[0][9] ), .D(n7), 
+        .Z(n2) );
+  AOI22M1P U185 ( .A(\Reg_Array[3][9] ), .B(n4), .C(\Reg_Array[2][9] ), .D(n5), 
+        .Z(n3) );
+  ND2M1P U186 ( .A(n34), .B(n35), .Z(RegPort_B[10]) );
+  AOI22M1P U187 ( .A(\Reg_Array[1][10] ), .B(n6), .C(\Reg_Array[0][10] ), .D(
+        n7), .Z(n34) );
+  AOI22M1P U188 ( .A(\Reg_Array[3][10] ), .B(n4), .C(\Reg_Array[2][10] ), .D(
+        n5), .Z(n35) );
+  ND2M1P U189 ( .A(n32), .B(n33), .Z(RegPort_B[11]) );
+  AOI22M1P U190 ( .A(\Reg_Array[1][11] ), .B(n6), .C(\Reg_Array[0][11] ), .D(
+        n7), .Z(n32) );
+  AOI22M1P U191 ( .A(\Reg_Array[3][11] ), .B(n4), .C(\Reg_Array[2][11] ), .D(
+        n5), .Z(n33) );
+  ND2M1P U192 ( .A(n30), .B(n31), .Z(RegPort_B[12]) );
+  AOI22M1P U193 ( .A(\Reg_Array[1][12] ), .B(n6), .C(\Reg_Array[0][12] ), .D(
+        n7), .Z(n30) );
+  AOI22M1P U194 ( .A(\Reg_Array[3][12] ), .B(n4), .C(\Reg_Array[2][12] ), .D(
+        n5), .Z(n31) );
+  ND2M1P U195 ( .A(n28), .B(n29), .Z(RegPort_B[13]) );
+  AOI22M1P U196 ( .A(\Reg_Array[1][13] ), .B(n6), .C(\Reg_Array[0][13] ), .D(
+        n7), .Z(n28) );
+  AOI22M1P U197 ( .A(\Reg_Array[3][13] ), .B(n4), .C(\Reg_Array[2][13] ), .D(
+        n5), .Z(n29) );
+  ND2M1P U198 ( .A(n26), .B(n27), .Z(RegPort_B[14]) );
+  AOI22M1P U199 ( .A(\Reg_Array[1][14] ), .B(n6), .C(\Reg_Array[0][14] ), .D(
+        n7), .Z(n26) );
+  AOI22M1P U200 ( .A(\Reg_Array[3][14] ), .B(n4), .C(\Reg_Array[2][14] ), .D(
+        n5), .Z(n27) );
+  ND2M1P U201 ( .A(n24), .B(n25), .Z(RegPort_B[15]) );
+  AOI22M1P U202 ( .A(\Reg_Array[1][15] ), .B(n6), .C(\Reg_Array[0][15] ), .D(
+        n7), .Z(n24) );
+  AOI22M1P U203 ( .A(\Reg_Array[3][15] ), .B(n4), .C(\Reg_Array[2][15] ), .D(
+        n5), .Z(n25) );
+endmodule
+
+
+module PRGRM_CNT_TOP ( Clk, Reset, Crnt_Instrn, Zro_Flag, Carry_Flag, Neg_Flag, 
+        Return_Addr, .Current_State({\Current_State[2] , \Current_State[1] , 
+        \Current_State[0] }), PC );
+  input [31:0] Crnt_Instrn;
+  input [7:0] Return_Addr;
+  output [7:0] PC;
+  input Clk, Reset, Zro_Flag, Carry_Flag, Neg_Flag;
+  output \Current_State[2] , \Current_State[1] , \Current_State[0] ;
+  wire   Incrmnt_PC, Ld_Brnch_Addr, Ld_Rtn_Addr;
+
+  PRGRM_FSM I_PRGRM_FSM ( .Clk(Clk), .Reset(Reset), .CurrentState({
+        \Current_State[2] , \Current_State[1] , \Current_State[0] }) );
+  PRGRM_DECODE I_PRGRM_DECODE ( .Zro_Flag(Zro_Flag), .Carry_Flag(Carry_Flag), 
+        .Neg_Flag(Neg_Flag), .CurrentState({\Current_State[2] , 
+        \Current_State[1] , \Current_State[0] }), .Crnt_Instrn(Crnt_Instrn), 
+        .Incrmnt_PC(Incrmnt_PC), .Ld_Brnch_Addr(Ld_Brnch_Addr), .Ld_Rtn_Addr(
+        Ld_Rtn_Addr) );
+  PRGRM_CNT I_PRGRM_CNT ( .Reset(Reset), .Clk(Clk), .Incrmnt_PC(Incrmnt_PC), 
+        .Ld_Brnch_Addr(Ld_Brnch_Addr), .Ld_Rtn_Addr(Ld_Rtn_Addr), .Imm_Addr(
+        Crnt_Instrn[7:0]), .Return_Addr(Return_Addr), .PC(PC) );
+endmodule
+
+
+module INSTRN_LAT ( Clk, Instrn, Latch_Instr, Crnt_Instrn_1, Crnt_Instrn_2 );
+  input [31:0] Instrn;
+  output [31:0] Crnt_Instrn_1;
+  output [31:0] Crnt_Instrn_2;
+  input Clk, Latch_Instr;
+  wire   n1, n2, n3, n4;
+
+  FD1LQM1P \Crnt_Instrn_2_reg[14]  ( .D(Instrn[14]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[14]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[13]  ( .D(Instrn[13]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_2[13]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[12]  ( .D(Instrn[12]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[12]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[11]  ( .D(Instrn[11]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_2[11]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[10]  ( .D(Instrn[10]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_2[10]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[9]  ( .D(Instrn[9]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_2[9]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[8]  ( .D(Instrn[8]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_2[8]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[15]  ( .D(Instrn[15]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[15]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[7]  ( .D(Instrn[7]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[7]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[6]  ( .D(Instrn[6]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_2[6]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[5]  ( .D(Instrn[5]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_2[5]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[4]  ( .D(Instrn[4]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_2[4]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[3]  ( .D(Instrn[3]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_2[3]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[2]  ( .D(Instrn[2]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_2[2]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[1]  ( .D(Instrn[1]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[1]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[0]  ( .D(Instrn[0]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_2[0]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[16]  ( .D(Instrn[16]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[16]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[17]  ( .D(Instrn[17]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[17]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[0]  ( .D(Instrn[0]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_1[0]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[29]  ( .D(Instrn[29]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[29]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[1]  ( .D(Instrn[1]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[1]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[26]  ( .D(Instrn[26]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[26]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[29]  ( .D(Instrn[29]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[29]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[28]  ( .D(Instrn[28]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[28]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[22]  ( .D(Instrn[22]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[22]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[23]  ( .D(Instrn[23]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[23]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[27]  ( .D(Instrn[27]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[27]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[18]  ( .D(Instrn[18]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[18]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[19]  ( .D(Instrn[19]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[19]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[17]  ( .D(Instrn[17]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[17]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[24]  ( .D(Instrn[24]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[24]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[20]  ( .D(Instrn[20]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[20]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[21]  ( .D(Instrn[21]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[21]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[24]  ( .D(Instrn[24]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[24]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[16]  ( .D(Instrn[16]), .LD(Latch_Instr), .CP(Clk), .Q(Crnt_Instrn_2[16]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[31]  ( .D(Instrn[31]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[31]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[25]  ( .D(Instrn[25]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[25]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[26]  ( .D(Instrn[26]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[26]) );
+  FD1LQM1P \Crnt_Instrn_2_reg[30]  ( .D(Instrn[30]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_2[30]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[25]  ( .D(Instrn[25]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[25]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[28]  ( .D(Instrn[28]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[28]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[27]  ( .D(Instrn[27]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[27]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[31]  ( .D(Instrn[31]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[31]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[30]  ( .D(Instrn[30]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[30]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[23]  ( .D(Instrn[23]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[23]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[22]  ( .D(Instrn[22]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[22]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[21]  ( .D(Instrn[21]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[21]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[20]  ( .D(Instrn[20]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[20]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[19]  ( .D(Instrn[19]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[19]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[18]  ( .D(Instrn[18]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[18]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[15]  ( .D(Instrn[15]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[15]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[14]  ( .D(Instrn[14]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[14]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[13]  ( .D(Instrn[13]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[13]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[12]  ( .D(Instrn[12]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[12]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[11]  ( .D(Instrn[11]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[11]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[10]  ( .D(Instrn[10]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[10]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[9]  ( .D(Instrn[9]), .LD(n3), .CP(Clk), .Q(
+        Crnt_Instrn_1[9]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[8]  ( .D(Instrn[8]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_1[8]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[7]  ( .D(Instrn[7]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_1[7]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[6]  ( .D(Instrn[6]), .LD(n1), .CP(Clk), .Q(
+        Crnt_Instrn_1[6]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[5]  ( .D(Instrn[5]), .LD(n2), .CP(Clk), .Q(
+        Crnt_Instrn_1[5]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[4]  ( .D(Instrn[4]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_1[4]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[3]  ( .D(Instrn[3]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_1[3]) );
+  FD1LQM1P \Crnt_Instrn_1_reg[2]  ( .D(Instrn[2]), .LD(Latch_Instr), .CP(Clk), 
+        .Q(Crnt_Instrn_1[2]) );
+  N1M1P U2 ( .A(n4), .Z(n3) );
+  N1M1P U3 ( .A(n4), .Z(n2) );
+  N1M1P U4 ( .A(n4), .Z(n1) );
+  N1M1P U5 ( .A(Latch_Instr), .Z(n4) );
+endmodule
+
+
+module DATA_PATH ( Clk, Reset, Reset_AluRegs, Rd_Oprnd_A, Rd_Oprnd_B, 
+        UseData_Imm_Or_RegB, UseData_Imm_Or_ALU, Latch_Flags, ALU_Zro, ALU_Neg, 
+        ALU_Carry, PSW_Zro, PSW_Neg, PSW_Carry, Crnt_Instrn, RegPort_A, 
+        RegPort_B, Op_Result, Zro_Flag, Neg_Flag, Carry_Flag, Addr_A, Oprnd_A, 
+        Oprnd_B, RegPort_C );
+  input [31:0] Crnt_Instrn;
+  input [15:0] RegPort_A;
+  input [15:0] RegPort_B;
+  input [15:0] Op_Result;
+  output [6:0] Addr_A;
+  output [15:0] Oprnd_A;
+  output [15:0] Oprnd_B;
+  output [15:0] RegPort_C;
+  input Clk, Reset, Reset_AluRegs, Rd_Oprnd_A, Rd_Oprnd_B, UseData_Imm_Or_RegB,
+         UseData_Imm_Or_ALU, Latch_Flags, ALU_Zro, ALU_Neg, ALU_Carry, PSW_Zro,
+         PSW_Neg, PSW_Carry;
+  output Zro_Flag, Neg_Flag, Carry_Flag;
+  wire   Crnt_Instrn_31, Crnt_Instrn_30, Crnt_Instrn_29, Crnt_Instrn_28,
+         Crnt_Instrn_27, Crnt_Instrn_26, Crnt_Instrn_25, Crnt_Instrn_24, N15,
+         N17, N19, N21, N23, N25, N27, N29, N31, N33, N35, N37, N39, N41, N43,
+         N44, N45, N97, N98, N99, N101, N103, N105, N107, N109, N111, N113,
+         N115, N117, N119, N121, N123, N125, N127, PSWL_Zro, PSWL_Neg,
+         PSWL_Carry, N130, N132, N133, N134, n2, n3, n4, n5, n6, n7, n8, n9,
+         n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23,
+         n24, n26, n27, n28, n29, n30, n31, n32, n33, n34, n1;
+  assign Crnt_Instrn_31 = Crnt_Instrn[31];
+  assign Crnt_Instrn_30 = Crnt_Instrn[30];
+  assign Crnt_Instrn_29 = Crnt_Instrn[29];
+  assign Crnt_Instrn_28 = Crnt_Instrn[28];
+  assign Crnt_Instrn_27 = Crnt_Instrn[27];
+  assign Crnt_Instrn_26 = Crnt_Instrn[26];
+  assign Crnt_Instrn_25 = Crnt_Instrn[25];
+  assign Crnt_Instrn_24 = Crnt_Instrn[24];
+
+  OAI22CDNM1P U77 ( .A(n5), .B(n6), .C(Op_Result[9]), .D(n6), .Z(RegPort_C[9])
+         );
+  OAI22CDNM1P U78 ( .A(n6), .B(n7), .C(Op_Result[8]), .D(n6), .Z(RegPort_C[8])
+         );
+  OAI22CDNM1P U79 ( .A(n6), .B(n8), .C(Op_Result[7]), .D(n6), .Z(RegPort_C[7])
+         );
+  OAI22CDNM1P U80 ( .A(n6), .B(n9), .C(Op_Result[6]), .D(n6), .Z(RegPort_C[6])
+         );
+  OAI22CDNM1P U81 ( .A(n6), .B(n10), .C(Op_Result[5]), .D(n6), .Z(RegPort_C[5]) );
+  OAI22CDNM1P U82 ( .A(n6), .B(n11), .C(Op_Result[4]), .D(n6), .Z(RegPort_C[4]) );
+  OAI22CDNM1P U83 ( .A(n6), .B(n12), .C(Op_Result[3]), .D(n6), .Z(RegPort_C[3]) );
+  OAI22CDNM1P U84 ( .A(n6), .B(n13), .C(Op_Result[2]), .D(n6), .Z(RegPort_C[2]) );
+  OAI22CDNM1P U85 ( .A(n6), .B(n14), .C(Op_Result[1]), .D(n6), .Z(RegPort_C[1]) );
+  OAI22CDNM1P U86 ( .A(n6), .B(n16), .C(Op_Result[14]), .D(n6), .Z(
+        RegPort_C[14]) );
+  OAI22CDNM1P U87 ( .A(n6), .B(n17), .C(Op_Result[13]), .D(n6), .Z(
+        RegPort_C[13]) );
+  OAI22CDNM1P U88 ( .A(n6), .B(n18), .C(Op_Result[12]), .D(n6), .Z(
+        RegPort_C[12]) );
+  OAI22CDNM1P U89 ( .A(n6), .B(n19), .C(Op_Result[11]), .D(n6), .Z(
+        RegPort_C[11]) );
+  OAI22CDNM1P U90 ( .A(n6), .B(n20), .C(Op_Result[10]), .D(n6), .Z(
+        RegPort_C[10]) );
+  OAI22CDNM1P U91 ( .A(n6), .B(n21), .C(Op_Result[0]), .D(n6), .Z(RegPort_C[0]) );
+  OAI22CDNM1P U92 ( .A(n14), .B(n23), .C(RegPort_B[1]), .D(n24), .Z(N99) );
+  OAI22CDNM1P U93 ( .A(n21), .B(n23), .C(RegPort_B[0]), .D(n24), .Z(N97) );
+  OAI22CDNM1P U94 ( .A(n8), .B(n23), .C(RegPort_B[7]), .D(n24), .Z(N111) );
+  OAI22CDNM1P U95 ( .A(n9), .B(n23), .C(RegPort_B[6]), .D(n24), .Z(N109) );
+  OAI22CDNM1P U96 ( .A(n10), .B(n23), .C(RegPort_B[5]), .D(n24), .Z(N107) );
+  OAI22CDNM1P U97 ( .A(n11), .B(n23), .C(RegPort_B[4]), .D(n24), .Z(N105) );
+  OAI22CDNM1P U98 ( .A(n12), .B(n23), .C(RegPort_B[3]), .D(n24), .Z(N103) );
+  OAI22CDNM1P U99 ( .A(n13), .B(n23), .C(RegPort_B[2]), .D(n24), .Z(N101) );
+  FD1LQM1P PSWL_Carry_reg ( .D(N134), .LD(N133), .CP(Clk), .Q(PSWL_Carry) );
+  FD1LQM1P PSWL_Zro_reg ( .D(N130), .LD(N133), .CP(Clk), .Q(PSWL_Zro) );
+  FD1LQM1P PSWL_Neg_reg ( .D(N132), .LD(N133), .CP(Clk), .Q(PSWL_Neg) );
+  FD1LQM1P \Oprnd_B_reg[15]  ( .D(N127), .LD(N98), .CP(Clk), .Q(Oprnd_B[15])
+         );
+  FD1LQM1P \Oprnd_B_reg[14]  ( .D(N125), .LD(N98), .CP(Clk), .Q(Oprnd_B[14])
+         );
+  FD1LQM1P \Oprnd_B_reg[13]  ( .D(N123), .LD(N98), .CP(Clk), .Q(Oprnd_B[13])
+         );
+  FD1LQM1P \Oprnd_B_reg[12]  ( .D(N121), .LD(N98), .CP(Clk), .Q(Oprnd_B[12])
+         );
+  FD1LQM1P \Oprnd_B_reg[11]  ( .D(N119), .LD(N98), .CP(Clk), .Q(Oprnd_B[11])
+         );
+  FD1LQM1P \Oprnd_B_reg[10]  ( .D(N117), .LD(N98), .CP(Clk), .Q(Oprnd_B[10])
+         );
+  FD1LQM1P \Oprnd_B_reg[9]  ( .D(N115), .LD(N98), .CP(Clk), .Q(Oprnd_B[9]) );
+  FD1LQM1P \Oprnd_B_reg[8]  ( .D(N113), .LD(N98), .CP(Clk), .Q(Oprnd_B[8]) );
+  FD1LQM1P \Oprnd_B_reg[7]  ( .D(N111), .LD(N98), .CP(Clk), .Q(Oprnd_B[7]) );
+  FD1LQM1P \Oprnd_B_reg[6]  ( .D(N109), .LD(N98), .CP(Clk), .Q(Oprnd_B[6]) );
+  FD1LQM1P \Oprnd_B_reg[5]  ( .D(N107), .LD(N98), .CP(Clk), .Q(Oprnd_B[5]) );
+  FD1LQM1P \Oprnd_A_reg[15]  ( .D(N45), .LD(N44), .CP(Clk), .Q(Oprnd_A[15]) );
+  FD1LQM1P \Oprnd_A_reg[12]  ( .D(N39), .LD(N44), .CP(Clk), .Q(Oprnd_A[12]) );
+  FD1LQM1P \Oprnd_A_reg[11]  ( .D(N37), .LD(N44), .CP(Clk), .Q(Oprnd_A[11]) );
+  FD1LQM1P \Oprnd_A_reg[10]  ( .D(N35), .LD(N44), .CP(Clk), .Q(Oprnd_A[10]) );
+  FD1LQM1P \Oprnd_A_reg[13]  ( .D(N41), .LD(N44), .CP(Clk), .Q(Oprnd_A[13]) );
+  FD1LQM1P \Oprnd_A_reg[9]  ( .D(N33), .LD(N44), .CP(Clk), .Q(Oprnd_A[9]) );
+  FD1LQM1P \Oprnd_A_reg[8]  ( .D(N31), .LD(N44), .CP(Clk), .Q(Oprnd_A[8]) );
+  FD1LQM1P \Oprnd_A_reg[7]  ( .D(N29), .LD(N44), .CP(Clk), .Q(Oprnd_A[7]) );
+  FD1LQM1P \Oprnd_A_reg[6]  ( .D(N27), .LD(N44), .CP(Clk), .Q(Oprnd_A[6]) );
+  FD1LQM1P \Oprnd_A_reg[5]  ( .D(N25), .LD(N44), .CP(Clk), .Q(Oprnd_A[5]) );
+  FD1LQM1P \Oprnd_A_reg[14]  ( .D(N43), .LD(N44), .CP(Clk), .Q(Oprnd_A[14]) );
+  FD1LQM1P \Oprnd_B_reg[0]  ( .D(N97), .LD(N98), .CP(Clk), .Q(Oprnd_B[0]) );
+  FD1LQM1P \Oprnd_B_reg[4]  ( .D(N105), .LD(N98), .CP(Clk), .Q(Oprnd_B[4]) );
+  FD1LQM1P \Oprnd_B_reg[3]  ( .D(N103), .LD(N98), .CP(Clk), .Q(Oprnd_B[3]) );
+  FD1LQM1P \Oprnd_B_reg[2]  ( .D(N101), .LD(N98), .CP(Clk), .Q(Oprnd_B[2]) );
+  FD1LQM1P \Oprnd_B_reg[1]  ( .D(N99), .LD(N98), .CP(Clk), .Q(Oprnd_B[1]) );
+  FD1LQM1P \Oprnd_A_reg[0]  ( .D(N15), .LD(N44), .CP(Clk), .Q(Oprnd_A[0]) );
+  FD1LQM1P \Oprnd_A_reg[4]  ( .D(N23), .LD(N44), .CP(Clk), .Q(Oprnd_A[4]) );
+  FD1LQM1P \Oprnd_A_reg[3]  ( .D(N21), .LD(N44), .CP(Clk), .Q(Oprnd_A[3]) );
+  FD1LQM1P \Oprnd_A_reg[2]  ( .D(N19), .LD(N44), .CP(Clk), .Q(Oprnd_A[2]) );
+  FD1LQM1P \Oprnd_A_reg[1]  ( .D(N17), .LD(N44), .CP(Clk), .Q(Oprnd_A[1]) );
+  ND2BNM1P U3 ( .B(Latch_Flags), .A(n26), .Z(N133) );
+  OAI22M1P U4 ( .A(n14), .B(n33), .C(n34), .D(n5), .Z(Addr_A[1]) );
+  OAI22M1P U5 ( .A(n21), .B(n33), .C(n34), .D(n7), .Z(Addr_A[0]) );
+  N1M1P U6 ( .A(n33), .Z(n34) );
+  N1M1P U7 ( .A(n4), .Z(n3) );
+  AND2M1P U8 ( .A(RegPort_A[0]), .B(n1), .Z(N15) );
+  AND2M1P U9 ( .A(RegPort_A[2]), .B(n1), .Z(N19) );
+  AND2M1P U10 ( .A(RegPort_A[3]), .B(n1), .Z(N21) );
+  AND2M1P U11 ( .A(RegPort_A[4]), .B(n1), .Z(N23) );
+  AND2M1P U12 ( .A(RegPort_A[5]), .B(n1), .Z(N25) );
+  AND2M1P U13 ( .A(RegPort_A[6]), .B(n1), .Z(N27) );
+  AND2M1P U14 ( .A(RegPort_A[7]), .B(n1), .Z(N29) );
+  AND2M1P U15 ( .A(RegPort_A[8]), .B(n1), .Z(N31) );
+  AND2M1P U16 ( .A(RegPort_A[9]), .B(n1), .Z(N33) );
+  AND2M1P U17 ( .A(RegPort_A[10]), .B(n1), .Z(N35) );
+  AND2M1P U18 ( .A(RegPort_A[11]), .B(n1), .Z(N37) );
+  AND2M1P U19 ( .A(RegPort_A[12]), .B(n1), .Z(N39) );
+  AND2M1P U20 ( .A(RegPort_A[13]), .B(n1), .Z(N41) );
+  AND2M1P U21 ( .A(RegPort_A[14]), .B(n1), .Z(N43) );
+  AND2M1P U22 ( .A(RegPort_A[15]), .B(n1), .Z(N45) );
+  NR2BNM1P U23 ( .B(RegPort_A[1]), .A(Reset_AluRegs), .Z(N17) );
+  N1M1P U24 ( .A(Reset_AluRegs), .Z(n1) );
+  ND2BNM2P U25 ( .B(Rd_Oprnd_B), .A(n1), .Z(N98) );
+  OAI22M1P U26 ( .A(n13), .B(n33), .C(n34), .D(n20), .Z(Addr_A[2]) );
+  OAI22M1P U27 ( .A(n12), .B(n33), .C(n34), .D(n19), .Z(Addr_A[3]) );
+  OAI22M1P U28 ( .A(n11), .B(n33), .C(n34), .D(n18), .Z(Addr_A[4]) );
+  OAI22M1P U29 ( .A(n10), .B(n33), .C(n34), .D(n17), .Z(Addr_A[5]) );
+  OAI22M1P U30 ( .A(n9), .B(n33), .C(n34), .D(n16), .Z(Addr_A[6]) );
+  N1M1P U31 ( .A(Reset), .Z(n26) );
+  AND2M1P U32 ( .A(PSW_Neg), .B(n26), .Z(N132) );
+  AND2M1P U33 ( .A(PSW_Zro), .B(n26), .Z(N130) );
+  AND2M1P U34 ( .A(PSW_Carry), .B(n26), .Z(N134) );
+  ND3M1P U35 ( .A(n28), .B(n29), .C(Crnt_Instrn_24), .Z(n33) );
+  ND4M1P U36 ( .A(n28), .B(n29), .C(n30), .D(n31), .Z(n4) );
+  NR2M1P U37 ( .A(Crnt_Instrn_29), .B(Crnt_Instrn_28), .Z(n30) );
+  NR3M1P U38 ( .A(n32), .B(Crnt_Instrn_26), .C(Crnt_Instrn_25), .Z(n31) );
+  ND2BNM1P U39 ( .B(Crnt_Instrn_24), .A(Crnt_Instrn_27), .Z(n32) );
+  N1M1P U40 ( .A(n22), .Z(Neg_Flag) );
+  AOI22M1P U41 ( .A(PSWL_Neg), .B(n3), .C(ALU_Neg), .D(n4), .Z(n22) );
+  N1M1P U42 ( .A(n2), .Z(Zro_Flag) );
+  AOI22M1P U43 ( .A(PSWL_Zro), .B(n3), .C(ALU_Zro), .D(n4), .Z(n2) );
+  N1M1P U44 ( .A(n27), .Z(Carry_Flag) );
+  AOI22M1P U45 ( .A(PSWL_Carry), .B(n3), .C(ALU_Carry), .D(n4), .Z(n27) );
+  N1M1P U46 ( .A(Crnt_Instrn_30), .Z(n28) );
+  N1M1P U47 ( .A(Crnt_Instrn_31), .Z(n29) );
+  NR2M1P U48 ( .A(Reset_AluRegs), .B(UseData_Imm_Or_RegB), .Z(n24) );
+  ND2M1P U49 ( .A(UseData_Imm_Or_RegB), .B(n1), .Z(n23) );
+  N1M1P U50 ( .A(n15), .Z(RegPort_C[15]) );
+  AOI22M1P U51 ( .A(Crnt_Instrn[15]), .B(UseData_Imm_Or_ALU), .C(Op_Result[15]), .D(n6), .Z(n15) );
+  ND2BNM2P U52 ( .B(Rd_Oprnd_A), .A(n1), .Z(N44) );
+  N1M1P U53 ( .A(UseData_Imm_Or_ALU), .Z(n6) );
+  N1M1P U54 ( .A(Crnt_Instrn[0]), .Z(n21) );
+  N1M1P U55 ( .A(Crnt_Instrn[1]), .Z(n14) );
+  N1M1P U56 ( .A(Crnt_Instrn[2]), .Z(n13) );
+  N1M1P U57 ( .A(Crnt_Instrn[3]), .Z(n12) );
+  N1M1P U58 ( .A(Crnt_Instrn[4]), .Z(n11) );
+  N1M1P U59 ( .A(Crnt_Instrn[5]), .Z(n10) );
+  N1M1P U60 ( .A(Crnt_Instrn[6]), .Z(n9) );
+  N1M1P U61 ( .A(Crnt_Instrn[9]), .Z(n5) );
+  N1M1P U62 ( .A(Crnt_Instrn[8]), .Z(n7) );
+  N1M1P U63 ( .A(Crnt_Instrn[10]), .Z(n20) );
+  N1M1P U64 ( .A(Crnt_Instrn[11]), .Z(n19) );
+  N1M1P U65 ( .A(Crnt_Instrn[12]), .Z(n18) );
+  N1M1P U66 ( .A(Crnt_Instrn[13]), .Z(n17) );
+  N1M1P U67 ( .A(Crnt_Instrn[14]), .Z(n16) );
+  N1M1P U68 ( .A(Crnt_Instrn[7]), .Z(n8) );
+  AND2M1P U69 ( .A(RegPort_B[8]), .B(n24), .Z(N113) );
+  AND2M1P U70 ( .A(RegPort_B[9]), .B(n24), .Z(N115) );
+  AND2M1P U71 ( .A(RegPort_B[10]), .B(n24), .Z(N117) );
+  AND2M1P U72 ( .A(RegPort_B[11]), .B(n24), .Z(N119) );
+  AND2M1P U73 ( .A(RegPort_B[12]), .B(n24), .Z(N121) );
+  AND2M1P U74 ( .A(RegPort_B[13]), .B(n24), .Z(N123) );
+  AND2M1P U75 ( .A(RegPort_B[14]), .B(n24), .Z(N125) );
+  AND2M1P U76 ( .A(RegPort_B[15]), .B(n24), .Z(N127) );
+endmodule
+
+
+module CONTROL ( Clk, Reset, Crnt_Instrn, .Current_State({\Current_State[2] , 
+        \Current_State[1] , \Current_State[0] }), Neg_Flag, Carry_Flag, 
+        Zro_Flag, Latch_Instr, Rd_Oprnd_A, Rd_Oprnd_B, Latch_Flags, 
+        Latch_Result, Write_RegC, UseData_Imm_Or_RegB, UseData_Imm_Or_ALU, 
+        Reset_AluRegs, EndOfInstrn, PushEnbl, PopEnbl, OUT_VALID );
+  input [31:0] Crnt_Instrn;
+  input Clk, Reset, \Current_State[2] , \Current_State[1] , \Current_State[0] ,
+         Neg_Flag, Carry_Flag, Zro_Flag;
+  output Latch_Instr, Rd_Oprnd_A, Rd_Oprnd_B, Latch_Flags, Latch_Result,
+         Write_RegC, UseData_Imm_Or_RegB, UseData_Imm_Or_ALU, Reset_AluRegs,
+         EndOfInstrn, PushEnbl, PopEnbl, OUT_VALID;
+  wire   Crnt_Instrn_31, Crnt_Instrn_30, Crnt_Instrn_28, Crnt_Instrn_27, N43,
+         N44, N45, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14,
+         n15, n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26;
+  assign Crnt_Instrn_31 = Crnt_Instrn[31];
+  assign Crnt_Instrn_30 = Crnt_Instrn[30];
+  assign Crnt_Instrn_28 = Crnt_Instrn[28];
+  assign Crnt_Instrn_27 = Crnt_Instrn[27];
+
+  FD1QM1P UseData_Imm_Or_ALU_reg ( .D(N44), .CP(Clk), .Q(UseData_Imm_Or_ALU)
+         );
+  FD1QM1P UseData_Imm_Or_RegB_reg ( .D(N43), .CP(Clk), .Q(UseData_Imm_Or_RegB)
+         );
+  FD1QM1P EndOfInstrn_reg ( .D(N45), .CP(Clk), .Q(EndOfInstrn) );
+  AOI22DNM1P U38 ( .A(n13), .B(n14), .D(Neg_Flag), .C(n15), .Z(n11) );
+  ND4CDNM1P U39 ( .C(Crnt_Instrn[22]), .D(Crnt_Instrn[23]), .A(Crnt_Instrn[17]), .B(Crnt_Instrn[16]), .Z(n18) );
+  AND2M1P U3 ( .A(Crnt_Instrn_27), .B(n8), .Z(PopEnbl) );
+  NR2M1P U4 ( .A(n6), .B(n23), .Z(N44) );
+  N1M1P U5 ( .A(n16), .Z(n13) );
+  N1M1P U6 ( .A(n26), .Z(n22) );
+  AND2M1P U7 ( .A(n2), .B(n22), .Z(n8) );
+  N1M1P U8 ( .A(Zro_Flag), .Z(n14) );
+  NR2BNM1P U9 ( .B(N45), .A(n2), .Z(Write_RegC) );
+  NR2M1P U10 ( .A(n2), .B(n4), .Z(Rd_Oprnd_B) );
+  NR2M1P U11 ( .A(n2), .B(n26), .Z(Latch_Result) );
+  AND2M1P U12 ( .A(n7), .B(n22), .Z(Latch_Flags) );
+  ND3BCNM1P U13 ( .B(Reset), .C(n24), .A(Crnt_Instrn_31), .Z(n23) );
+  NR3CNM1P U14 ( .C(n4), .A(n22), .B(N45), .Z(n24) );
+  NR2M1P U15 ( .A(Crnt_Instrn_30), .B(n23), .Z(N43) );
+  ND3M1P U16 ( .A(Current_State[0]), .B(n25), .C(Current_State[1]), .Z(n26) );
+  NR2BNM1P U17 ( .B(n20), .A(Crnt_Instrn[16]), .Z(n15) );
+  AOI21M1P U18 ( .A(Neg_Flag), .B(n15), .C(n17), .Z(n10) );
+  OAI22M1P U19 ( .A(n16), .B(n14), .C(n18), .D(n19), .Z(n17) );
+  ND4M1P U20 ( .A(Crnt_Instrn[21]), .B(Crnt_Instrn[20]), .C(Crnt_Instrn[19]), 
+        .D(Crnt_Instrn[18]), .Z(n19) );
+  N1M1P U21 ( .A(Current_State[2]), .Z(n25) );
+  AND3M1P U22 ( .A(n8), .B(n9), .C(Crnt_Instrn_28), .Z(PushEnbl) );
+  OAI22M1P U23 ( .A(Crnt_Instrn[25]), .B(n10), .C(n11), .D(n12), .Z(n9) );
+  N1M1P U24 ( .A(Crnt_Instrn[25]), .Z(n12) );
+  ND2M1P U25 ( .A(Crnt_Instrn[16]), .B(n20), .Z(n16) );
+  NR4M1P U26 ( .A(Crnt_Instrn[18]), .B(Crnt_Instrn[19]), .C(Crnt_Instrn[17]), 
+        .D(n21), .Z(n20) );
+  OR4M1P U27 ( .A(Crnt_Instrn[20]), .B(Crnt_Instrn[21]), .C(Crnt_Instrn[22]), 
+        .D(Crnt_Instrn[23]), .Z(n21) );
+  NR3M1P U28 ( .A(Current_State[0]), .B(Current_State[1]), .C(n25), .Z(N45) );
+  NR2M1P U29 ( .A(Crnt_Instrn_31), .B(Crnt_Instrn_30), .Z(n2) );
+  EOFM1P U30 ( .A(Crnt_Instrn_31), .B(Crnt_Instrn_30), .Z(n7) );
+  ND3M1P U31 ( .A(n3), .B(n25), .C(Current_State[1]), .Z(n4) );
+  NR2M1P U32 ( .A(n5), .B(n4), .Z(Rd_Oprnd_A) );
+  AOI21M1P U33 ( .A(Crnt_Instrn[24]), .B(n6), .C(n7), .Z(n5) );
+  N1M1P U34 ( .A(Current_State[0]), .Z(n3) );
+  N1M1P U35 ( .A(Crnt_Instrn_30), .Z(n6) );
+  AND2M1P U36 ( .A(Crnt_Instrn[24]), .B(n8), .Z(OUT_VALID) );
+  BUFM1P U37 ( .A(Reset_AluRegs), .Z(Latch_Instr) );
+  NR3M1P U40 ( .A(n3), .B(Current_State[2]), .C(Current_State[1]), .Z(
+        Reset_AluRegs) );
+endmodule
+
+
+module ALU ( Reset, Clk, Oprnd_A, Oprnd_B, ALU_OP, Latch_Result, Latch_Flags, 
+        Lachd_Result, Zro_Flag, Neg_Flag, Carry_Flag );
+  input [15:0] Oprnd_A;
+  input [15:0] Oprnd_B;
+  input [5:0] ALU_OP;
+  output [15:0] Lachd_Result;
+  input Reset, Clk, Latch_Result, Latch_Flags;
+  output Zro_Flag, Neg_Flag, Carry_Flag;
+  wire   ALU_Neg, N28, N30, N31, N57, N58, N59, N60, N61, N62, N63, N64, N65,
+         N66, N67, N68, N69, N70, N71, N72, N89, N90, N91, N92, N93, N94, N95,
+         N96, N97, N98, N99, N100, N101, N102, N103, N104, N105, N106, N107,
+         N108, N109, N110, N111, N112, N113, N114, N115, N116, N117, N118,
+         N119, N120, N121, N122, N123, N124, N125, N126, N127, N128, N129,
+         N130, N131, N132, N133, N134, N135, N136, N153, N154, N155, N156,
+         N157, N158, N159, N160, N161, N162, N163, N164, N165, N166, N167,
+         N168, N169, N170, N171, N172, N173, N174, N175, N176, N177, N178,
+         N179, N180, N181, N182, N183, N184, n16, n17, n18, n19, n20, n21, n22,
+         n23, n24, n25, n26, n27, n28, n29, n30, n31, n32, n33, n34, n35, n36,
+         n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n47, n48, n49, n51,
+         n52, n53, n54, n55, n56, n57, n58, n61, n62, n63, n64, n65, n66, n67,
+         n68, n69, n70, n71, n72, n73, n74, n75, n76, n77, n78, n79, n80, n81,
+         n82, n83, n84, n85, n86, n87, n88, n89, n90, n91, n92, n93, n94, n95,
+         n96, n97, n98, n99, n100, n101, n102, n103, n104, n105, n106, n107,
+         n108, n109, n110, n111, n112, n113, n114, n115, n116, n117, n118,
+         n119, n120, n121, n122, n123, n124, n125, n126, n127, n128, n129,
+         n130, n131, n132, n133, n134, n135, n136, n137, n138, n139, n140,
+         n141, n142, n143, n144, n145, n146, n147, n148, n149, n150, n151,
+         n152, n153, n154, n155, n156, n157, n158, n159, n160, n161, n162,
+         n163, n164, n165, n166, n167, n168, n169, n170, n171, n172, n173,
+         n174, n175, n176, n177, n178, n179, n180, n181, n182, n183, n184,
+         n185, n186, n187, n188, n189, n190, n191, n192, n193, n194, n195,
+         n196, n197, n198, n199, n200, n201, n202, n203, n204, n205, n206,
+         n207, n208, n209, n210, n211, n212, n213, n214, n215, n216, n217,
+         n218, n219, n220, n221, n222, n223, n224, n225, n226, n227, n228, n1,
+         n2, n5, n6, n7, n8, n9;
+  wire   [15:0] Result;
+  assign Carry_Flag = 1'b0;
+
+  OA21M1P U220 ( .A(n33), .B(ALU_OP[5]), .C(n32), .Z(N28) );
+  AND4M1P U221 ( .A(n37), .B(n38), .C(n39), .D(n40), .Z(n19) );
+  AND4M1P U222 ( .A(n61), .B(n62), .C(n63), .D(n64), .Z(n18) );
+  AND4M1P U223 ( .A(n71), .B(n72), .C(n73), .D(n74), .Z(n17) );
+  AND4M1P U224 ( .A(n81), .B(n82), .C(n83), .D(n84), .Z(n16) );
+  AND4M1P U225 ( .A(n91), .B(n92), .C(n93), .D(n94), .Z(n23) );
+  AND4M1P U226 ( .A(n101), .B(n102), .C(n103), .D(n104), .Z(n22) );
+  AND4M1P U227 ( .A(n111), .B(n112), .C(n113), .D(n114), .Z(n21) );
+  AND4M1P U228 ( .A(n121), .B(n122), .C(n123), .D(n124), .Z(n20) );
+  ND8M1P U229 ( .A(n24), .B(n25), .C(n26), .D(n27), .E(n28), .F(n29), .G(n30), 
+        .H(n31), .Z(n34) );
+  AND4M1P U230 ( .A(n131), .B(n132), .C(n133), .D(n134), .Z(n31) );
+  AND4M1P U231 ( .A(n141), .B(n142), .C(n143), .D(n144), .Z(n30) );
+  AND4M1P U232 ( .A(n151), .B(n152), .C(n153), .D(n154), .Z(n29) );
+  AND4M1P U233 ( .A(n161), .B(n162), .C(n163), .D(n164), .Z(n28) );
+  AND4M1P U234 ( .A(n171), .B(n172), .C(n173), .D(n174), .Z(n27) );
+  AND4M1P U235 ( .A(n181), .B(n182), .C(n183), .D(n184), .Z(n26) );
+  AND4M1P U236 ( .A(n191), .B(n192), .C(n193), .D(n194), .Z(n25) );
+  AND4M1P U237 ( .A(n201), .B(n202), .C(n203), .D(n204), .Z(n24) );
+  ALU_DW01_dec_0 sub_90 ( .A(Oprnd_A), .SUM({N184, N183, N182, N181, N180, 
+        N179, N178, N177, N176, N175, N174, N173, N172, N171, N170, N169}) );
+  ALU_DW01_sub_0 sub_1_root_sub_87 ( .A(Oprnd_A), .B(Oprnd_B), .CI(1'b1), 
+        .DIFF({N168, N167, N166, N165, N164, N163, N162, N161, N160, N159, 
+        N158, N157, N156, N155, N154, N153}) );
+  ALU_DW01_sub_1 sub_84 ( .A(Oprnd_A), .B(Oprnd_B), .CI(1'b0), .DIFF({N136, 
+        N135, N134, N133, N132, N131, N130, N129, N128, N127, N126, N125, N124, 
+        N123, N122, N121}) );
+  ALU_DW01_inc_0 add_81 ( .A(Oprnd_A), .SUM({N120, N119, N118, N117, N116, 
+        N115, N114, N113, N112, N111, N110, N109, N108, N107, N106, N105}) );
+  ALU_DW01_add_0 add_1_root_add_75_2 ( .A(Oprnd_A), .B(Oprnd_B), .CI(1'b1), 
+        .SUM({N104, N103, N102, N101, N100, N99, N98, N97, N96, N95, N94, N93, 
+        N92, N91, N90, N89}) );
+  ALU_DW01_add_1 add_72 ( .A(Oprnd_A), .B(Oprnd_B), .CI(1'b0), .SUM({N72, N71, 
+        N70, N69, N68, N67, N66, N65, N64, N63, N62, N61, N60, N59, N58, N57})
+         );
+  FD1LQM1P \Lachd_Result_reg[14]  ( .D(Result[14]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[14]) );
+  FD1LQM1P \Lachd_Result_reg[13]  ( .D(Result[13]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[13]) );
+  FD1LQM1P \Lachd_Result_reg[12]  ( .D(Result[12]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[12]) );
+  FD1LQM1P \Lachd_Result_reg[11]  ( .D(Result[11]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[11]) );
+  FD1LQM1P \Lachd_Result_reg[10]  ( .D(Result[10]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[10]) );
+  FD1LQM1P \Lachd_Result_reg[9]  ( .D(Result[9]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[9]) );
+  FD1LQM1P \Lachd_Result_reg[8]  ( .D(Result[8]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[8]) );
+  FD1LQM1P \Lachd_Result_reg[7]  ( .D(Result[7]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[7]) );
+  FD1LQM1P \Lachd_Result_reg[6]  ( .D(Result[6]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[6]) );
+  FD1LQM1P \Lachd_Result_reg[5]  ( .D(Result[5]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[5]) );
+  FD1LQM1P \Lachd_Result_reg[4]  ( .D(Result[4]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[4]) );
+  FD1LQM1P \Lachd_Result_reg[3]  ( .D(Result[3]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[3]) );
+  FD1LQM1P \Lachd_Result_reg[2]  ( .D(Result[2]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[2]) );
+  FD1LQM1P \Lachd_Result_reg[1]  ( .D(Result[1]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[1]) );
+  FD1LQM1P \Lachd_Result_reg[0]  ( .D(Result[0]), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[0]) );
+  FD1LQM1P \Lachd_Result_reg[15]  ( .D(ALU_Neg), .LD(n6), .CP(Clk), .Q(
+        Lachd_Result[15]) );
+  FD1LQM1P Zro_Flag_reg ( .D(N28), .LD(N31), .CP(Clk), .Q(Zro_Flag) );
+  FD1LQM1P Neg_Flag_reg ( .D(N30), .LD(N31), .CP(Clk), .Q(Neg_Flag) );
+  AND2M1P U4 ( .A(n227), .B(n228), .Z(n1) );
+  ND2M1P U5 ( .A(n221), .B(ALU_OP[4]), .Z(n2) );
+  AND4M1P U6 ( .A(n227), .B(n216), .C(n220), .D(n225), .Z(n5) );
+  ND3M1P U7 ( .A(ALU_OP[2]), .B(ALU_OP[4]), .C(ALU_OP[3]), .Z(n51) );
+  NR2M2P U10 ( .A(n215), .B(ALU_OP[1]), .Z(n53) );
+  AND3M1P U11 ( .A(n221), .B(n218), .C(ALU_OP[1]), .Z(n55) );
+  BUFM1P U12 ( .A(n56), .Z(n7) );
+  BUFM1P U13 ( .A(n41), .Z(n8) );
+  N1M1P U14 ( .A(n214), .Z(n209) );
+  AOI222M1P U15 ( .A(N119), .B(n7), .C(N167), .D(n57), .E(N135), .F(n58), .Z(
+        n182) );
+  AOI222M1P U16 ( .A(N118), .B(n7), .C(N166), .D(n57), .E(N134), .F(n58), .Z(
+        n172) );
+  AOI222M1P U17 ( .A(N117), .B(n7), .C(N165), .D(n57), .E(N133), .F(n58), .Z(
+        n162) );
+  AOI222M1P U18 ( .A(N116), .B(n7), .C(N164), .D(n57), .E(N132), .F(n58), .Z(
+        n152) );
+  ND2BNM1P U19 ( .B(Latch_Flags), .A(n32), .Z(N31) );
+  AND2M1P U20 ( .A(ALU_Neg), .B(n32), .Z(N30) );
+  NR2M2P U21 ( .A(n209), .B(n225), .Z(n54) );
+  AOI222M1P U22 ( .A(N115), .B(n7), .C(N163), .D(n57), .E(N131), .F(n58), .Z(
+        n142) );
+  AOI222M1P U23 ( .A(N114), .B(n7), .C(N162), .D(n57), .E(N130), .F(n58), .Z(
+        n82) );
+  AOI222M1P U24 ( .A(N113), .B(n7), .C(N161), .D(n57), .E(N129), .F(n58), .Z(
+        n72) );
+  AOI222M1P U25 ( .A(N112), .B(n7), .C(N160), .D(n57), .E(N128), .F(n58), .Z(
+        n62) );
+  AOI222M1P U26 ( .A(N111), .B(n7), .C(N159), .D(n57), .E(N127), .F(n58), .Z(
+        n38) );
+  AOI222M1P U27 ( .A(N110), .B(n7), .C(N158), .D(n57), .E(N126), .F(n58), .Z(
+        n122) );
+  AOI222M1P U28 ( .A(N109), .B(n7), .C(N157), .D(n57), .E(N125), .F(n58), .Z(
+        n112) );
+  BUFM1P U29 ( .A(n49), .Z(n9) );
+  OAI22M1P U30 ( .A(n215), .B(n216), .C(n218), .D(n210), .Z(n49) );
+  NR2M1P U31 ( .A(n226), .B(n218), .Z(n214) );
+  AND2M1P U32 ( .A(n227), .B(n221), .Z(n57) );
+  AND2M1P U33 ( .A(n227), .B(n213), .Z(n58) );
+  AOI22M1P U34 ( .A(n54), .B(n109), .C(N172), .D(n55), .Z(n103) );
+  AOI22M1P U35 ( .A(N92), .B(n1), .C(N60), .D(n5), .Z(n101) );
+  AOI222M1P U36 ( .A(N108), .B(n7), .C(N156), .D(n57), .E(N124), .F(n58), .Z(
+        n102) );
+  AOI22M1P U37 ( .A(N91), .B(n1), .C(N59), .D(n5), .Z(n91) );
+  AOI22M1P U38 ( .A(n54), .B(n99), .C(N171), .D(n55), .Z(n93) );
+  AOI222M1P U39 ( .A(N107), .B(n7), .C(N155), .D(n57), .E(N123), .F(n58), .Z(
+        n92) );
+  N1M1P U40 ( .A(n228), .Z(n210) );
+  AOI22M1P U41 ( .A(N89), .B(n1), .C(N57), .D(n5), .Z(n131) );
+  AOI222M1P U42 ( .A(N105), .B(n7), .C(N153), .D(n57), .E(N121), .F(n58), .Z(
+        n132) );
+  AOI22M1P U43 ( .A(n54), .B(n139), .C(N169), .D(n55), .Z(n133) );
+  AOI22M1P U44 ( .A(N90), .B(n1), .C(N58), .D(n5), .Z(n201) );
+  AOI222M1P U45 ( .A(N106), .B(n7), .C(N154), .D(n57), .E(N122), .F(n58), .Z(
+        n202) );
+  AOI22M1P U46 ( .A(n54), .B(n217), .C(N170), .D(n55), .Z(n203) );
+  OAI211M1P U47 ( .A(n2), .B(n199), .C(n51), .D(n200), .Z(n195) );
+  ND2M1P U48 ( .A(n53), .B(n199), .Z(n200) );
+  OAI211M1P U49 ( .A(n2), .B(n179), .C(n51), .D(n180), .Z(n175) );
+  ND2M1P U50 ( .A(n53), .B(n179), .Z(n180) );
+  OAI211M1P U51 ( .A(n2), .B(n169), .C(n51), .D(n170), .Z(n165) );
+  ND2M1P U52 ( .A(n53), .B(n169), .Z(n170) );
+  OAI211M1P U53 ( .A(n2), .B(n159), .C(n51), .D(n160), .Z(n155) );
+  ND2M1P U54 ( .A(n53), .B(n159), .Z(n160) );
+  OAI211M1P U55 ( .A(n2), .B(n149), .C(n51), .D(n150), .Z(n145) );
+  ND2M1P U56 ( .A(n53), .B(n149), .Z(n150) );
+  OAI211M1P U57 ( .A(n2), .B(n129), .C(n51), .D(n130), .Z(n125) );
+  ND2M1P U58 ( .A(n53), .B(n129), .Z(n130) );
+  ND2M1P U59 ( .A(n53), .B(n139), .Z(n140) );
+  ND2M1P U60 ( .A(n53), .B(n217), .Z(n219) );
+  ND2M1P U61 ( .A(n53), .B(n99), .Z(n100) );
+  ND2M1P U62 ( .A(n53), .B(n109), .Z(n110) );
+  OAI211M1P U63 ( .A(n2), .B(n189), .C(n51), .D(n190), .Z(n185) );
+  ND2M1P U64 ( .A(n53), .B(n189), .Z(n190) );
+  OAI211M1P U65 ( .A(n2), .B(n89), .C(n51), .D(n90), .Z(n85) );
+  ND2M1P U66 ( .A(n53), .B(n89), .Z(n90) );
+  OAI211M1P U67 ( .A(n2), .B(n79), .C(n51), .D(n80), .Z(n75) );
+  ND2M1P U68 ( .A(n53), .B(n79), .Z(n80) );
+  OAI211M1P U69 ( .A(n2), .B(n69), .C(n51), .D(n70), .Z(n65) );
+  ND2M1P U70 ( .A(n53), .B(n69), .Z(n70) );
+  OAI211M1P U71 ( .A(n2), .B(n48), .C(n51), .D(n52), .Z(n42) );
+  ND2M1P U72 ( .A(n53), .B(n48), .Z(n52) );
+  OAI211M1P U73 ( .A(n2), .B(n119), .C(n51), .D(n120), .Z(n115) );
+  ND2M1P U74 ( .A(n53), .B(n119), .Z(n120) );
+  BUFM2P U75 ( .A(Latch_Result), .Z(n6) );
+  AOI222M1P U76 ( .A(N120), .B(n7), .C(N168), .D(n57), .E(N136), .F(n58), .Z(
+        n192) );
+  AOI222M1P U77 ( .A(Oprnd_A[15]), .B(n8), .C(n195), .D(n196), .E(Oprnd_B[15]), 
+        .F(n197), .Z(n194) );
+  AOI22M1P U78 ( .A(n54), .B(n199), .C(N184), .D(n55), .Z(n193) );
+  AOI22M1P U79 ( .A(N104), .B(n1), .C(N72), .D(n5), .Z(n191) );
+  AOI222M1P U80 ( .A(Oprnd_A[14]), .B(n8), .C(n185), .D(n186), .E(Oprnd_B[14]), 
+        .F(n187), .Z(n184) );
+  AOI22M1P U81 ( .A(n54), .B(n189), .C(N183), .D(n55), .Z(n183) );
+  AOI22M1P U82 ( .A(N103), .B(n1), .C(N71), .D(n5), .Z(n181) );
+  AOI222M1P U83 ( .A(Oprnd_A[13]), .B(n8), .C(n175), .D(n176), .E(Oprnd_B[13]), 
+        .F(n177), .Z(n174) );
+  AOI22M1P U84 ( .A(n54), .B(n179), .C(N182), .D(n55), .Z(n173) );
+  AOI22M1P U85 ( .A(N102), .B(n1), .C(N70), .D(n5), .Z(n171) );
+  AOI222M1P U86 ( .A(Oprnd_A[12]), .B(n8), .C(n165), .D(n166), .E(Oprnd_B[12]), 
+        .F(n167), .Z(n164) );
+  AOI22M1P U87 ( .A(n54), .B(n169), .C(N181), .D(n55), .Z(n163) );
+  AOI22M1P U88 ( .A(N101), .B(n1), .C(N69), .D(n5), .Z(n161) );
+  AOI222M1P U89 ( .A(Oprnd_A[11]), .B(n8), .C(n155), .D(n156), .E(Oprnd_B[11]), 
+        .F(n157), .Z(n154) );
+  AOI22M1P U90 ( .A(n54), .B(n159), .C(N180), .D(n55), .Z(n153) );
+  AOI22M1P U91 ( .A(N100), .B(n1), .C(N68), .D(n5), .Z(n151) );
+  NR3M1P U92 ( .A(n34), .B(n35), .C(n36), .Z(n33) );
+  ND4M1P U93 ( .A(n20), .B(n21), .C(n22), .D(n23), .Z(n35) );
+  ND4M1P U94 ( .A(n16), .B(n17), .C(n18), .D(n19), .Z(n36) );
+  NR2M1P U95 ( .A(ALU_OP[5]), .B(n25), .Z(ALU_Neg) );
+  NR2M1P U96 ( .A(ALU_OP[5]), .B(n27), .Z(Result[13]) );
+  NR2M1P U97 ( .A(ALU_OP[5]), .B(n26), .Z(Result[14]) );
+  N1M1P U98 ( .A(Reset), .Z(n32) );
+  NR3M1P U99 ( .A(ALU_OP[0]), .B(ALU_OP[3]), .C(n220), .Z(n221) );
+  NR3M1P U100 ( .A(n220), .B(ALU_OP[3]), .C(n216), .Z(n213) );
+  ND3M1P U101 ( .A(ALU_OP[4]), .B(n220), .C(ALU_OP[3]), .Z(n215) );
+  AOI222M1P U102 ( .A(Oprnd_A[0]), .B(n8), .C(n135), .D(n136), .E(Oprnd_B[0]), 
+        .F(n137), .Z(n134) );
+  N1M1P U103 ( .A(Oprnd_B[0]), .Z(n136) );
+  OAI211M1P U104 ( .A(n2), .B(n139), .C(n51), .D(n140), .Z(n135) );
+  ND2M1P U105 ( .A(n138), .B(n46), .Z(n137) );
+  AOI222M1P U106 ( .A(Oprnd_A[2]), .B(n8), .C(n95), .D(n96), .E(Oprnd_B[2]), 
+        .F(n97), .Z(n94) );
+  N1M1P U107 ( .A(Oprnd_B[2]), .Z(n96) );
+  OAI211M1P U108 ( .A(n2), .B(n99), .C(n51), .D(n100), .Z(n95) );
+  ND2M1P U109 ( .A(n98), .B(n46), .Z(n97) );
+  NR3M1P U110 ( .A(ALU_OP[2]), .B(ALU_OP[3]), .C(n216), .Z(n228) );
+  N1M1P U111 ( .A(ALU_OP[3]), .Z(n225) );
+  NR2M2P U112 ( .A(n209), .B(ALU_OP[3]), .Z(n47) );
+  NR2M1P U113 ( .A(ALU_OP[4]), .B(ALU_OP[1]), .Z(n227) );
+  N1M1P U114 ( .A(ALU_OP[0]), .Z(n216) );
+  N1M1P U115 ( .A(Oprnd_A[14]), .Z(n189) );
+  N1M1P U116 ( .A(Oprnd_A[1]), .Z(n217) );
+  N1M1P U117 ( .A(Oprnd_A[13]), .Z(n179) );
+  N1M1P U118 ( .A(Oprnd_A[12]), .Z(n169) );
+  N1M1P U119 ( .A(Oprnd_A[11]), .Z(n159) );
+  N1M1P U120 ( .A(Oprnd_A[10]), .Z(n149) );
+  N1M1P U121 ( .A(Oprnd_A[0]), .Z(n139) );
+  N1M1P U122 ( .A(Oprnd_A[15]), .Z(n199) );
+  N1M1P U123 ( .A(ALU_OP[4]), .Z(n218) );
+  OA21M1P U124 ( .A(n209), .B(n210), .C(n211), .Z(n46) );
+  AOI22M1P U125 ( .A(n212), .B(ALU_OP[1]), .C(n213), .D(n214), .Z(n211) );
+  NR2M1P U126 ( .A(n215), .B(n216), .Z(n212) );
+  AOI222M1P U127 ( .A(Oprnd_A[9]), .B(n8), .C(n85), .D(n86), .E(Oprnd_B[9]), 
+        .F(n87), .Z(n84) );
+  AOI22M1P U128 ( .A(n54), .B(n89), .C(N178), .D(n55), .Z(n83) );
+  AOI22M1P U129 ( .A(N98), .B(n1), .C(N66), .D(n5), .Z(n81) );
+  AOI22M1P U130 ( .A(n54), .B(n129), .C(N174), .D(n55), .Z(n123) );
+  AOI222M1P U131 ( .A(Oprnd_A[5]), .B(n8), .C(n125), .D(n126), .E(Oprnd_B[5]), 
+        .F(n127), .Z(n124) );
+  AOI22M1P U132 ( .A(N94), .B(n1), .C(N62), .D(n5), .Z(n121) );
+  AOI222M1P U133 ( .A(Oprnd_A[8]), .B(n8), .C(n75), .D(n76), .E(Oprnd_B[8]), 
+        .F(n77), .Z(n74) );
+  AOI22M1P U134 ( .A(n54), .B(n79), .C(N177), .D(n55), .Z(n73) );
+  AOI22M1P U135 ( .A(N97), .B(n1), .C(N65), .D(n5), .Z(n71) );
+  AOI22M1P U136 ( .A(n54), .B(n119), .C(N173), .D(n55), .Z(n113) );
+  AOI22M1P U137 ( .A(N93), .B(n1), .C(N61), .D(n5), .Z(n111) );
+  AOI222M1P U138 ( .A(Oprnd_A[4]), .B(n8), .C(n115), .D(n116), .E(Oprnd_B[4]), 
+        .F(n117), .Z(n114) );
+  AOI222M1P U139 ( .A(Oprnd_A[7]), .B(n8), .C(n65), .D(n66), .E(Oprnd_B[7]), 
+        .F(n67), .Z(n64) );
+  AOI22M1P U140 ( .A(n54), .B(n69), .C(N176), .D(n55), .Z(n63) );
+  AOI22M1P U141 ( .A(N96), .B(n1), .C(N64), .D(n5), .Z(n61) );
+  N1M1P U142 ( .A(ALU_OP[2]), .Z(n220) );
+  AOI222M1P U143 ( .A(Oprnd_A[6]), .B(n8), .C(n42), .D(n43), .E(Oprnd_B[6]), 
+        .F(n44), .Z(n40) );
+  AOI22M1P U144 ( .A(n54), .B(n48), .C(N175), .D(n55), .Z(n39) );
+  AOI22M1P U145 ( .A(N95), .B(n1), .C(N63), .D(n5), .Z(n37) );
+  N1M1P U146 ( .A(ALU_OP[1]), .Z(n226) );
+  EOFM1P U147 ( .A(n220), .B(ALU_OP[0]), .Z(n224) );
+  AOI22M1P U148 ( .A(n47), .B(n139), .C(Oprnd_A[0]), .D(n9), .Z(n138) );
+  AOI22M1P U149 ( .A(n47), .B(n217), .C(Oprnd_A[1]), .D(n9), .Z(n208) );
+  AOI22M1P U150 ( .A(n47), .B(n99), .C(Oprnd_A[2]), .D(n9), .Z(n98) );
+  AOI22M1P U151 ( .A(n47), .B(n109), .C(Oprnd_A[3]), .D(n9), .Z(n108) );
+  AOI222M1P U152 ( .A(Oprnd_A[10]), .B(n8), .C(n145), .D(n146), .E(Oprnd_B[10]), .F(n147), .Z(n144) );
+  AOI22M1P U153 ( .A(n54), .B(n149), .C(N179), .D(n55), .Z(n143) );
+  AOI22M1P U154 ( .A(N99), .B(n1), .C(N67), .D(n5), .Z(n141) );
+  NR3M1P U155 ( .A(n226), .B(ALU_OP[4]), .C(n210), .Z(n56) );
+  OAI211M1P U156 ( .A(n51), .B(n216), .C(n222), .D(n223), .Z(n41) );
+  ND2M1P U157 ( .A(n213), .B(ALU_OP[4]), .Z(n223) );
+  ND4M1P U158 ( .A(n224), .B(ALU_OP[1]), .C(n225), .D(n218), .Z(n222) );
+  NR2M1P U159 ( .A(ALU_OP[5]), .B(n31), .Z(Result[0]) );
+  NR2M1P U160 ( .A(ALU_OP[5]), .B(n24), .Z(Result[1]) );
+  NR2M1P U161 ( .A(ALU_OP[5]), .B(n23), .Z(Result[2]) );
+  NR2M1P U162 ( .A(ALU_OP[5]), .B(n22), .Z(Result[3]) );
+  NR2M1P U163 ( .A(ALU_OP[5]), .B(n21), .Z(Result[4]) );
+  NR2M1P U164 ( .A(ALU_OP[5]), .B(n20), .Z(Result[5]) );
+  NR2M1P U165 ( .A(ALU_OP[5]), .B(n19), .Z(Result[6]) );
+  NR2M1P U166 ( .A(ALU_OP[5]), .B(n18), .Z(Result[7]) );
+  NR2M1P U167 ( .A(ALU_OP[5]), .B(n17), .Z(Result[8]) );
+  NR2M1P U168 ( .A(ALU_OP[5]), .B(n16), .Z(Result[9]) );
+  NR2M1P U169 ( .A(ALU_OP[5]), .B(n30), .Z(Result[10]) );
+  NR2M1P U170 ( .A(ALU_OP[5]), .B(n29), .Z(Result[11]) );
+  NR2M1P U171 ( .A(ALU_OP[5]), .B(n28), .Z(Result[12]) );
+  ND2M1P U172 ( .A(n198), .B(n46), .Z(n197) );
+  AOI22M1P U173 ( .A(n47), .B(n199), .C(Oprnd_A[15]), .D(n9), .Z(n198) );
+  ND2M1P U174 ( .A(n188), .B(n46), .Z(n187) );
+  AOI22M1P U175 ( .A(n47), .B(n189), .C(Oprnd_A[14]), .D(n9), .Z(n188) );
+  ND2M1P U176 ( .A(n178), .B(n46), .Z(n177) );
+  AOI22M1P U177 ( .A(n47), .B(n179), .C(Oprnd_A[13]), .D(n9), .Z(n178) );
+  ND2M1P U178 ( .A(n168), .B(n46), .Z(n167) );
+  AOI22M1P U179 ( .A(n47), .B(n169), .C(Oprnd_A[12]), .D(n9), .Z(n168) );
+  ND2M1P U180 ( .A(n158), .B(n46), .Z(n157) );
+  AOI22M1P U181 ( .A(n47), .B(n159), .C(Oprnd_A[11]), .D(n9), .Z(n158) );
+  ND2M1P U182 ( .A(n148), .B(n46), .Z(n147) );
+  AOI22M1P U183 ( .A(n47), .B(n149), .C(Oprnd_A[10]), .D(n9), .Z(n148) );
+  ND2M1P U184 ( .A(n88), .B(n46), .Z(n87) );
+  AOI22M1P U185 ( .A(n47), .B(n89), .C(Oprnd_A[9]), .D(n9), .Z(n88) );
+  ND2M1P U186 ( .A(n78), .B(n46), .Z(n77) );
+  AOI22M1P U187 ( .A(n47), .B(n79), .C(Oprnd_A[8]), .D(n9), .Z(n78) );
+  ND2M1P U188 ( .A(n68), .B(n46), .Z(n67) );
+  AOI22M1P U189 ( .A(n47), .B(n69), .C(Oprnd_A[7]), .D(n9), .Z(n68) );
+  ND2M1P U190 ( .A(n45), .B(n46), .Z(n44) );
+  AOI22M1P U191 ( .A(n47), .B(n48), .C(Oprnd_A[6]), .D(n9), .Z(n45) );
+  ND2M1P U192 ( .A(n128), .B(n46), .Z(n127) );
+  AOI22M1P U193 ( .A(n47), .B(n129), .C(Oprnd_A[5]), .D(n9), .Z(n128) );
+  ND2M1P U194 ( .A(n118), .B(n46), .Z(n117) );
+  AOI22M1P U195 ( .A(n47), .B(n119), .C(Oprnd_A[4]), .D(n9), .Z(n118) );
+  AOI222M1P U196 ( .A(Oprnd_A[1]), .B(n8), .C(n205), .D(n206), .E(Oprnd_B[1]), 
+        .F(n207), .Z(n204) );
+  N1M1P U197 ( .A(Oprnd_B[1]), .Z(n206) );
+  OAI211M1P U198 ( .A(n2), .B(n217), .C(n51), .D(n219), .Z(n205) );
+  ND2M1P U199 ( .A(n208), .B(n46), .Z(n207) );
+  AOI222M1P U200 ( .A(Oprnd_A[3]), .B(n8), .C(n105), .D(n106), .E(Oprnd_B[3]), 
+        .F(n107), .Z(n104) );
+  N1M1P U201 ( .A(Oprnd_B[3]), .Z(n106) );
+  OAI211M1P U202 ( .A(n2), .B(n109), .C(n51), .D(n110), .Z(n105) );
+  ND2M1P U203 ( .A(n108), .B(n46), .Z(n107) );
+  N1M1P U204 ( .A(Oprnd_A[9]), .Z(n89) );
+  N1M1P U205 ( .A(Oprnd_A[8]), .Z(n79) );
+  N1M1P U206 ( .A(Oprnd_A[7]), .Z(n69) );
+  N1M1P U207 ( .A(Oprnd_A[6]), .Z(n48) );
+  N1M1P U208 ( .A(Oprnd_A[5]), .Z(n129) );
+  N1M1P U209 ( .A(Oprnd_A[4]), .Z(n119) );
+  N1M1P U210 ( .A(Oprnd_A[2]), .Z(n99) );
+  N1M1P U211 ( .A(Oprnd_A[3]), .Z(n109) );
+  N1M1P U212 ( .A(Oprnd_B[15]), .Z(n196) );
+  N1M1P U213 ( .A(Oprnd_B[14]), .Z(n186) );
+  N1M1P U214 ( .A(Oprnd_B[13]), .Z(n176) );
+  N1M1P U215 ( .A(Oprnd_B[12]), .Z(n166) );
+  N1M1P U216 ( .A(Oprnd_B[11]), .Z(n156) );
+  N1M1P U217 ( .A(Oprnd_B[10]), .Z(n146) );
+  N1M1P U218 ( .A(Oprnd_B[9]), .Z(n86) );
+  N1M1P U219 ( .A(Oprnd_B[8]), .Z(n76) );
+  N1M1P U238 ( .A(Oprnd_B[7]), .Z(n66) );
+  N1M1P U239 ( .A(Oprnd_B[6]), .Z(n43) );
+  N1M1P U240 ( .A(Oprnd_B[5]), .Z(n126) );
+  N1M1P U241 ( .A(Oprnd_B[4]), .Z(n116) );
+endmodule
+
+
+module RISC_CORE ( Clk, Reset, Instrn, Xecutng_Instrn, EndOfInstrn, PSW, 
+        Rd_Instr, RESULT_DATA, OUT_VALID, STACK_FULL );
+  input [31:0] Instrn;
+  output [31:0] Xecutng_Instrn;
+  output [10:0] PSW;
+  output [15:0] RESULT_DATA;
+  input Clk, Reset;
+  output EndOfInstrn, Rd_Instr, OUT_VALID, STACK_FULL;
+  wire   Latch_Result, Latch_Flags, ALU_Zro, ALU_Neg, Rd_Oprnd_A, Rd_Oprnd_B,
+         Write_RegC, UseData_Imm_Or_RegB, UseData_Imm_Or_ALU, Reset_AluRegs,
+         PushEnbl, PopEnbl;
+  wire   [7:0] Return_Addr;
+  wire   [10:8] PopDataOut;
+  wire   [15:0] Oprnd_A;
+  wire   [15:0] Oprnd_B;
+  wire   [15:0] Op_Result;
+  wire   [31:0] Crnt_Instrn_2;
+  wire   [2:0] Current_State;
+  wire   [15:0] RegPort_B;
+  wire   [6:0] Addr_A;
+  wire   [15:0] RegPort_C;
+  wire   SYNOPSYS_UNCONNECTED__0;
+
+  ALU I_ALU ( .Reset(Reset), .Clk(Clk), .Oprnd_A(Oprnd_A), .Oprnd_B(Oprnd_B), 
+        .ALU_OP(Xecutng_Instrn[29:24]), .Latch_Result(Latch_Result), 
+        .Latch_Flags(Latch_Flags), .Lachd_Result(Op_Result), .Zro_Flag(ALU_Zro), .Neg_Flag(ALU_Neg) );
+  CONTROL I_CONTROL ( .Clk(Clk), .Reset(Reset), .Crnt_Instrn(Crnt_Instrn_2), 
+        .Current_State(Current_State), .Neg_Flag(PSW[1]), .Carry_Flag(PSW[0]), 
+        .Zro_Flag(PSW[2]), .Latch_Instr(Rd_Instr), .Rd_Oprnd_A(Rd_Oprnd_A), 
+        .Rd_Oprnd_B(Rd_Oprnd_B), .Latch_Flags(Latch_Flags), .Latch_Result(
+        Latch_Result), .Write_RegC(Write_RegC), .UseData_Imm_Or_RegB(
+        UseData_Imm_Or_RegB), .UseData_Imm_Or_ALU(UseData_Imm_Or_ALU), 
+        .Reset_AluRegs(Reset_AluRegs), .EndOfInstrn(EndOfInstrn), .PushEnbl(
+        PushEnbl), .PopEnbl(PopEnbl), .OUT_VALID(OUT_VALID) );
+  DATA_PATH I_DATA_PATH ( .Clk(Clk), .Reset(Reset), .Reset_AluRegs(
+        Reset_AluRegs), .Rd_Oprnd_A(Rd_Oprnd_A), .Rd_Oprnd_B(Rd_Oprnd_B), 
+        .UseData_Imm_Or_RegB(UseData_Imm_Or_RegB), .UseData_Imm_Or_ALU(
+        UseData_Imm_Or_ALU), .Latch_Flags(Latch_Flags), .ALU_Zro(ALU_Zro), 
+        .ALU_Neg(ALU_Neg), .ALU_Carry(1'b0), .PSW_Zro(PopDataOut[10]), 
+        .PSW_Neg(PopDataOut[9]), .PSW_Carry(PopDataOut[8]), .Crnt_Instrn(
+        Crnt_Instrn_2), .RegPort_A(RESULT_DATA), .RegPort_B(RegPort_B), 
+        .Op_Result(Op_Result), .Zro_Flag(PSW[2]), .Neg_Flag(PSW[1]), 
+        .Carry_Flag(PSW[0]), .Addr_A(Addr_A), .Oprnd_A(Oprnd_A), .Oprnd_B(
+        Oprnd_B), .RegPort_C(RegPort_C) );
+  INSTRN_LAT I_INSTRN_LAT ( .Clk(Clk), .Instrn(Instrn), .Latch_Instr(Rd_Instr), 
+        .Crnt_Instrn_1(Xecutng_Instrn), .Crnt_Instrn_2(Crnt_Instrn_2) );
+  PRGRM_CNT_TOP I_PRGRM_CNT_TOP ( .Clk(Clk), .Reset(Reset), .Crnt_Instrn(
+        Crnt_Instrn_2), .Zro_Flag(PSW[2]), .Carry_Flag(PSW[0]), .Neg_Flag(
+        PSW[1]), .Return_Addr(Return_Addr), .Current_State(Current_State), 
+        .PC(PSW[10:3]) );
+  REG_FILE I_REG_FILE ( .Reset(Reset), .Clk(Clk), .Addr_A(Addr_A), .Addr_B(
+        Xecutng_Instrn[6:0]), .Addr_C(Xecutng_Instrn[22:16]), .RegPort_C(
+        RegPort_C), .Write_RegC(Write_RegC), .RegPort_A(RESULT_DATA), 
+        .RegPort_B(RegPort_B) );
+  STACK_TOP I_STACK_TOP ( .Reset(Reset), .Clk(Clk), .PushEnbl(PushEnbl), 
+        .PopEnbl(PopEnbl), .PushDataIn({1'b0, PSW[2:0], PSW[10:3]}), 
+        .PopDataOut({SYNOPSYS_UNCONNECTED__0, PopDataOut, Return_Addr}), 
+        .STACK_FULL(STACK_FULL) );
+endmodule
+

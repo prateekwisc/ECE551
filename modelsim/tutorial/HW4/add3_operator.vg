@@ -1,0 +1,12 @@
+
+module add3_operator ( y, a, b, c );
+  output [7:0] y;
+  input [7:0] a;
+  input [7:0] b;
+  input [7:0] c;
+  wire   N0, N1, N2, N3, N4, N5, N6, N7;
+
+  ADD_UNS_OP add_8 ( .A(a), .B(b), .Z({N7, N6, N5, N4, N3, N2, N1, N0}) );
+  ADD_UNS_OP add_8_2 ( .A({N7, N6, N5, N4, N3, N2, N1, N0}), .B(c), .Z(y) );
+endmodule
+

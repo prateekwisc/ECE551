@@ -1,0 +1,426 @@
+/filespace/people/p/prateek/ece551/modelsim/tutorial/bw.v {0 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/bw.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module multi
+-- Compiling module multi_tb
+** Error: /filespace/people/p/prateek/ece551/modelsim/tutorial/bw.v(46): (vlog-2110) Illegal reference to net "ma".
+** Error: /filespace/people/p/prateek/ece551/modelsim/tutorial/bw.v(53): (vlog-2110) Illegal reference to net "ma".
+** Error: /filespace/people/p/prateek/ece551/modelsim/tutorial/bw.v(54): (vlog-2110) Illegal reference to net "ma".
+** Error: /filespace/people/p/prateek/ece551/modelsim/tutorial/bw.v(55): (vlog-2110) Illegal reference to net "ma".
+
+} {5.0 9.0} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIR.vg {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIR.vg
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module mod_booth_multiplier_1
+-- Compiling module mult_resbooth_1
+-- Compiling module mod_booth_multiplier_2
+-- Compiling module mod_booth_multiplier_3
+-- Compiling module mod_booth_multiplier_4
+-- Compiling module mod_booth_multiplier_0
+-- Compiling module MAC
+-- Compiling module PIIR
+-- Compiling module t_PIIR
+
+Top level modules:
+	t_PIIR
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIR.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIR.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module PIIR
+-- Compiling module MAC
+-- Compiling module mod_booth_multiplier
+-- Compiling module mult_resbooth
+-- Compiling module FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module CLA_16bit
+-- Compiling module t_PIIR
+
+Top level modules:
+	t_PIIR
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/t_transmit.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/t_transmit.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module t_transmit
+
+Top level modules:
+	t_transmit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/busint.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/busint.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module BusInt
+
+Top level modules:
+	BusInt
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/multiplier.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/multiplier.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module array_multiplier
+-- Compiling module array_multiplier_tb
+
+Top level modules:
+	array_multiplier_tb
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_gupta.v {0 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_gupta.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module add3_FA
+** Error: /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_gupta.v(1): Identifier must be declared with a port mode: cout.
+-- Compiling module add3_struct
+-- Compiling module add3_case
+-- Compiling module bit2_FA
+-- Compiling module add3_parcase
+-- Compiling module add3_operator
+
+} {4.0 5.0} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/signed_mult.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/signed_mult.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module signed_mult
+
+Top level modules:
+	signed_mult
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/errors.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/errors.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/t_receive.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/t_receive.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module t_receive
+
+Top level modules:
+	t_receive
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_struct.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_struct.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module add3_FA
+-- Compiling module add3_struct
+
+Top level modules:
+	add3_struct
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/booth4.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/booth4.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module booth_mul
+-- Compiling module tb_mul
+
+Top level modules:
+	tb_mul
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_2.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_2.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module FAGP_1bit
+-- Compiling module t_FAGP_1bit
+
+Top level modules:
+	t_FAGP_1bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/mux.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/mux.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/receive.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/receive.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module Receive
+
+Top level modules:
+	Receive
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/Test_PIIR.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/Test_PIIR.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module t_PIIR
+
+Top level modules:
+	t_PIIR
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/practice3.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/practice3.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module my_mod
+
+Top level modules:
+	my_mod
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/Untitled-1.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/Untitled-1.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/booth_nbitnew.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/booth_nbitnew.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module booth_mult
+-- Compiling module mult_resbooth
+
+Top level modules:
+	mult_resbooth
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/cla1b.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/cla1b.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module CLA_16bit
+
+Top level modules:
+	CLA_16bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/ssp.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/ssp.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module ssp
+
+Top level modules:
+	ssp
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/booth_nbit.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/booth_nbit.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module mod_booth_multiplier
+-- Compiling module mult_resbooth
+
+Top level modules:
+	mod_booth_multiplier
+	mult_resbooth
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_4_f.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_4_f.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module CLA_16bit
+-- Compiling module t_CLA_16bit
+
+Top level modules:
+	t_CLA_16bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_add3_pcase.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_add3_pcase.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module add3_parcase
+-- Compiling module bit2_FA
+
+Top level modules:
+	add3_parcase
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_3.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_3.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module CLU_4bit
+-- Compiling module t_CLU_4bit
+
+Top level modules:
+	t_CLU_4bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_f.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module queue
+-- Compiling module q0_queue
+-- Compiling module q1_queue
+-- Compiling module t_queue
+
+Top level modules:
+	t_queue
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/bw1.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/bw1.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module multi
+
+Top level modules:
+	multi
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/booth.vg {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/booth.vg
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module booth_mult
+-- Compiling module t_booth
+
+Top level modules:
+	t_booth
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_operator.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_operator.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module add3_operator
+
+Top level modules:
+	add3_operator
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/queue_final.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module queue
+-- Compiling module q0_queue
+-- Compiling module q1_queue
+-- Compiling module t_queue
+
+Top level modules:
+	t_queue
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/practice4.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/practice4.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module my_mod1
+
+Top level modules:
+	my_mod1
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw1_Gupta.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw1_Gupta.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module FAGP_1bit
+-- Compiling module t_FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module t_CLU_4bit
+-- Compiling module CLA_16bit
+-- Compiling module t_CLA_16bit
+
+Top level modules:
+	t_FAGP_1bit
+	t_CLU_4bit
+	t_CLA_16bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_GUPTA.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_GUPTA.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module add3_FA
+-- Compiling module add3_struct
+-- Compiling module t_add3_struct
+-- Compiling module add3_case
+-- Compiling module bit2_FA
+-- Compiling module t_add3_case
+-- Compiling module add3_parcase
+-- Compiling module add3_operator
+-- Compiling module t_add3_operator
+
+Top level modules:
+	t_add3_struct
+	t_add3_case
+	add3_parcase
+	t_add3_operator
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/prac1.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/prac1.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module mult_test1
+
+Top level modules:
+	mult_test1
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/t_errors.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/t_errors.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module t_errors
+
+Top level modules:
+	t_errors
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/adder_1.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/adder_1.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module carry_skip_4
+-- Compiling module carry_skip_16
+-- Compiling module t_carry_skip
+
+Top level modules:
+	t_carry_skip
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_add3_case.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/hw4_add3_case.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module add3_case
+-- Compiling module bit2_FA
+
+Top level modules:
+	add3_case
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/transmit.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/transmit.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module transmit
+
+Top level modules:
+	transmit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/submit_adder.vg {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/submit_adder.vg
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module CLA_16bit
+
+Top level modules:
+	CLA_16bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIRwithMAC_mod3.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIRwithMAC_mod3.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module PIIR
+-- Compiling module MAC
+-- Compiling module mod_booth_multiplier
+-- Compiling module mult_resbooth
+-- Compiling module FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module CLA_16bit
+-- Compiling module t_PIIR
+
+Top level modules:
+	t_PIIR
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_4.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/Hw1_Gupta_4.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module CLA_4bit
+-- Compiling module CLA_16bit
+-- Compiling module t_CLA_16bit
+
+Top level modules:
+	t_CLA_16bit
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/prateek.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/prateek.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/fifo2.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/fifo2.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module queue
+-- Compiling module q1_queue
+-- Compiling module q2_queue
+-- Compiling module t_queue
+
+Top level modules:
+	t_queue
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIRwithMAC_mod.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIRwithMAC_mod.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module PIIR
+-- Compiling module t_PIIR
+-- Compiling module MAC_Dummy
+-- Compiling module MAC
+-- Compiling module mod_booth_multiplier
+-- Compiling module mult_resbooth
+-- Compiling module FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module CLA_16bit
+
+Top level modules:
+	t_PIIR
+	MAC
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/multiply.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/multiply.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module cond_oper
+
+Top level modules:
+	cond_oper
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/practice5.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/practice5.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module mux_4_to_1
+
+Top level modules:
+	mux_4_to_1
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/t_ssp.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/t_ssp.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module t_ssp
+
+Top level modules:
+	t_ssp
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIRwithMAC.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/PIIRwithMAC.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module PIIR
+-- Compiling module MAC
+-- Compiling module mod_booth_multiplier
+-- Compiling module mult_resbooth
+-- Compiling module FAGP_1bit
+-- Compiling module CLU_4bit
+-- Compiling module CLA_16bit
+
+Top level modules:
+	PIIR
+
+} {} {}} /filespace/people/p/prateek/ece551/modelsim/tutorial/booth3.v {1 {vlog -work work -vopt -nocovercells /filespace/people/p/prateek/ece551/modelsim/tutorial/booth3.v
+Model Technology ModelSim SE vlog 10.0c_1 Compiler 2011.08 Aug 26 2011
+-- Compiling module booth
+-- Compiling module test_booth
+
+Top level modules:
+	test_booth
+
+} {} {}}

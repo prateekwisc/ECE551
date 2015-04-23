@@ -1,0 +1,210 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:18:32 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_case          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_7          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_6          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_5          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_2          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_1          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  genblk1.fa0[0]/a[1] (bit2_FA_7)          0.00       0.00 f
+  genblk1.fa0[0]/U14/ZN (CKND2D0BWP)       0.03       0.03 r
+  genblk1.fa0[0]/U13/ZN (OAI21D0BWP)       0.05       0.08 f
+  genblk1.fa0[0]/U11/Z (CKMUX2D0BWP)       0.08       0.16 f
+  genblk1.fa0[0]/U7/ZN (CKND2D0BWP)        0.03       0.18 r
+  genblk1.fa0[0]/cout (bit2_FA_7)          0.00       0.18 r
+  genblk1.fa0[1]/c (bit2_FA_6)             0.00       0.18 r
+  genblk1.fa0[1]/U10/ZN (CKND0BWP)         0.04       0.22 f
+  genblk1.fa0[1]/U9/ZN (IAO21D0BWP)        0.05       0.27 r
+  genblk1.fa0[1]/U8/ZN (OAI21D0BWP)        0.05       0.32 f
+  genblk1.fa0[1]/U7/ZN (CKND2D0BWP)        0.03       0.34 r
+  genblk1.fa0[1]/cout (bit2_FA_6)          0.00       0.34 r
+  genblk1.fa0[2]/c (bit2_FA_5)             0.00       0.34 r
+  genblk1.fa0[2]/U10/ZN (CKND0BWP)         0.04       0.38 f
+  genblk1.fa0[2]/U9/ZN (IAO21D0BWP)        0.05       0.43 r
+  genblk1.fa0[2]/U2/ZN (NR2D0BWP)          0.03       0.47 f
+  genblk1.fa0[2]/U1/Z (CKXOR2D0BWP)        0.08       0.55 r
+  genblk1.fa0[2]/y[1] (bit2_FA_5)          0.00       0.55 r
+  genblk1.fa1[2]/a[1] (bit2_FA_2)          0.00       0.55 r
+  genblk1.fa1[2]/U14/ZN (CKND2D0BWP)       0.05       0.60 f
+  genblk1.fa1[2]/U13/ZN (OAI21D0BWP)       0.04       0.64 r
+  genblk1.fa1[2]/U11/Z (CKMUX2D0BWP)       0.07       0.71 r
+  genblk1.fa1[2]/U7/ZN (CKND2D0BWP)        0.03       0.74 f
+  genblk1.fa1[2]/cout (bit2_FA_2)          0.00       0.74 f
+  genblk1.fa1[3]/c (bit2_FA_1)             0.00       0.74 f
+  genblk1.fa1[3]/U10/ZN (CKND0BWP)         0.04       0.78 r
+  genblk1.fa1[3]/U9/ZN (IAO21D0BWP)        0.03       0.81 f
+  genblk1.fa1[3]/U2/ZN (NR2D0BWP)          0.05       0.86 r
+  genblk1.fa1[3]/U1/Z (CKXOR2D0BWP)        0.07       0.94 f
+  genblk1.fa1[3]/y[1] (bit2_FA_1)          0.00       0.94 f
+  y[7] (out)                               0.00       0.94 f
+  data arrival time                                   0.94
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:19:55 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_case          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_7          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_6          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_5          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_2          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_1          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  genblk1.fa0[0]/a[1] (bit2_FA_7)          0.00       0.00 f
+  genblk1.fa0[0]/U14/ZN (CKND2D0BWP)       0.03       0.03 r
+  genblk1.fa0[0]/U13/ZN (OAI21D0BWP)       0.05       0.08 f
+  genblk1.fa0[0]/U11/Z (CKMUX2D0BWP)       0.08       0.16 f
+  genblk1.fa0[0]/U7/ZN (CKND2D0BWP)        0.03       0.18 r
+  genblk1.fa0[0]/cout (bit2_FA_7)          0.00       0.18 r
+  genblk1.fa0[1]/c (bit2_FA_6)             0.00       0.18 r
+  genblk1.fa0[1]/U10/ZN (CKND0BWP)         0.04       0.22 f
+  genblk1.fa0[1]/U9/ZN (IAO21D0BWP)        0.05       0.27 r
+  genblk1.fa0[1]/U8/ZN (OAI21D0BWP)        0.05       0.32 f
+  genblk1.fa0[1]/U7/ZN (CKND2D0BWP)        0.03       0.34 r
+  genblk1.fa0[1]/cout (bit2_FA_6)          0.00       0.34 r
+  genblk1.fa0[2]/c (bit2_FA_5)             0.00       0.34 r
+  genblk1.fa0[2]/U10/ZN (CKND0BWP)         0.04       0.38 f
+  genblk1.fa0[2]/U9/ZN (IAO21D0BWP)        0.05       0.43 r
+  genblk1.fa0[2]/U2/ZN (NR2D0BWP)          0.03       0.47 f
+  genblk1.fa0[2]/U1/Z (CKXOR2D0BWP)        0.08       0.55 r
+  genblk1.fa0[2]/y[1] (bit2_FA_5)          0.00       0.55 r
+  genblk1.fa1[2]/a[1] (bit2_FA_2)          0.00       0.55 r
+  genblk1.fa1[2]/U14/ZN (CKND2D0BWP)       0.05       0.60 f
+  genblk1.fa1[2]/U13/ZN (OAI21D0BWP)       0.04       0.64 r
+  genblk1.fa1[2]/U11/Z (CKMUX2D0BWP)       0.07       0.71 r
+  genblk1.fa1[2]/U7/ZN (CKND2D0BWP)        0.03       0.74 f
+  genblk1.fa1[2]/cout (bit2_FA_2)          0.00       0.74 f
+  genblk1.fa1[3]/c (bit2_FA_1)             0.00       0.74 f
+  genblk1.fa1[3]/U10/ZN (CKND0BWP)         0.04       0.78 r
+  genblk1.fa1[3]/U9/ZN (IAO21D0BWP)        0.03       0.81 f
+  genblk1.fa1[3]/U2/ZN (NR2D0BWP)          0.05       0.86 r
+  genblk1.fa1[3]/U1/Z (CKXOR2D0BWP)        0.07       0.94 f
+  genblk1.fa1[3]/y[1] (bit2_FA_1)          0.00       0.94 f
+  y[7] (out)                               0.00       0.94 f
+  data arrival time                                   0.94
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:20:53 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_case          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_7          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_6          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_5          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_2          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_1          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  genblk1.fa0[0]/a[1] (bit2_FA_7)          0.00       0.00 f
+  genblk1.fa0[0]/U14/ZN (CKND2D0BWP)       0.03       0.03 r
+  genblk1.fa0[0]/U13/ZN (OAI21D0BWP)       0.05       0.08 f
+  genblk1.fa0[0]/U11/Z (CKMUX2D0BWP)       0.08       0.16 f
+  genblk1.fa0[0]/U7/ZN (CKND2D0BWP)        0.03       0.18 r
+  genblk1.fa0[0]/cout (bit2_FA_7)          0.00       0.18 r
+  genblk1.fa0[1]/c (bit2_FA_6)             0.00       0.18 r
+  genblk1.fa0[1]/U10/ZN (CKND0BWP)         0.04       0.22 f
+  genblk1.fa0[1]/U9/ZN (IAO21D0BWP)        0.05       0.27 r
+  genblk1.fa0[1]/U8/ZN (OAI21D0BWP)        0.05       0.32 f
+  genblk1.fa0[1]/U7/ZN (CKND2D0BWP)        0.03       0.34 r
+  genblk1.fa0[1]/cout (bit2_FA_6)          0.00       0.34 r
+  genblk1.fa0[2]/c (bit2_FA_5)             0.00       0.34 r
+  genblk1.fa0[2]/U10/ZN (CKND0BWP)         0.04       0.38 f
+  genblk1.fa0[2]/U9/ZN (IAO21D0BWP)        0.05       0.43 r
+  genblk1.fa0[2]/U2/ZN (NR2D0BWP)          0.03       0.47 f
+  genblk1.fa0[2]/U1/Z (CKXOR2D0BWP)        0.08       0.55 r
+  genblk1.fa0[2]/y[1] (bit2_FA_5)          0.00       0.55 r
+  genblk1.fa1[2]/a[1] (bit2_FA_2)          0.00       0.55 r
+  genblk1.fa1[2]/U14/ZN (CKND2D0BWP)       0.05       0.60 f
+  genblk1.fa1[2]/U13/ZN (OAI21D0BWP)       0.04       0.64 r
+  genblk1.fa1[2]/U11/Z (CKMUX2D0BWP)       0.07       0.71 r
+  genblk1.fa1[2]/U7/ZN (CKND2D0BWP)        0.03       0.74 f
+  genblk1.fa1[2]/cout (bit2_FA_2)          0.00       0.74 f
+  genblk1.fa1[3]/c (bit2_FA_1)             0.00       0.74 f
+  genblk1.fa1[3]/U10/ZN (CKND0BWP)         0.04       0.78 r
+  genblk1.fa1[3]/U9/ZN (IAO21D0BWP)        0.03       0.81 f
+  genblk1.fa1[3]/U2/ZN (NR2D0BWP)          0.05       0.86 r
+  genblk1.fa1[3]/U1/Z (CKXOR2D0BWP)        0.07       0.94 f
+  genblk1.fa1[3]/y[1] (bit2_FA_1)          0.00       0.94 f
+  y[7] (out)                               0.00       0.94 f
+  data arrival time                                   0.94
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

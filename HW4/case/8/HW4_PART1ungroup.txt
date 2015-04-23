@@ -1,0 +1,82 @@
+ 
+****************************************
+Report : area
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 14:06:43 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           32
+Number of nets:                           148
+Number of cells:                          124
+Number of combinational cells:            124
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         26
+Number of references:                      26
+
+Combinational area:                139.356003
+Buf/Inv area:                       13.759200
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   139.356003
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 14:06:43 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[0] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_case          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[0] (in)                                0.00       0.00 f
+  U256/ZN (CKND2D0BWP)                     0.02       0.02 r
+  U255/Z (CKXOR2D0BWP)                     0.10       0.12 f
+  U237/ZN (MUX2ND0BWP)                     0.06       0.18 r
+  U229/ZN (CKND0BWP)                       0.04       0.23 f
+  U224/ZN (AOI21D0BWP)                     0.06       0.29 r
+  U200/ZN (AOI21D0BWP)                     0.03       0.32 f
+  U199/ZN (OAI221D0BWP)                    0.10       0.43 r
+  U198/ZN (MUX2ND0BWP)                     0.09       0.51 r
+  U195/ZN (CKND2D0BWP)                     0.04       0.56 f
+  U194/ZN (CKND2D0BWP)                     0.07       0.62 r
+  U183/ZN (CKND0BWP)                       0.06       0.68 f
+  U181/ZN (NR2D0BWP)                       0.08       0.76 r
+  U137/ZN (MOAI22D0BWP)                    0.08       0.84 r
+  U135/ZN (AOI21D0BWP)                     0.04       0.88 f
+  U134/ZN (MAOI222D0BWP)                   0.08       0.96 r
+  U133/ZN (XNR3D0BWP)                      0.10       1.06 f
+  y[7] (out)                               0.00       1.06 f
+  data arrival time                                   1.06
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

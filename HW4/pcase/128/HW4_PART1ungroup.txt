@@ -1,0 +1,326 @@
+ 
+****************************************
+Report : area
+Design : add3_parcase
+Version: H-2013.03-SP3
+Date   : Thu Oct 31 13:15:54 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          512
+Number of nets:                          2175
+Number of cells:                         1793
+Number of combinational cells:           1793
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        128
+Number of references:                      10
+
+Combinational area:               2077.815661
+Buf/Inv area:                       67.737602
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  2077.815661
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_parcase
+Version: H-2013.03-SP3
+Date   : Thu Oct 31 13:15:55 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[127] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_parcase       ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  even.fa0[0]/U14/ZN (CKND2D0BWP)          0.03       0.03 r
+  even.fa0[0]/U13/ZN (OAI21D0BWP)          0.05       0.08 f
+  even.fa0[0]/U11/Z (CKMUX2D0BWP)          0.08       0.16 f
+  even.fa0[0]/U7/ZN (CKND2D0BWP)           0.03       0.18 r
+  even.fa0[1]/U10/ZN (CKND0BWP)            0.04       0.22 f
+  even.fa0[1]/U9/ZN (IAO21D0BWP)           0.05       0.27 r
+  even.fa0[1]/U8/ZN (OAI21D0BWP)           0.05       0.32 f
+  even.fa0[1]/U7/ZN (CKND2D0BWP)           0.03       0.34 r
+  even.fa0[2]/U10/ZN (CKND0BWP)            0.04       0.38 f
+  even.fa0[2]/U9/ZN (IAO21D0BWP)           0.05       0.43 r
+  even.fa0[2]/U8/ZN (OAI21D0BWP)           0.05       0.48 f
+  even.fa0[2]/U7/ZN (CKND2D0BWP)           0.03       0.51 r
+  even.fa0[3]/U10/ZN (CKND0BWP)            0.04       0.55 f
+  even.fa0[3]/U9/ZN (IAO21D0BWP)           0.05       0.60 r
+  even.fa0[3]/U8/ZN (OAI21D0BWP)           0.05       0.64 f
+  even.fa0[3]/U7/ZN (CKND2D0BWP)           0.03       0.67 r
+  even.fa0[4]/U10/ZN (CKND0BWP)            0.04       0.71 f
+  even.fa0[4]/U9/ZN (IAO21D0BWP)           0.05       0.76 r
+  even.fa0[4]/U8/ZN (OAI21D0BWP)           0.05       0.81 f
+  even.fa0[4]/U7/ZN (CKND2D0BWP)           0.03       0.84 r
+  even.fa0[5]/U10/ZN (CKND0BWP)            0.04       0.88 f
+  even.fa0[5]/U9/ZN (IAO21D0BWP)           0.05       0.93 r
+  even.fa0[5]/U8/ZN (OAI21D0BWP)           0.05       0.97 f
+  even.fa0[5]/U7/ZN (CKND2D0BWP)           0.03       1.00 r
+  even.fa0[6]/U10/ZN (CKND0BWP)            0.04       1.04 f
+  even.fa0[6]/U9/ZN (IAO21D0BWP)           0.05       1.09 r
+  even.fa0[6]/U8/ZN (OAI21D0BWP)           0.05       1.14 f
+  even.fa0[6]/U7/ZN (CKND2D0BWP)           0.03       1.17 r
+  even.fa0[7]/U10/ZN (CKND0BWP)            0.04       1.21 f
+  even.fa0[7]/U9/ZN (IAO21D0BWP)           0.05       1.26 r
+  even.fa0[7]/U8/ZN (OAI21D0BWP)           0.05       1.30 f
+  even.fa0[7]/U7/ZN (CKND2D0BWP)           0.03       1.33 r
+  even.fa0[8]/U10/ZN (CKND0BWP)            0.04       1.37 f
+  even.fa0[8]/U9/ZN (IAO21D0BWP)           0.05       1.42 r
+  even.fa0[8]/U8/ZN (OAI21D0BWP)           0.05       1.47 f
+  even.fa0[8]/U7/ZN (CKND2D0BWP)           0.03       1.50 r
+  even.fa0[9]/U10/ZN (CKND0BWP)            0.04       1.54 f
+  even.fa0[9]/U9/ZN (IAO21D0BWP)           0.05       1.59 r
+  even.fa0[9]/U8/ZN (OAI21D0BWP)           0.05       1.63 f
+  even.fa0[9]/U7/ZN (CKND2D0BWP)           0.03       1.66 r
+  even.fa0[10]/U10/ZN (CKND0BWP)           0.04       1.70 f
+  even.fa0[10]/U9/ZN (IAO21D0BWP)          0.05       1.75 r
+  even.fa0[10]/U8/ZN (OAI21D0BWP)          0.05       1.80 f
+  even.fa0[10]/U7/ZN (CKND2D0BWP)          0.03       1.83 r
+  even.fa0[11]/U10/ZN (CKND0BWP)           0.04       1.86 f
+  even.fa0[11]/U9/ZN (IAO21D0BWP)          0.05       1.92 r
+  even.fa0[11]/U8/ZN (OAI21D0BWP)          0.05       1.96 f
+  even.fa0[11]/U7/ZN (CKND2D0BWP)          0.03       1.99 r
+  even.fa0[12]/U10/ZN (CKND0BWP)           0.04       2.03 f
+  even.fa0[12]/U9/ZN (IAO21D0BWP)          0.05       2.08 r
+  even.fa0[12]/U8/ZN (OAI21D0BWP)          0.05       2.13 f
+  even.fa0[12]/U7/ZN (CKND2D0BWP)          0.03       2.16 r
+  even.fa0[13]/U10/ZN (CKND0BWP)           0.04       2.19 f
+  even.fa0[13]/U9/ZN (IAO21D0BWP)          0.05       2.25 r
+  even.fa0[13]/U8/ZN (OAI21D0BWP)          0.05       2.29 f
+  even.fa0[13]/U7/ZN (CKND2D0BWP)          0.03       2.32 r
+  even.fa0[14]/U10/ZN (CKND0BWP)           0.04       2.36 f
+  even.fa0[14]/U9/ZN (IAO21D0BWP)          0.05       2.41 r
+  even.fa0[14]/U8/ZN (OAI21D0BWP)          0.05       2.46 f
+  even.fa0[14]/U7/ZN (CKND2D0BWP)          0.03       2.49 r
+  even.fa0[15]/U10/ZN (CKND0BWP)           0.04       2.52 f
+  even.fa0[15]/U9/ZN (IAO21D0BWP)          0.05       2.58 r
+  even.fa0[15]/U8/ZN (OAI21D0BWP)          0.05       2.62 f
+  even.fa0[15]/U7/ZN (CKND2D0BWP)          0.03       2.65 r
+  even.fa0[16]/U10/ZN (CKND0BWP)           0.04       2.69 f
+  even.fa0[16]/U9/ZN (IAO21D0BWP)          0.05       2.74 r
+  even.fa0[16]/U8/ZN (OAI21D0BWP)          0.05       2.79 f
+  even.fa0[16]/U7/ZN (CKND2D0BWP)          0.03       2.82 r
+  even.fa0[17]/U10/ZN (CKND0BWP)           0.04       2.85 f
+  even.fa0[17]/U9/ZN (IAO21D0BWP)          0.05       2.91 r
+  even.fa0[17]/U8/ZN (OAI21D0BWP)          0.05       2.95 f
+  even.fa0[17]/U7/ZN (CKND2D0BWP)          0.03       2.98 r
+  even.fa0[18]/U10/ZN (CKND0BWP)           0.04       3.02 f
+  even.fa0[18]/U9/ZN (IAO21D0BWP)          0.05       3.07 r
+  even.fa0[18]/U8/ZN (OAI21D0BWP)          0.05       3.12 f
+  even.fa0[18]/U7/ZN (CKND2D0BWP)          0.03       3.15 r
+  even.fa0[19]/U10/ZN (CKND0BWP)           0.04       3.18 f
+  even.fa0[19]/U9/ZN (IAO21D0BWP)          0.05       3.24 r
+  even.fa0[19]/U8/ZN (OAI21D0BWP)          0.05       3.28 f
+  even.fa0[19]/U7/ZN (CKND2D0BWP)          0.03       3.31 r
+  even.fa0[20]/U10/ZN (CKND0BWP)           0.04       3.35 f
+  even.fa0[20]/U9/ZN (IAO21D0BWP)          0.05       3.40 r
+  even.fa0[20]/U8/ZN (OAI21D0BWP)          0.05       3.45 f
+  even.fa0[20]/U7/ZN (CKND2D0BWP)          0.03       3.48 r
+  even.fa0[21]/U10/ZN (CKND0BWP)           0.04       3.51 f
+  even.fa0[21]/U9/ZN (IAO21D0BWP)          0.05       3.57 r
+  even.fa0[21]/U8/ZN (OAI21D0BWP)          0.05       3.61 f
+  even.fa0[21]/U7/ZN (CKND2D0BWP)          0.03       3.64 r
+  even.fa0[22]/U10/ZN (CKND0BWP)           0.04       3.68 f
+  even.fa0[22]/U9/ZN (IAO21D0BWP)          0.05       3.73 r
+  even.fa0[22]/U8/ZN (OAI21D0BWP)          0.05       3.78 f
+  even.fa0[22]/U7/ZN (CKND2D0BWP)          0.03       3.81 r
+  even.fa0[23]/U10/ZN (CKND0BWP)           0.04       3.84 f
+  even.fa0[23]/U9/ZN (IAO21D0BWP)          0.05       3.90 r
+  even.fa0[23]/U8/ZN (OAI21D0BWP)          0.05       3.94 f
+  even.fa0[23]/U7/ZN (CKND2D0BWP)          0.03       3.97 r
+  even.fa0[24]/U10/ZN (CKND0BWP)           0.04       4.01 f
+  even.fa0[24]/U9/ZN (IAO21D0BWP)          0.05       4.06 r
+  even.fa0[24]/U8/ZN (OAI21D0BWP)          0.05       4.11 f
+  even.fa0[24]/U7/ZN (CKND2D0BWP)          0.03       4.14 r
+  even.fa0[25]/U10/ZN (CKND0BWP)           0.04       4.17 f
+  even.fa0[25]/U9/ZN (IAO21D0BWP)          0.05       4.23 r
+  even.fa0[25]/U8/ZN (OAI21D0BWP)          0.05       4.27 f
+  even.fa0[25]/U7/ZN (CKND2D0BWP)          0.03       4.30 r
+  even.fa0[26]/U10/ZN (CKND0BWP)           0.04       4.34 f
+  even.fa0[26]/U9/ZN (IAO21D0BWP)          0.05       4.39 r
+  even.fa0[26]/U8/ZN (OAI21D0BWP)          0.05       4.44 f
+  even.fa0[26]/U7/ZN (CKND2D0BWP)          0.03       4.47 r
+  even.fa0[27]/U10/ZN (CKND0BWP)           0.04       4.50 f
+  even.fa0[27]/U9/ZN (IAO21D0BWP)          0.05       4.56 r
+  even.fa0[27]/U8/ZN (OAI21D0BWP)          0.05       4.60 f
+  even.fa0[27]/U7/ZN (CKND2D0BWP)          0.03       4.63 r
+  even.fa0[28]/U10/ZN (CKND0BWP)           0.04       4.67 f
+  even.fa0[28]/U9/ZN (IAO21D0BWP)          0.05       4.72 r
+  even.fa0[28]/U8/ZN (OAI21D0BWP)          0.05       4.77 f
+  even.fa0[28]/U7/ZN (CKND2D0BWP)          0.03       4.80 r
+  even.fa0[29]/U10/ZN (CKND0BWP)           0.04       4.83 f
+  even.fa0[29]/U9/ZN (IAO21D0BWP)          0.05       4.88 r
+  even.fa0[29]/U8/ZN (OAI21D0BWP)          0.05       4.93 f
+  even.fa0[29]/U7/ZN (CKND2D0BWP)          0.03       4.96 r
+  even.fa0[30]/U10/ZN (CKND0BWP)           0.04       5.00 f
+  even.fa0[30]/U9/ZN (IAO21D0BWP)          0.05       5.05 r
+  even.fa0[30]/U8/ZN (OAI21D0BWP)          0.05       5.10 f
+  even.fa0[30]/U7/ZN (CKND2D0BWP)          0.03       5.13 r
+  even.fa0[31]/U10/ZN (CKND0BWP)           0.04       5.16 f
+  even.fa0[31]/U9/ZN (IAO21D0BWP)          0.05       5.21 r
+  even.fa0[31]/U8/ZN (OAI21D0BWP)          0.05       5.26 f
+  even.fa0[31]/U7/ZN (CKND2D0BWP)          0.03       5.29 r
+  even.fa0[32]/U10/ZN (CKND0BWP)           0.04       5.33 f
+  even.fa0[32]/U9/ZN (IAO21D0BWP)          0.05       5.38 r
+  even.fa0[32]/U8/ZN (OAI21D0BWP)          0.05       5.43 f
+  even.fa0[32]/U7/ZN (CKND2D0BWP)          0.03       5.46 r
+  even.fa0[33]/U10/ZN (CKND0BWP)           0.04       5.49 f
+  even.fa0[33]/U9/ZN (IAO21D0BWP)          0.05       5.54 r
+  even.fa0[33]/U8/ZN (OAI21D0BWP)          0.05       5.59 f
+  even.fa0[33]/U7/ZN (CKND2D0BWP)          0.03       5.62 r
+  even.fa0[34]/U10/ZN (CKND0BWP)           0.04       5.66 f
+  even.fa0[34]/U9/ZN (IAO21D0BWP)          0.05       5.71 r
+  even.fa0[34]/U8/ZN (OAI21D0BWP)          0.05       5.76 f
+  even.fa0[34]/U7/ZN (CKND2D0BWP)          0.03       5.79 r
+  even.fa0[35]/U10/ZN (CKND0BWP)           0.04       5.82 f
+  even.fa0[35]/U9/ZN (IAO21D0BWP)          0.05       5.87 r
+  even.fa0[35]/U8/ZN (OAI21D0BWP)          0.05       5.92 f
+  even.fa0[35]/U7/ZN (CKND2D0BWP)          0.03       5.95 r
+  even.fa0[36]/U10/ZN (CKND0BWP)           0.04       5.99 f
+  even.fa0[36]/U9/ZN (IAO21D0BWP)          0.05       6.04 r
+  even.fa0[36]/U8/ZN (OAI21D0BWP)          0.05       6.09 f
+  even.fa0[36]/U7/ZN (CKND2D0BWP)          0.03       6.11 r
+  even.fa0[37]/U10/ZN (CKND0BWP)           0.04       6.15 f
+  even.fa0[37]/U9/ZN (IAO21D0BWP)          0.05       6.20 r
+  even.fa0[37]/U8/ZN (OAI21D0BWP)          0.05       6.25 f
+  even.fa0[37]/U7/ZN (CKND2D0BWP)          0.03       6.28 r
+  even.fa0[38]/U10/ZN (CKND0BWP)           0.04       6.32 f
+  even.fa0[38]/U9/ZN (IAO21D0BWP)          0.05       6.37 r
+  even.fa0[38]/U8/ZN (OAI21D0BWP)          0.05       6.42 f
+  even.fa0[38]/U7/ZN (CKND2D0BWP)          0.03       6.44 r
+  even.fa0[39]/U10/ZN (CKND0BWP)           0.04       6.48 f
+  even.fa0[39]/U9/ZN (IAO21D0BWP)          0.05       6.53 r
+  even.fa0[39]/U8/ZN (OAI21D0BWP)          0.05       6.58 f
+  even.fa0[39]/U7/ZN (CKND2D0BWP)          0.03       6.61 r
+  even.fa0[40]/U10/ZN (CKND0BWP)           0.04       6.65 f
+  even.fa0[40]/U9/ZN (IAO21D0BWP)          0.05       6.70 r
+  even.fa0[40]/U8/ZN (OAI21D0BWP)          0.05       6.74 f
+  even.fa0[40]/U7/ZN (CKND2D0BWP)          0.03       6.77 r
+  even.fa0[41]/U10/ZN (CKND0BWP)           0.04       6.81 f
+  even.fa0[41]/U9/ZN (IAO21D0BWP)          0.05       6.86 r
+  even.fa0[41]/U8/ZN (OAI21D0BWP)          0.05       6.91 f
+  even.fa0[41]/U7/ZN (CKND2D0BWP)          0.03       6.94 r
+  even.fa0[42]/U10/ZN (CKND0BWP)           0.04       6.98 f
+  even.fa0[42]/U9/ZN (IAO21D0BWP)          0.05       7.03 r
+  even.fa0[42]/U8/ZN (OAI21D0BWP)          0.05       7.07 f
+  even.fa0[42]/U7/ZN (CKND2D0BWP)          0.03       7.10 r
+  even.fa0[43]/U10/ZN (CKND0BWP)           0.04       7.14 f
+  even.fa0[43]/U9/ZN (IAO21D0BWP)          0.05       7.19 r
+  even.fa0[43]/U8/ZN (OAI21D0BWP)          0.05       7.24 f
+  even.fa0[43]/U7/ZN (CKND2D0BWP)          0.03       7.27 r
+  even.fa0[44]/U10/ZN (CKND0BWP)           0.04       7.31 f
+  even.fa0[44]/U9/ZN (IAO21D0BWP)          0.05       7.36 r
+  even.fa0[44]/U8/ZN (OAI21D0BWP)          0.05       7.40 f
+  even.fa0[44]/U7/ZN (CKND2D0BWP)          0.03       7.43 r
+  even.fa0[45]/U10/ZN (CKND0BWP)           0.04       7.47 f
+  even.fa0[45]/U9/ZN (IAO21D0BWP)          0.05       7.52 r
+  even.fa0[45]/U8/ZN (OAI21D0BWP)          0.05       7.57 f
+  even.fa0[45]/U7/ZN (CKND2D0BWP)          0.03       7.60 r
+  even.fa0[46]/U10/ZN (CKND0BWP)           0.04       7.64 f
+  even.fa0[46]/U9/ZN (IAO21D0BWP)          0.05       7.69 r
+  even.fa0[46]/U8/ZN (OAI21D0BWP)          0.05       7.73 f
+  even.fa0[46]/U7/ZN (CKND2D0BWP)          0.03       7.76 r
+  even.fa0[47]/U10/ZN (CKND0BWP)           0.04       7.80 f
+  even.fa0[47]/U9/ZN (IAO21D0BWP)          0.05       7.85 r
+  even.fa0[47]/U8/ZN (OAI21D0BWP)          0.05       7.90 f
+  even.fa0[47]/U7/ZN (CKND2D0BWP)          0.03       7.93 r
+  even.fa0[48]/U10/ZN (CKND0BWP)           0.04       7.96 f
+  even.fa0[48]/U9/ZN (IAO21D0BWP)          0.05       8.02 r
+  even.fa0[48]/U8/ZN (OAI21D0BWP)          0.05       8.06 f
+  even.fa0[48]/U7/ZN (CKND2D0BWP)          0.03       8.09 r
+  even.fa0[49]/U10/ZN (CKND0BWP)           0.04       8.13 f
+  even.fa0[49]/U9/ZN (IAO21D0BWP)          0.05       8.18 r
+  even.fa0[49]/U8/ZN (OAI21D0BWP)          0.05       8.23 f
+  even.fa0[49]/U7/ZN (CKND2D0BWP)          0.03       8.26 r
+  even.fa0[50]/U10/ZN (CKND0BWP)           0.04       8.29 f
+  even.fa0[50]/U9/ZN (IAO21D0BWP)          0.05       8.35 r
+  even.fa0[50]/U8/ZN (OAI21D0BWP)          0.05       8.39 f
+  even.fa0[50]/U7/ZN (CKND2D0BWP)          0.03       8.42 r
+  even.fa0[51]/U10/ZN (CKND0BWP)           0.04       8.46 f
+  even.fa0[51]/U9/ZN (IAO21D0BWP)          0.05       8.51 r
+  even.fa0[51]/U8/ZN (OAI21D0BWP)          0.05       8.56 f
+  even.fa0[51]/U7/ZN (CKND2D0BWP)          0.03       8.59 r
+  even.fa0[52]/U10/ZN (CKND0BWP)           0.04       8.62 f
+  even.fa0[52]/U9/ZN (IAO21D0BWP)          0.05       8.68 r
+  even.fa0[52]/U8/ZN (OAI21D0BWP)          0.05       8.72 f
+  even.fa0[52]/U7/ZN (CKND2D0BWP)          0.03       8.75 r
+  even.fa0[53]/U10/ZN (CKND0BWP)           0.04       8.79 f
+  even.fa0[53]/U9/ZN (IAO21D0BWP)          0.05       8.84 r
+  even.fa0[53]/U8/ZN (OAI21D0BWP)          0.05       8.89 f
+  even.fa0[53]/U7/ZN (CKND2D0BWP)          0.03       8.92 r
+  even.fa0[54]/U10/ZN (CKND0BWP)           0.04       8.95 f
+  even.fa0[54]/U9/ZN (IAO21D0BWP)          0.05       9.01 r
+  even.fa0[54]/U8/ZN (OAI21D0BWP)          0.05       9.05 f
+  even.fa0[54]/U7/ZN (CKND2D0BWP)          0.03       9.08 r
+  even.fa0[55]/U10/ZN (CKND0BWP)           0.04       9.12 f
+  even.fa0[55]/U9/ZN (IAO21D0BWP)          0.05       9.17 r
+  even.fa0[55]/U8/ZN (OAI21D0BWP)          0.05       9.22 f
+  even.fa0[55]/U7/ZN (CKND2D0BWP)          0.03       9.25 r
+  even.fa0[56]/U10/ZN (CKND0BWP)           0.04       9.28 f
+  even.fa0[56]/U9/ZN (IAO21D0BWP)          0.05       9.34 r
+  even.fa0[56]/U8/ZN (OAI21D0BWP)          0.05       9.38 f
+  even.fa0[56]/U7/ZN (CKND2D0BWP)          0.03       9.41 r
+  even.fa0[57]/U10/ZN (CKND0BWP)           0.04       9.45 f
+  even.fa0[57]/U9/ZN (IAO21D0BWP)          0.05       9.50 r
+  even.fa0[57]/U8/ZN (OAI21D0BWP)          0.05       9.55 f
+  even.fa0[57]/U7/ZN (CKND2D0BWP)          0.03       9.58 r
+  even.fa0[58]/U10/ZN (CKND0BWP)           0.04       9.61 f
+  even.fa0[58]/U9/ZN (IAO21D0BWP)          0.05       9.67 r
+  even.fa0[58]/U8/ZN (OAI21D0BWP)          0.05       9.71 f
+  even.fa0[58]/U7/ZN (CKND2D0BWP)          0.03       9.74 r
+  even.fa0[59]/U10/ZN (CKND0BWP)           0.04       9.78 f
+  even.fa0[59]/U9/ZN (IAO21D0BWP)          0.05       9.83 r
+  even.fa0[59]/U8/ZN (OAI21D0BWP)          0.05       9.88 f
+  even.fa0[59]/U7/ZN (CKND2D0BWP)          0.03       9.91 r
+  even.fa0[60]/U10/ZN (CKND0BWP)           0.04       9.94 f
+  even.fa0[60]/U9/ZN (IAO21D0BWP)          0.05      10.00 r
+  even.fa0[60]/U8/ZN (OAI21D0BWP)          0.05      10.04 f
+  even.fa0[60]/U7/ZN (CKND2D0BWP)          0.03      10.07 r
+  even.fa0[61]/U10/ZN (CKND0BWP)           0.04      10.11 f
+  even.fa0[61]/U9/ZN (IAO21D0BWP)          0.05      10.16 r
+  even.fa0[61]/U8/ZN (OAI21D0BWP)          0.05      10.21 f
+  even.fa0[61]/U7/ZN (CKND2D0BWP)          0.03      10.24 r
+  even.fa0[62]/U10/ZN (CKND0BWP)           0.04      10.27 f
+  even.fa0[62]/U9/ZN (IAO21D0BWP)          0.05      10.33 r
+  even.fa0[62]/U2/ZN (NR2D0BWP)            0.03      10.36 f
+  even.fa0[62]/U1/Z (CKXOR2D0BWP)          0.08      10.44 r
+  even.fa1[62]/U14/ZN (CKND2D0BWP)         0.05      10.49 f
+  even.fa1[62]/U13/ZN (OAI21D0BWP)         0.04      10.53 r
+  even.fa1[62]/U11/Z (CKMUX2D0BWP)         0.07      10.60 r
+  even.fa1[62]/U7/ZN (CKND2D0BWP)          0.03      10.63 f
+  even.fa1[63]/U10/ZN (CKND0BWP)           0.04      10.67 r
+  even.fa1[63]/U9/ZN (IAO21D0BWP)          0.03      10.71 f
+  even.fa1[63]/U2/ZN (NR2D0BWP)            0.05      10.76 r
+  even.fa1[63]/U1/Z (CKXOR2D0BWP)          0.07      10.83 f
+  y[127] (out)                             0.00      10.83 f
+  data arrival time                                  10.83
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

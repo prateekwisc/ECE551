@@ -1,0 +1,79 @@
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Module name: Signed 16-bit radix-4 modified booth's multiplier.
+// Group Members: Prateek Gupta, Karan Maini, Amitesh Narayan, snehal Mhatre 
+// 
+// Create Date:    12:44:20 11/08/2013 
+// Design Name:    mod_booth_multiplier
+// 
+// Project Name: 
+//  
+// Description: It is a signed 16-bit radix-4 modified booth multiplier. This program
+// shows how the area and timing efficient multiplication can be achieved using the   
+// modified booth algorithm for signed numbers.
+//
+// x = multiplicand, y = multiplier
+//////////////////////////////////////////////////////////////////////////////////
+
+module mod_booth_multiplier (product, x, y);
+
+//parameter declarations
+parameter width= 4;
+parameter N = 2;
+
+//input port declaration
+input[width-1:0]x, y;
+
+//output port declaration
+output[width-1:0]product;
+
+//Port Data Types
+reg [2:0] count[N-1:0];
+reg [width:0] partial[N-1:0];
+reg [width+width-1:0] signedpartial[N-1:0];
+reg [width+width-1:0] result;
+wire [width:0] inv_x;
+
+//local variables of integer type
+integer i,j;
+
+//generate two's complement of mutiplicand X(M)
+assign inv_x = {~x[width-1],~x}+1;
+always @ (x or y or inv_x)
+begin
+count[0] = {y[1],y[0],1'b0};
+for(j=1;j<N;j=j+1)
+count[j] = {y[2*j+1],y[2*j],y[2*j-1]};
+
+for(j=0;j<N;j=j+1)
+begin
+case(count[j])  //recoding cases of radix-4 booth multiplier
+//computing booth recoded bits
+3'b001 , 3'b010 : partial[j] = {x[width-1],x}; // 1 X Multiplicand
+3'b011 : partial[j] = {x,1'b0};                // 2 X Multiplicand
+3'b100 : partial[j] = {inv_x[width-1:0],1'b0}; // -2 X Multiplicand
+3'b101 , 3'b110 : partial[j] = inv_x;          // -1 X Multiplicand
+default : partial[j] = 0;                      // Zero
+endcase
+signedpartial[j] = $signed(partial[j]);
+for(i=0;i<j;i=i+1)
+signedpartial[j] = {signedpartial[j],2'b00}; //multiply by 2 to the power x or shifting operation
+end
+result = signedpartial[0];
+for(j=1;j<N;j=j+1)
+result = result + signedpartial[j];
+end
+assign product = result ;
+endmodule
+
+//module for rounding up and truncating
+
+module mult_resbooth(Y,A,B);
+  input [3:0] A,B;
+  output [3:0] Y;
+  wire [7:0] m_res;
+  booth_mult m1(m_res,A,B);
+  assign Y = m_res[6:3] + m_res[2];
+endmodule
+

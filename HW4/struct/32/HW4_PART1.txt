@@ -1,0 +1,165 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:58:52 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: A[1] (input port)
+  Endpoint: Y[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_struct        ZeroWireload          tcbn40lpbwptc
+  add3_FA_62         ZeroWireload          tcbn40lpbwptc
+  add3_FA_31         ZeroWireload          tcbn40lpbwptc
+  add3_FA_30         ZeroWireload          tcbn40lpbwptc
+  add3_FA_29         ZeroWireload          tcbn40lpbwptc
+  add3_FA_28         ZeroWireload          tcbn40lpbwptc
+  add3_FA_27         ZeroWireload          tcbn40lpbwptc
+  add3_FA_26         ZeroWireload          tcbn40lpbwptc
+  add3_FA_25         ZeroWireload          tcbn40lpbwptc
+  add3_FA_24         ZeroWireload          tcbn40lpbwptc
+  add3_FA_23         ZeroWireload          tcbn40lpbwptc
+  add3_FA_22         ZeroWireload          tcbn40lpbwptc
+  add3_FA_21         ZeroWireload          tcbn40lpbwptc
+  add3_FA_20         ZeroWireload          tcbn40lpbwptc
+  add3_FA_19         ZeroWireload          tcbn40lpbwptc
+  add3_FA_18         ZeroWireload          tcbn40lpbwptc
+  add3_FA_17         ZeroWireload          tcbn40lpbwptc
+  add3_FA_16         ZeroWireload          tcbn40lpbwptc
+  add3_FA_15         ZeroWireload          tcbn40lpbwptc
+  add3_FA_14         ZeroWireload          tcbn40lpbwptc
+  add3_FA_13         ZeroWireload          tcbn40lpbwptc
+  add3_FA_12         ZeroWireload          tcbn40lpbwptc
+  add3_FA_11         ZeroWireload          tcbn40lpbwptc
+  add3_FA_10         ZeroWireload          tcbn40lpbwptc
+  add3_FA_9          ZeroWireload          tcbn40lpbwptc
+  add3_FA_8          ZeroWireload          tcbn40lpbwptc
+  add3_FA_7          ZeroWireload          tcbn40lpbwptc
+  add3_FA_6          ZeroWireload          tcbn40lpbwptc
+  add3_FA_5          ZeroWireload          tcbn40lpbwptc
+  add3_FA_4          ZeroWireload          tcbn40lpbwptc
+  add3_FA_3          ZeroWireload          tcbn40lpbwptc
+  add3_FA_2          ZeroWireload          tcbn40lpbwptc
+  add3_FA_1          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  A[1] (in)                                0.00       0.00 r
+  fa0[1]/a (add3_FA_62)                    0.00       0.00 r
+  fa0[1]/U3/Z (CKXOR2D0BWP)                0.08       0.08 f
+  fa0[1]/U1/Z (CKXOR2D0BWP)                0.09       0.17 r
+  fa0[1]/y (add3_FA_62)                    0.00       0.17 r
+  fa1[1]/a (add3_FA_31)                    0.00       0.17 r
+  fa1[1]/U3/Z (CKXOR2D0BWP)                0.09       0.27 f
+  fa1[1]/U2/Z (AO22D0BWP)                  0.09       0.36 f
+  fa1[1]/cout (add3_FA_31)                 0.00       0.36 f
+  fa1[2]/c (add3_FA_30)                    0.00       0.36 f
+  fa1[2]/U2/Z (AO22D0BWP)                  0.10       0.45 f
+  fa1[2]/cout (add3_FA_30)                 0.00       0.45 f
+  fa1[3]/c (add3_FA_29)                    0.00       0.45 f
+  fa1[3]/U2/Z (AO22D0BWP)                  0.10       0.55 f
+  fa1[3]/cout (add3_FA_29)                 0.00       0.55 f
+  fa1[4]/c (add3_FA_28)                    0.00       0.55 f
+  fa1[4]/U2/Z (AO22D0BWP)                  0.10       0.65 f
+  fa1[4]/cout (add3_FA_28)                 0.00       0.65 f
+  fa1[5]/c (add3_FA_27)                    0.00       0.65 f
+  fa1[5]/U2/Z (AO22D0BWP)                  0.10       0.75 f
+  fa1[5]/cout (add3_FA_27)                 0.00       0.75 f
+  fa1[6]/c (add3_FA_26)                    0.00       0.75 f
+  fa1[6]/U2/Z (AO22D0BWP)                  0.10       0.84 f
+  fa1[6]/cout (add3_FA_26)                 0.00       0.84 f
+  fa1[7]/c (add3_FA_25)                    0.00       0.84 f
+  fa1[7]/U2/Z (AO22D0BWP)                  0.10       0.94 f
+  fa1[7]/cout (add3_FA_25)                 0.00       0.94 f
+  fa1[8]/c (add3_FA_24)                    0.00       0.94 f
+  fa1[8]/U2/Z (AO22D0BWP)                  0.10       1.04 f
+  fa1[8]/cout (add3_FA_24)                 0.00       1.04 f
+  fa1[9]/c (add3_FA_23)                    0.00       1.04 f
+  fa1[9]/U2/Z (AO22D0BWP)                  0.10       1.13 f
+  fa1[9]/cout (add3_FA_23)                 0.00       1.13 f
+  fa1[10]/c (add3_FA_22)                   0.00       1.13 f
+  fa1[10]/U2/Z (AO22D0BWP)                 0.10       1.23 f
+  fa1[10]/cout (add3_FA_22)                0.00       1.23 f
+  fa1[11]/c (add3_FA_21)                   0.00       1.23 f
+  fa1[11]/U2/Z (AO22D0BWP)                 0.10       1.33 f
+  fa1[11]/cout (add3_FA_21)                0.00       1.33 f
+  fa1[12]/c (add3_FA_20)                   0.00       1.33 f
+  fa1[12]/U2/Z (AO22D0BWP)                 0.10       1.42 f
+  fa1[12]/cout (add3_FA_20)                0.00       1.42 f
+  fa1[13]/c (add3_FA_19)                   0.00       1.42 f
+  fa1[13]/U2/Z (AO22D0BWP)                 0.10       1.52 f
+  fa1[13]/cout (add3_FA_19)                0.00       1.52 f
+  fa1[14]/c (add3_FA_18)                   0.00       1.52 f
+  fa1[14]/U2/Z (AO22D0BWP)                 0.10       1.62 f
+  fa1[14]/cout (add3_FA_18)                0.00       1.62 f
+  fa1[15]/c (add3_FA_17)                   0.00       1.62 f
+  fa1[15]/U2/Z (AO22D0BWP)                 0.10       1.71 f
+  fa1[15]/cout (add3_FA_17)                0.00       1.71 f
+  fa1[16]/c (add3_FA_16)                   0.00       1.71 f
+  fa1[16]/U2/Z (AO22D0BWP)                 0.10       1.81 f
+  fa1[16]/cout (add3_FA_16)                0.00       1.81 f
+  fa1[17]/c (add3_FA_15)                   0.00       1.81 f
+  fa1[17]/U2/Z (AO22D0BWP)                 0.10       1.91 f
+  fa1[17]/cout (add3_FA_15)                0.00       1.91 f
+  fa1[18]/c (add3_FA_14)                   0.00       1.91 f
+  fa1[18]/U2/Z (AO22D0BWP)                 0.10       2.00 f
+  fa1[18]/cout (add3_FA_14)                0.00       2.00 f
+  fa1[19]/c (add3_FA_13)                   0.00       2.00 f
+  fa1[19]/U2/Z (AO22D0BWP)                 0.10       2.10 f
+  fa1[19]/cout (add3_FA_13)                0.00       2.10 f
+  fa1[20]/c (add3_FA_12)                   0.00       2.10 f
+  fa1[20]/U2/Z (AO22D0BWP)                 0.10       2.20 f
+  fa1[20]/cout (add3_FA_12)                0.00       2.20 f
+  fa1[21]/c (add3_FA_11)                   0.00       2.20 f
+  fa1[21]/U2/Z (AO22D0BWP)                 0.10       2.29 f
+  fa1[21]/cout (add3_FA_11)                0.00       2.29 f
+  fa1[22]/c (add3_FA_10)                   0.00       2.29 f
+  fa1[22]/U2/Z (AO22D0BWP)                 0.10       2.39 f
+  fa1[22]/cout (add3_FA_10)                0.00       2.39 f
+  fa1[23]/c (add3_FA_9)                    0.00       2.39 f
+  fa1[23]/U2/Z (AO22D0BWP)                 0.10       2.49 f
+  fa1[23]/cout (add3_FA_9)                 0.00       2.49 f
+  fa1[24]/c (add3_FA_8)                    0.00       2.49 f
+  fa1[24]/U2/Z (AO22D0BWP)                 0.10       2.59 f
+  fa1[24]/cout (add3_FA_8)                 0.00       2.59 f
+  fa1[25]/c (add3_FA_7)                    0.00       2.59 f
+  fa1[25]/U2/Z (AO22D0BWP)                 0.10       2.68 f
+  fa1[25]/cout (add3_FA_7)                 0.00       2.68 f
+  fa1[26]/c (add3_FA_6)                    0.00       2.68 f
+  fa1[26]/U2/Z (AO22D0BWP)                 0.10       2.78 f
+  fa1[26]/cout (add3_FA_6)                 0.00       2.78 f
+  fa1[27]/c (add3_FA_5)                    0.00       2.78 f
+  fa1[27]/U2/Z (AO22D0BWP)                 0.10       2.88 f
+  fa1[27]/cout (add3_FA_5)                 0.00       2.88 f
+  fa1[28]/c (add3_FA_4)                    0.00       2.88 f
+  fa1[28]/U2/Z (AO22D0BWP)                 0.10       2.97 f
+  fa1[28]/cout (add3_FA_4)                 0.00       2.97 f
+  fa1[29]/c (add3_FA_3)                    0.00       2.97 f
+  fa1[29]/U2/Z (AO22D0BWP)                 0.10       3.07 f
+  fa1[29]/cout (add3_FA_3)                 0.00       3.07 f
+  fa1[30]/c (add3_FA_2)                    0.00       3.07 f
+  fa1[30]/U2/Z (AO22D0BWP)                 0.10       3.17 f
+  fa1[30]/cout (add3_FA_2)                 0.00       3.17 f
+  fa1[31]/c (add3_FA_1)                    0.00       3.17 f
+  fa1[31]/U1/Z (CKXOR2D0BWP)               0.06       3.23 r
+  fa1[31]/y (add3_FA_1)                    0.00       3.23 r
+  Y[31] (out)                              0.00       3.23 r
+  data arrival time                                   3.23
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

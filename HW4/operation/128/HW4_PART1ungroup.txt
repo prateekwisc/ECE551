@@ -1,0 +1,194 @@
+ 
+****************************************
+Report : area
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:06:19 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          512
+Number of nets:                           898
+Number of cells:                          263
+Number of combinational cells:            263
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          4
+Number of references:                       6
+
+Combinational area:               1125.255562
+Buf/Inv area:                        2.116800
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1125.255562
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:06:19 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[127] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_operator      ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  add_8/U1_1/CO (FA1D0BWP)                 0.14       0.14 f
+  add_8/U1_2/CO (FA1D0BWP)                 0.08       0.22 f
+  add_8/U1_3/CO (FA1D0BWP)                 0.08       0.29 f
+  add_8/U1_4/CO (FA1D0BWP)                 0.08       0.37 f
+  add_8/U1_5/CO (FA1D0BWP)                 0.08       0.45 f
+  add_8/U1_6/CO (FA1D0BWP)                 0.08       0.53 f
+  add_8/U1_7/CO (FA1D0BWP)                 0.08       0.61 f
+  add_8/U1_8/CO (FA1D0BWP)                 0.08       0.69 f
+  add_8/U1_9/CO (FA1D0BWP)                 0.08       0.76 f
+  add_8/U1_10/CO (FA1D0BWP)                0.08       0.84 f
+  add_8/U1_11/CO (FA1D0BWP)                0.08       0.92 f
+  add_8/U1_12/CO (FA1D0BWP)                0.08       1.00 f
+  add_8/U1_13/CO (FA1D0BWP)                0.08       1.08 f
+  add_8/U1_14/CO (FA1D0BWP)                0.08       1.15 f
+  add_8/U1_15/CO (FA1D0BWP)                0.08       1.23 f
+  add_8/U1_16/CO (FA1D0BWP)                0.08       1.31 f
+  add_8/U1_17/CO (FA1D0BWP)                0.08       1.39 f
+  add_8/U1_18/CO (FA1D0BWP)                0.08       1.47 f
+  add_8/U1_19/CO (FA1D0BWP)                0.08       1.55 f
+  add_8/U1_20/CO (FA1D0BWP)                0.08       1.62 f
+  add_8/U1_21/CO (FA1D0BWP)                0.08       1.70 f
+  add_8/U1_22/CO (FA1D0BWP)                0.08       1.78 f
+  add_8/U1_23/CO (FA1D0BWP)                0.08       1.86 f
+  add_8/U1_24/CO (FA1D0BWP)                0.08       1.94 f
+  add_8/U1_25/CO (FA1D0BWP)                0.08       2.02 f
+  add_8/U1_26/CO (FA1D0BWP)                0.08       2.09 f
+  add_8/U1_27/CO (FA1D0BWP)                0.08       2.17 f
+  add_8/U1_28/CO (FA1D0BWP)                0.08       2.25 f
+  add_8/U1_29/CO (FA1D0BWP)                0.08       2.33 f
+  add_8/U1_30/CO (FA1D0BWP)                0.08       2.41 f
+  add_8/U1_31/CO (FA1D0BWP)                0.08       2.48 f
+  add_8/U1_32/CO (FA1D0BWP)                0.08       2.56 f
+  add_8/U1_33/CO (FA1D0BWP)                0.08       2.64 f
+  add_8/U1_34/CO (FA1D0BWP)                0.08       2.72 f
+  add_8/U1_35/CO (FA1D0BWP)                0.08       2.80 f
+  add_8/U1_36/CO (FA1D0BWP)                0.08       2.88 f
+  add_8/U1_37/CO (FA1D0BWP)                0.08       2.95 f
+  add_8/U1_38/CO (FA1D0BWP)                0.08       3.03 f
+  add_8/U1_39/CO (FA1D0BWP)                0.08       3.11 f
+  add_8/U1_40/CO (FA1D0BWP)                0.08       3.19 f
+  add_8/U1_41/CO (FA1D0BWP)                0.08       3.27 f
+  add_8/U1_42/CO (FA1D0BWP)                0.08       3.35 f
+  add_8/U1_43/CO (FA1D0BWP)                0.08       3.42 f
+  add_8/U1_44/CO (FA1D0BWP)                0.08       3.50 f
+  add_8/U1_45/CO (FA1D0BWP)                0.08       3.58 f
+  add_8/U1_46/CO (FA1D0BWP)                0.08       3.66 f
+  add_8/U1_47/CO (FA1D0BWP)                0.08       3.74 f
+  add_8/U1_48/CO (FA1D0BWP)                0.08       3.81 f
+  add_8/U1_49/CO (FA1D0BWP)                0.08       3.89 f
+  add_8/U1_50/CO (FA1D0BWP)                0.08       3.97 f
+  add_8/U1_51/CO (FA1D0BWP)                0.08       4.05 f
+  add_8/U1_52/CO (FA1D0BWP)                0.08       4.13 f
+  add_8/U1_53/CO (FA1D0BWP)                0.08       4.21 f
+  add_8/U1_54/CO (FA1D0BWP)                0.08       4.28 f
+  add_8/U1_55/CO (FA1D0BWP)                0.08       4.36 f
+  add_8/U1_56/CO (FA1D0BWP)                0.08       4.44 f
+  add_8/U1_57/CO (FA1D0BWP)                0.08       4.52 f
+  add_8/U1_58/CO (FA1D0BWP)                0.08       4.60 f
+  add_8/U1_59/CO (FA1D0BWP)                0.08       4.68 f
+  add_8/U1_60/CO (FA1D0BWP)                0.08       4.75 f
+  add_8/U1_61/CO (FA1D0BWP)                0.08       4.83 f
+  add_8/U1_62/CO (FA1D0BWP)                0.08       4.91 f
+  add_8/U1_63/CO (FA1D0BWP)                0.08       4.99 f
+  add_8/U1_64/CO (FA1D0BWP)                0.08       5.07 f
+  add_8/U1_65/CO (FA1D0BWP)                0.08       5.14 f
+  add_8/U1_66/CO (FA1D0BWP)                0.08       5.22 f
+  add_8/U1_67/CO (FA1D0BWP)                0.08       5.30 f
+  add_8/U1_68/CO (FA1D0BWP)                0.08       5.38 f
+  add_8/U1_69/CO (FA1D0BWP)                0.08       5.46 f
+  add_8/U1_70/CO (FA1D0BWP)                0.08       5.54 f
+  add_8/U1_71/CO (FA1D0BWP)                0.08       5.61 f
+  add_8/U1_72/CO (FA1D0BWP)                0.08       5.69 f
+  add_8/U1_73/CO (FA1D0BWP)                0.08       5.77 f
+  add_8/U1_74/CO (FA1D0BWP)                0.08       5.85 f
+  add_8/U1_75/CO (FA1D0BWP)                0.08       5.93 f
+  add_8/U1_76/CO (FA1D0BWP)                0.08       6.00 f
+  add_8/U1_77/CO (FA1D0BWP)                0.08       6.08 f
+  add_8/U1_78/CO (FA1D0BWP)                0.08       6.16 f
+  add_8/U1_79/CO (FA1D0BWP)                0.08       6.24 f
+  add_8/U1_80/CO (FA1D0BWP)                0.08       6.32 f
+  add_8/U1_81/CO (FA1D0BWP)                0.08       6.40 f
+  add_8/U1_82/CO (FA1D0BWP)                0.08       6.47 f
+  add_8/U1_83/CO (FA1D0BWP)                0.08       6.55 f
+  add_8/U1_84/CO (FA1D0BWP)                0.08       6.63 f
+  add_8/U1_85/CO (FA1D0BWP)                0.08       6.71 f
+  add_8/U1_86/CO (FA1D0BWP)                0.08       6.79 f
+  add_8/U1_87/CO (FA1D0BWP)                0.08       6.87 f
+  add_8/U1_88/CO (FA1D0BWP)                0.08       6.94 f
+  add_8/U1_89/CO (FA1D0BWP)                0.08       7.02 f
+  add_8/U1_90/CO (FA1D0BWP)                0.08       7.10 f
+  add_8/U1_91/CO (FA1D0BWP)                0.08       7.18 f
+  add_8/U1_92/CO (FA1D0BWP)                0.08       7.26 f
+  add_8/U1_93/CO (FA1D0BWP)                0.08       7.33 f
+  add_8/U1_94/CO (FA1D0BWP)                0.08       7.41 f
+  add_8/U1_95/CO (FA1D0BWP)                0.08       7.49 f
+  add_8/U1_96/CO (FA1D0BWP)                0.08       7.57 f
+  add_8/U1_97/CO (FA1D0BWP)                0.08       7.65 f
+  add_8/U1_98/CO (FA1D0BWP)                0.08       7.73 f
+  add_8/U1_99/CO (FA1D0BWP)                0.08       7.80 f
+  add_8/U1_100/CO (FA1D0BWP)               0.08       7.88 f
+  add_8/U1_101/CO (FA1D0BWP)               0.08       7.96 f
+  add_8/U1_102/CO (FA1D0BWP)               0.08       8.04 f
+  add_8/U1_103/CO (FA1D0BWP)               0.08       8.12 f
+  add_8/U1_104/CO (FA1D0BWP)               0.08       8.20 f
+  add_8/U1_105/CO (FA1D0BWP)               0.08       8.27 f
+  add_8/U1_106/CO (FA1D0BWP)               0.08       8.35 f
+  add_8/U1_107/CO (FA1D0BWP)               0.08       8.43 f
+  add_8/U1_108/CO (FA1D0BWP)               0.08       8.51 f
+  add_8/U1_109/CO (FA1D0BWP)               0.08       8.59 f
+  add_8/U1_110/CO (FA1D0BWP)               0.08       8.66 f
+  add_8/U1_111/CO (FA1D0BWP)               0.08       8.74 f
+  add_8/U1_112/CO (FA1D0BWP)               0.08       8.82 f
+  add_8/U1_113/CO (FA1D0BWP)               0.08       8.90 f
+  add_8/U1_114/CO (FA1D0BWP)               0.08       8.98 f
+  add_8/U1_115/CO (FA1D0BWP)               0.08       9.06 f
+  add_8/U1_116/CO (FA1D0BWP)               0.08       9.13 f
+  add_8/U1_117/CO (FA1D0BWP)               0.08       9.21 f
+  add_8/U1_118/CO (FA1D0BWP)               0.08       9.29 f
+  add_8/U1_119/CO (FA1D0BWP)               0.08       9.37 f
+  add_8/U1_120/CO (FA1D0BWP)               0.08       9.45 f
+  add_8/U1_121/CO (FA1D0BWP)               0.08       9.53 f
+  add_8/U1_122/CO (FA1D0BWP)               0.08       9.60 f
+  add_8/U1_123/CO (FA1D0BWP)               0.08       9.68 f
+  add_8/U1_124/CO (FA1D0BWP)               0.08       9.76 f
+  add_8/U1_125/CO (FA1D0BWP)               0.08       9.84 f
+  add_8/U1_126/S (FA1D0BWP)                0.09       9.93 r
+  add_8_2/U1_126/CO (FA1D0BWP)             0.13      10.06 r
+  add_8_2/U1_127/Z (XOR3D1BWP)             0.09      10.15 f
+  y[127] (out)                             0.00      10.15 f
+  data arrival time                                  10.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

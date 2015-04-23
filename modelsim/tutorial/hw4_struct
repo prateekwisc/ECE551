@@ -1,0 +1,21 @@
+module add3_FA(y,a,b,c);
+  output y;
+  input a,b,c;
+  wire cout,c1,c2;
+  xor x1 (y,a,b,c);
+  xor x2 (c1,a,b);
+  and a1 (c2,a,b);
+  and a2 (c3,c1,c);
+  or(cout,c1,c3);
+endmodule
+
+module add3_struct(y,a,b,c);
+parameter N = 8;
+output [N-1:0]y;
+input [N-1:0]a,b,c;
+wire [N-1:1]ci;
+wire cout;
+reg cin;
+
+add3_FA fa1[N-1:0](y,{cout,ci[N-1:1]},a,b,c,{ci[N-1:1],1'b0});
+endmodule

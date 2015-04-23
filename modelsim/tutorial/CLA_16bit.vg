@@ -1,0 +1,122 @@
+
+module FAGP_1bit ( C_out, S, G, P, InA, InB, C_in );
+  input InA, InB, C_in;
+  output C_out, S, G, P;
+  wire   N0, N3, N5, N9, N10, N11, N1, N2, N4, N6, N7, N8;
+
+  GTECH_XOR2 X1 ( .A(InA), .B(InB), .Z(N1) );
+  GTECH_XOR2 X2 ( .A(C_in), .B(N1), .Z(S) );
+  GTECH_AND2 A1 ( .A(N1), .B(C_in), .Z(N0) );
+  GTECH_NOT I_0 ( .A(N0), .Z(N2) );
+  GTECH_NOT I_1 ( .A(N2), .Z(N4) );
+  GTECH_AND2 O1 ( .A(N3), .B(N5), .Z(N6) );
+  GTECH_NOT I_2 ( .A(N4), .Z(N3) );
+  GTECH_NOT I_3 ( .A(G), .Z(N5) );
+  GTECH_NOT I_4 ( .A(N6), .Z(C_out) );
+  GTECH_AND2 O2 ( .A(N9), .B(N10), .Z(N7) );
+  GTECH_NOT I_5 ( .A(InA), .Z(N9) );
+  GTECH_NOT I_6 ( .A(InB), .Z(N10) );
+  GTECH_NOT I_7 ( .A(N7), .Z(P) );
+  GTECH_AND2 A3 ( .A(InA), .B(InB), .Z(N11) );
+  GTECH_NOT I_8 ( .A(N11), .Z(N8) );
+  GTECH_NOT I_9 ( .A(N8), .Z(G) );
+endmodule
+
+
+module CLU_4bit ( C_out, G, P, C_in );
+  output [3:0] C_out;
+  input [3:0] G;
+  input [3:0] P;
+  input C_in;
+  wire   N12, N13, N14, N15, N16, N17, N18, N19, N20, N21, N22, N23, N0, N4,
+         N8, N1, N5, N9, N2, N6, N10, N3, N7, N11;
+
+  GTECH_AND2 A0 ( .A(P[0]), .B(C_in), .Z(N12) );
+  GTECH_NOT I_0 ( .A(N12), .Z(N0) );
+  GTECH_NOT I_1 ( .A(N0), .Z(N4) );
+  GTECH_AND2 c1 ( .A(N13), .B(N14), .Z(N8) );
+  GTECH_NOT I_2 ( .A(G[0]), .Z(N13) );
+  GTECH_NOT I_3 ( .A(N4), .Z(N14) );
+  GTECH_NOT I_4 ( .A(N8), .Z(C_out[0]) );
+  GTECH_AND2 A1 ( .A(P[1]), .B(C_out[0]), .Z(N15) );
+  GTECH_NOT I_5 ( .A(N15), .Z(N1) );
+  GTECH_NOT I_6 ( .A(N1), .Z(N5) );
+  GTECH_AND2 c2 ( .A(N16), .B(N17), .Z(N9) );
+  GTECH_NOT I_7 ( .A(G[1]), .Z(N16) );
+  GTECH_NOT I_8 ( .A(N5), .Z(N17) );
+  GTECH_NOT I_9 ( .A(N9), .Z(C_out[1]) );
+  GTECH_AND2 A2 ( .A(P[2]), .B(C_out[1]), .Z(N18) );
+  GTECH_NOT I_10 ( .A(N18), .Z(N2) );
+  GTECH_NOT I_11 ( .A(N2), .Z(N6) );
+  GTECH_AND2 c3 ( .A(N19), .B(N20), .Z(N10) );
+  GTECH_NOT I_12 ( .A(G[2]), .Z(N19) );
+  GTECH_NOT I_13 ( .A(N6), .Z(N20) );
+  GTECH_NOT I_14 ( .A(N10), .Z(C_out[2]) );
+  GTECH_AND2 A3 ( .A(P[3]), .B(C_out[2]), .Z(N21) );
+  GTECH_NOT I_15 ( .A(N21), .Z(N3) );
+  GTECH_NOT I_16 ( .A(N3), .Z(N7) );
+  GTECH_AND2 c4 ( .A(N22), .B(N23), .Z(N11) );
+  GTECH_NOT I_17 ( .A(G[3]), .Z(N22) );
+  GTECH_NOT I_18 ( .A(N7), .Z(N23) );
+  GTECH_NOT I_19 ( .A(N11), .Z(C_out[3]) );
+endmodule
+
+
+module CLA_16bit ( Carry_out, A, B, Sum, Carry_In );
+  input [15:0] A;
+  input [15:0] B;
+  output [15:0] Sum;
+  input Carry_In;
+  output Carry_out;
+
+  wire   [3:0] g0;
+  wire   [3:0] p0;
+  wire   [3:0] c0;
+  wire   [3:0] g1;
+  wire   [3:0] p1;
+  wire   [3:0] c1;
+  wire   [3:0] g2;
+  wire   [3:0] p2;
+  wire   [3:0] c2;
+  wire   [3:0] g3;
+  wire   [3:0] p3;
+  wire   [2:0] c3;
+
+  FAGP_1bit FA0 ( .S(Sum[0]), .G(g0[0]), .P(p0[0]), .InA(A[0]), .InB(B[0]), 
+        .C_in(Carry_In) );
+  FAGP_1bit FA1 ( .S(Sum[1]), .G(g0[1]), .P(p0[1]), .InA(A[1]), .InB(B[1]), 
+        .C_in(c0[0]) );
+  FAGP_1bit FA2 ( .S(Sum[2]), .G(g0[2]), .P(p0[2]), .InA(A[2]), .InB(B[2]), 
+        .C_in(c0[1]) );
+  FAGP_1bit FA3 ( .S(Sum[3]), .G(g0[3]), .P(p0[3]), .InA(A[3]), .InB(B[3]), 
+        .C_in(c0[2]) );
+  CLU_4bit CLU0 ( .C_out(c0), .G(g0), .P(p0), .C_in(Carry_In) );
+  FAGP_1bit FA4 ( .S(Sum[4]), .G(g1[0]), .P(p1[0]), .InA(A[4]), .InB(B[4]), 
+        .C_in(c0[3]) );
+  FAGP_1bit FA5 ( .S(Sum[5]), .G(g1[1]), .P(p1[1]), .InA(A[5]), .InB(B[5]), 
+        .C_in(c1[0]) );
+  FAGP_1bit FA6 ( .S(Sum[6]), .G(g1[2]), .P(p1[2]), .InA(A[6]), .InB(B[6]), 
+        .C_in(c1[1]) );
+  FAGP_1bit FA7 ( .S(Sum[7]), .G(g1[3]), .P(p1[3]), .InA(A[7]), .InB(B[7]), 
+        .C_in(c1[2]) );
+  CLU_4bit CLU1 ( .C_out(c1), .G(g1), .P(p1), .C_in(c0[3]) );
+  FAGP_1bit FA8 ( .S(Sum[8]), .G(g2[0]), .P(p2[0]), .InA(A[8]), .InB(B[8]), 
+        .C_in(c1[3]) );
+  FAGP_1bit FA9 ( .S(Sum[9]), .G(g2[1]), .P(p2[1]), .InA(A[9]), .InB(B[9]), 
+        .C_in(c2[0]) );
+  FAGP_1bit FA10 ( .S(Sum[10]), .G(g2[2]), .P(p2[2]), .InA(A[10]), .InB(B[10]), 
+        .C_in(c2[1]) );
+  FAGP_1bit FA11 ( .S(Sum[11]), .G(g2[3]), .P(p2[3]), .InA(A[11]), .InB(B[11]), 
+        .C_in(c2[2]) );
+  CLU_4bit CLU2 ( .C_out(c2), .G(g2), .P(p2), .C_in(c1[3]) );
+  FAGP_1bit FA12 ( .S(Sum[12]), .G(g3[0]), .P(p3[0]), .InA(A[12]), .InB(B[12]), 
+        .C_in(c2[3]) );
+  FAGP_1bit FA13 ( .S(Sum[13]), .G(g3[1]), .P(p3[1]), .InA(A[13]), .InB(B[13]), 
+        .C_in(c3[0]) );
+  FAGP_1bit FA14 ( .S(Sum[14]), .G(g3[2]), .P(p3[2]), .InA(A[14]), .InB(B[14]), 
+        .C_in(c3[1]) );
+  FAGP_1bit FA15 ( .S(Sum[15]), .G(g3[3]), .P(p3[3]), .InA(A[15]), .InB(B[15]), 
+        .C_in(c3[2]) );
+  CLU_4bit CLU3 ( .C_out({Carry_out, c3}), .G(g3), .P(p3), .C_in(c2[3]) );
+endmodule
+

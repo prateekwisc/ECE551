@@ -1,0 +1,30 @@
+module CLU_4bit(C_out,S[3:0],G[3:0],P[3:0],InA[3:0],InB[3:0],C_in);
+  output C_out,S[3:0],G[3:0],P[3:0];
+  input C_in,InA[3:0],InB[3:0];
+  wire C1,C2,C3;
+  xor X1(N1,InA,InB);
+  xor X2(S,C_in,N1);
+  and A1(N2,N1,C_in);
+  and A2(N3,InA,InB);
+  or O1(C_out,N2,N3);
+  or O2[3:0](P[3:0],InA[3:0],InB[3:0]);
+  and A3[3:0](G[3:0],InA[3:0],InB[3:0]);
+endmodule
+  //Test bench module//
+module t_CLU_4bit; //module instantiation//
+   reg C_in,InA,InB;
+   wire C_out,S,G,P;
+   FAGP_1bit FAGP_1(C_out,S,G,P,InA,InB,C_in);
+   initial
+   begin
+     #5 InA=0;InB=0;C_in=0;
+     #5 InA=1;InB=0;C_in=0;
+     #5 InA=0;InB=1;C_in=0;
+     #5 InA=1;InB=1;C_in=0;
+     #5 InA=0;InB=0;C_in=1;
+     #5 InA=1;InB=0;C_in=1;
+     #5 InA=0;InB=1;C_in=1;
+     #5 InA=1;InB=1;C_in=1;
+     #5 $stop;
+   end
+ endmodule

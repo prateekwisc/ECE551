@@ -1,0 +1,552 @@
+module add3_FA(y,cout,a,b,c);
+  output y,cout;
+  input a,b,c;
+  wire c3,c1,c2;
+  
+  xor x1 (c1,a,b);
+  xor x2 (y,c1,c);
+  
+  and a1 (c2,a,b);
+  and a2 (c3,c1,c);
+  or o1 (cout,c2,c3);
+  
+ 
+endmodule
+
+module add3_struct(y,a,b,c);
+parameter N = 16;
+output [N-1:0]y;
+input [N-1:0]a,b,c;
+wire [N-1:1]ci1,ci2;
+wire [N-1:0]carry;
+wire cout1,cout2;
+reg cin;
+
+add3_FA fa0[N-1:0](carry,{cout1,ci1[N-1:1]},a,b,{ci1[N-1:1],1'b0});
+add3_FA fa1[N-1:0](y,{cout2,ci2[N-1:1]},carry,c,{ci2[N-1:1],1'b0});
+endmodule
+
+module t_add3_struct();
+  
+  reg[15:0] a,b,c;
+  wire cout;
+  wire[15:0] y;
+  
+  add3_struct fa1(y,a,b,c);
+  initial begin
+    
+    #5
+     a = 16'b0000_1010_1100_0011;
+     b = 16'b0001_1000_0101_1100;
+     c = 16'b0000_1011_0010_0001;
+     
+     #5
+     a = 16'b0000_1011_1100_0011;
+     b = 16'b0001_1000_0101_1100;
+     c = 16'b0011_1001_0010_0001;
+     
+     $monitor("a= %d, b= %d, c= %d, y= %d ",a,b,c,y);
+   end
+  endmodule
+
+module add3_case(y,a,b,c);
+  
+parameter N = 16;
+output [N-1:0]y;
+input [N-1:0]a,b,c;
+wire [(N/2)-1:0]ci1,ci2;
+wire [N/2:0]ci3,ci4;
+wire [N-1:0]tmp1;
+wire [N:0]tmp2;
+wire y0;
+wire cout1,cout2;
+wire tmp;
+reg cin;
+
+//LV_pragma translate_off
+generate
+ 
+ if(N % 2 == 0) begin
+   
+     bit2_FA fa0[(N/2)-1:0](tmp1,{cout1,ci1[N/2-1:1]},a,b,{ci1[N/2-1:1],1'b0});
+     bit2_FA fa1[(N/2)-1:0](y,{cout2,ci2[(N/2)-1:1]},tmp1,c,{ci2[N/2-1:1],1'b0});
+   end
+     else begin
+      bit2_FA fa2[(N/2):0](tmp2,{cout1,ci3[(N/2):1]},{1'b0,a},{1'b0,b},{ci3[N/2:1],1'b0});
+      bit2_FA fa3[(N/2):0]({tmp,y},{cout2,ci4[(N/2):1]},tmp2,{1'b0,c},{ci4[N/2:1],1'b0});
+    end
+    
+    endgenerate
+//LV_pragram translate_on    
+ endmodule
+
+module bit2_FA(y,cout,a,b,c);
+  output reg[1:0] y;
+  input [1:0]a,b;
+  input c;
+  output reg cout;
+  
+  
+   always@(a,b,c)
+  begin 
+  
+  //case({a[1],a[0],b[1],b[0],c})
+  case({a,b,c})  
+    5'b00001:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b0;
+     end 
+    
+    5'b00010:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b0;
+     end 
+     
+     5'b00011:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end 
+     
+     5'b00100:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end
+     
+     5'b00101:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b00110:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b00111:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b01000:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b0;
+     end
+     
+     5'b01001:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end
+     
+     5'b01010:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end 
+     
+     5'b01011:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b01100:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b01101:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b01110:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b01111:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b10000:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end
+     
+     5'b10001:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b10010:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b10011:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b10100:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b10101:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b10110:  //22
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b10111:  //23
+    begin
+     y <= 2'b10; 
+     cout <= 1'b1;
+     end
+     
+     5'b11000: //24
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b11001:  //25
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b11010:  //26
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b11011:  //27
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b11100: //28
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b11101:  //29
+    begin
+     y <= 2'b10; 
+     cout <= 1'b1;
+     end
+     
+     5'b11110:  //30
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b11111:  //31
+    begin
+     y <= 2'b11; 
+     cout <= 1'b1;
+     end
+     
+     5'b00000:  //0
+    begin
+     y <= 2'b00; 
+     cout <= 1'b0;
+     end
+ endcase
+ end
+endmodule
+
+module t_add3_case();
+  
+  reg[15:0] a,b,c;
+  wire cout;
+  wire[15:0] y;
+  
+  add3_case fa1(y,a,b,c);
+  initial begin
+    
+    #5
+     a = 13'b0_1010_1000_0011;
+     b = 13'b0_1000_0101_1100;
+     c = 13'b0_1011_0100_0001;
+     
+     #10
+     a = 13'b0_0011_1100_0011;
+     b = 13'b0_0000_0101_1100;
+     c = 13'b0_0001_1010_0001;
+     
+     $monitor("a= %d, b= %d, c= %d, y= %d",a,b,c,y);
+   end
+  endmodule
+  
+  module add3_parcase(y,a,b,c);
+  
+  output reg[1:0] y;
+  input [1:0]a,b;
+  input c;
+  reg cout;
+  
+  always @(a,b,c)
+  begin 
+   
+   
+   case({a,b,c}) // synopsys parallel_case
+    5'b00001:
+    begin
+    y <= 2'b01; 
+     cout <= 1'b0;
+     end 
+    
+    5'b00010:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b0;
+     end 
+     
+     5'b00011:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end 
+     
+     5'b00100:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end
+     
+     5'b00101:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b00110:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b00111:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b01000:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b0;
+     end
+     
+     5'b01001:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end
+     
+     5'b01010:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end 
+     
+     5'b01011:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b01100:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b01101:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b01110:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b01111:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b10000:
+    begin
+     y <= 2'b10; 
+     cout <= 1'b0;
+     end
+     
+     5'b10001:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b10010:
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b10011:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b10100:
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b10101:
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b10110:  //22
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b10111:  //23
+    begin
+     y <= 2'b10; 
+     cout <= 1'b1;
+     end
+     
+     5'b11000: //24
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b11001:  //25
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b11010:  //26
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b11011:  //27
+    begin
+     y <= 2'b00; 
+     cout <= 1'b1;
+     end
+     
+     5'b11100: //28
+    begin
+     y <= 2'b01; 
+     cout <= 1'b1;
+     end
+     
+     5'b11101:  //29
+    begin
+     y <= 2'b10; 
+     cout <= 1'b1;
+     end
+     
+     5'b11110:  //30
+    begin
+     y <= 2'b11; 
+     cout <= 1'b0;
+     end
+     
+     5'b11111:  //31
+    begin
+     y <= 2'b11; 
+     cout <= 1'b1;
+     end
+     
+     5'b00000:  //0
+    begin
+     y <= 2'b00; 
+     cout <= 1'b0;
+     end
+ endcase
+ end
+ endmodule
+
+module add3_operator(y,a,b,c);
+  
+parameter N = 16;
+output [N-1:0]y;
+input [N-1:0]a,b,c;
+
+assign y = (a+b)+c;
+
+endmodule
+
+module t_add3_operator();
+  
+  reg[15:0] a,b,c;
+  wire cout;
+  wire[15:0] y;
+  
+  add3_operator fa1(y,a,b,c);
+  initial begin
+    
+    #5
+     a = 16'b0000_0010_1100_0011;
+     b = 16'b0000_0000_0101_1100;
+     c = 16'b0000_0011_0010_0001;
+     
+     #5
+     a = 16'b0000_0011_1100_0011;
+     b = 16'b0000_0000_0101_1100;
+     c = 16'b0000_0001_0010_0001;
+     
+     $monitor("a= %d, b= %d, c= %d, y= %d",a,b,c,y);
+   end
+  endmodule
+  

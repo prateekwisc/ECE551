@@ -1,0 +1,99 @@
+ 
+****************************************
+Report : area
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:18:36 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           32
+Number of nets:                            47
+Number of cells:                            9
+Number of combinational cells:              1
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       9
+
+Combinational area:                127.537204
+Buf/Inv area:                       12.700800
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   127.537204
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:18:36 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_case          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_7          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_6          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_3          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_2          ZeroWireload          tcbn40lpbwptc
+  bit2_FA_1          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  genblk1.fa0[0]/a[1] (bit2_FA_7)          0.00       0.00 f
+  genblk1.fa0[0]/U13/ZN (CKND2D0BWP)       0.02       0.02 r
+  genblk1.fa0[0]/U12/ZN (CKND0BWP)         0.03       0.05 f
+  genblk1.fa0[0]/U11/ZN (NR2D0BWP)         0.06       0.11 r
+  genblk1.fa0[0]/U9/ZN (MUX2ND0BWP)        0.05       0.16 f
+  genblk1.fa0[0]/U8/ZN (OAI31D0BWP)        0.04       0.20 r
+  genblk1.fa0[0]/cout (bit2_FA_7)          0.00       0.20 r
+  genblk1.fa0[1]/c (bit2_FA_6)             0.00       0.20 r
+  genblk1.fa0[1]/U16/ZN (CKND0BWP)         0.04       0.23 f
+  genblk1.fa0[1]/U2/ZN (OAI21D0BWP)        0.05       0.28 r
+  genblk1.fa0[1]/U1/Z (CKXOR2D0BWP)        0.10       0.38 f
+  genblk1.fa0[1]/y[1] (bit2_FA_6)          0.00       0.38 f
+  genblk1.fa1[1]/a[1] (bit2_FA_3)          0.00       0.38 f
+  genblk1.fa1[1]/U13/ZN (CKND2D0BWP)       0.04       0.42 r
+  genblk1.fa1[1]/U12/ZN (CKND0BWP)         0.03       0.45 f
+  genblk1.fa1[1]/U11/ZN (NR2D0BWP)         0.06       0.51 r
+  genblk1.fa1[1]/U9/ZN (MUX2ND0BWP)        0.05       0.56 f
+  genblk1.fa1[1]/U8/ZN (OAI31D0BWP)        0.04       0.60 r
+  genblk1.fa1[1]/cout (bit2_FA_3)          0.00       0.60 r
+  genblk1.fa1[2]/c (bit2_FA_2)             0.00       0.60 r
+  genblk1.fa1[2]/U16/ZN (CKND0BWP)         0.05       0.65 f
+  genblk1.fa1[2]/U8/ZN (OAI31D0BWP)        0.08       0.72 r
+  genblk1.fa1[2]/cout (bit2_FA_2)          0.00       0.72 r
+  genblk1.fa1[3]/c (bit2_FA_1)             0.00       0.72 r
+  genblk1.fa1[3]/U16/ZN (CKND0BWP)         0.05       0.77 f
+  genblk1.fa1[3]/U2/ZN (OAI21D0BWP)        0.05       0.82 r
+  genblk1.fa1[3]/U1/Z (CKXOR2D0BWP)        0.09       0.91 f
+  genblk1.fa1[3]/y[1] (bit2_FA_1)          0.00       0.91 f
+  y[7] (out)                               0.00       0.91 f
+  data arrival time                                   0.91
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

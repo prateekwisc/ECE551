@@ -1,0 +1,53 @@
+###################################################################
+
+# Created by write_script -format dctcl on Wed Oct 30 15:18:11 2013
+
+###################################################################
+
+# Set the current_design #
+current_design add3_case
+
+set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
+remove_wire_load_model
+set_local_link_library {tcbn40lpbwptc.db,tpfn45gsgv18tc.db,tcbn40lpbwptc.db}
+set_fix_multiple_port_nets -all
+set_max_area 0
+set_input_delay 0  [get_ports {A[1]}]
+set_input_delay 0  [get_ports {C[7]}]
+set_input_delay 0  [get_ports {B[4]}]
+set_input_delay 0  [get_ports {B[2]}]
+set_input_delay 0  [get_ports {C[5]}]
+set_input_delay 0  [get_ports {A[6]}]
+set_input_delay 0  [get_ports {B[0]}]
+set_input_delay 0  [get_ports {C[3]}]
+set_input_delay 0  [get_ports {B[7]}]
+set_input_delay 0  [get_ports {A[4]}]
+set_input_delay 0  [get_ports {C[1]}]
+set_input_delay 0  [get_ports {A[2]}]
+set_input_delay 0  [get_ports {B[5]}]
+set_input_delay 0  [get_ports {A[0]}]
+set_input_delay 0  [get_ports {B[3]}]
+set_input_delay 0  [get_ports {C[6]}]
+set_input_delay 0  [get_ports {A[7]}]
+set_input_delay 0  [get_ports {B[1]}]
+set_input_delay 0  [get_ports {C[4]}]
+set_input_delay 0  [get_ports {A[5]}]
+set_input_delay 0  [get_ports {C[2]}]
+set_input_delay 0  [get_ports {A[3]}]
+set_input_delay 0  [get_ports {B[6]}]
+set_input_delay 0  [get_ports {C[0]}]
+set_output_delay 0  [get_ports {Y[7]}]
+set_output_delay 0  [get_ports {Y[6]}]
+set_output_delay 0  [get_ports {Y[5]}]
+set_output_delay 0  [get_ports {Y[4]}]
+set_output_delay 0  [get_ports {Y[3]}]
+set_output_delay 0  [get_ports {Y[2]}]
+set_output_delay 0  [get_ports {Y[1]}]
+set_output_delay 0  [get_ports {Y[0]}]
+
+#Compile with low mapping effort, and report area and timing
+compile -exact_map -area_effort low
+check_design
+report_area -nosplit > HW4_Q2low.txt
+report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group >> HW4_Q2low.txt
+1

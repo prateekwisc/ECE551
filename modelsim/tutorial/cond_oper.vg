@@ -1,0 +1,18 @@
+
+module cond_oper ( a, b, c, d, z );
+  input [7:0] a;
+  input [7:0] b;
+  input [7:0] c;
+  input [7:0] d;
+  output [7:0] z;
+  wire   N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, N11;
+
+  LT_UNS_OP lt_8 ( .A({N9, N8, N7, N6, N5, N4, N3, N2, N1}), .B({1'b1, 1'b1, 
+        1'b0, 1'b0, 1'b0}), .Z(N10) );
+  ADD_UNS_OP add_8 ( .A(a), .B(b), .Z({N9, N8, N7, N6, N5, N4, N3, N2, N1}) );
+  SELECT_OP C18 ( .DATA1(c), .DATA2(d), .CONTROL1(N0), .CONTROL2(N11), .Z(z)
+         );
+  GTECH_BUF B_0 ( .A(N10), .Z(N0) );
+  GTECH_NOT I_0 ( .A(N10), .Z(N11) );
+endmodule
+

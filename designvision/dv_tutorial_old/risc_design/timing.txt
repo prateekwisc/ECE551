@@ -1,0 +1,251 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 3
+        -max_paths 3
+Design : queue
+Version: H-2013.03-SP3
+Date   : Tue Oct 22 22:39:24 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: top
+
+  Startpoint: reset (input port clocked by clock)
+  Endpoint: genblk1.q2/mem_reg[3][7]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  queue              TSMC512K_Lowk_Aggresive
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  reset (in)                                              0.10       2.10 f
+  U302/ZN (INVD1BWP)                                      0.15       2.25 r
+  U301/ZN (ND3D1BWP)                                      0.12       2.38 f
+  U262/ZN (OAI31D1BWP)                                    0.10       2.47 r
+  U236/ZN (ND3D1BWP)                                      0.17       2.65 f
+  U247/ZN (NR2XD1BWP)                                     0.17       2.81 r
+  U245/ZN (INVD1BWP)                                      0.13       2.94 f
+  U352/ZN (OAI22D1BWP)                                    0.09       3.03 r
+  genblk1.q2/mem_reg[3][7]/D (DFD1BWP)                    0.00       3.03 r
+  data arrival time                                                  3.03
+
+  clock clock (rise edge)                                 4.00       4.00
+  clock network delay (ideal)                             0.00       4.00
+  genblk1.q2/mem_reg[3][7]/CP (DFD1BWP)                   0.00       4.00 r
+  library setup time                                     -0.04       3.96
+  data required time                                                 3.96
+  --------------------------------------------------------------------------
+  data required time                                                 3.96
+  data arrival time                                                 -3.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.93
+
+
+  Startpoint: reset (input port clocked by clock)
+  Endpoint: genblk1.q2/mem_reg[3][6]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  queue              TSMC512K_Lowk_Aggresive
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  reset (in)                                              0.10       2.10 f
+  U302/ZN (INVD1BWP)                                      0.15       2.25 r
+  U301/ZN (ND3D1BWP)                                      0.12       2.38 f
+  U262/ZN (OAI31D1BWP)                                    0.10       2.47 r
+  U236/ZN (ND3D1BWP)                                      0.17       2.65 f
+  U247/ZN (NR2XD1BWP)                                     0.17       2.81 r
+  U245/ZN (INVD1BWP)                                      0.13       2.94 f
+  U353/ZN (OAI22D1BWP)                                    0.09       3.03 r
+  genblk1.q2/mem_reg[3][6]/D (DFD1BWP)                    0.00       3.03 r
+  data arrival time                                                  3.03
+
+  clock clock (rise edge)                                 4.00       4.00
+  clock network delay (ideal)                             0.00       4.00
+  genblk1.q2/mem_reg[3][6]/CP (DFD1BWP)                   0.00       4.00 r
+  library setup time                                     -0.04       3.96
+  data required time                                                 3.96
+  --------------------------------------------------------------------------
+  data required time                                                 3.96
+  data arrival time                                                 -3.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.93
+
+
+  Startpoint: reset (input port clocked by clock)
+  Endpoint: genblk1.q2/mem_reg[3][6]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  queue              TSMC512K_Lowk_Aggresive
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  reset (in)                                              0.10       2.10 f
+  U302/ZN (INVD1BWP)                                      0.15       2.25 r
+  U301/ZN (ND3D1BWP)                                      0.12       2.38 f
+  U262/ZN (OAI31D1BWP)                                    0.10       2.47 r
+  U236/ZN (ND3D1BWP)                                      0.17       2.64 f
+  U247/ZN (NR2XD1BWP)                                     0.17       2.81 r
+  U245/ZN (INVD1BWP)                                      0.13       2.94 f
+  U353/ZN (OAI22D1BWP)                                    0.09       3.03 r
+  genblk1.q2/mem_reg[3][6]/D (DFD1BWP)                    0.00       3.03 r
+  data arrival time                                                  3.03
+
+  clock clock (rise edge)                                 4.00       4.00
+  clock network delay (ideal)                             0.00       4.00
+  genblk1.q2/mem_reg[3][6]/CP (DFD1BWP)                   0.00       4.00 r
+  library setup time                                     -0.04       3.96
+  data required time                                                 3.96
+  --------------------------------------------------------------------------
+  data required time                                                 3.96
+  data arrival time                                                 -3.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.93
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 3
+        -max_paths 3
+Design : queue
+Version: H-2013.03-SP3
+Date   : Tue Oct 22 22:39:24 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: top
+
+  Startpoint: genblk1.q2/full_indicator_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: genblk1.q2/full_indicator_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  queue              TSMC512K_Lowk_Aggresive
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1.q2/full_indicator_reg[0]/CP (DFD1BWP)           0.00       0.00 r
+  genblk1.q2/full_indicator_reg[0]/Q (DFD1BWP)            0.10       0.10 r
+  U335/ZN (OAI22D1BWP)                                    0.03       0.13 f
+  genblk1.q2/full_indicator_reg[0]/D (DFD1BWP)            0.00       0.13 f
+  data arrival time                                                  0.13
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1.q2/full_indicator_reg[0]/CP (DFD1BWP)           0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: genblk1.q2/full_indicator_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: genblk1.q2/full_indicator_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  queue              TSMC512K_Lowk_Aggresive
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1.q2/full_indicator_reg[0]/CP (DFD1BWP)           0.00       0.00 r
+  genblk1.q2/full_indicator_reg[0]/Q (DFD1BWP)            0.10       0.10 r
+  U335/ZN (OAI22D1BWP)                                    0.03       0.13 f
+  genblk1.q2/full_indicator_reg[0]/D (DFD1BWP)            0.00       0.13 f
+  data arrival time                                                  0.13
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1.q2/full_indicator_reg[0]/CP (DFD1BWP)           0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: genblk1.q2/full_indicator_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: genblk1.q2/full_indicator_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  queue              TSMC512K_Lowk_Aggresive
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1.q2/full_indicator_reg[0]/CP (DFD1BWP)           0.00       0.00 r
+  genblk1.q2/full_indicator_reg[0]/Q (DFD1BWP)            0.10       0.10 r
+  U335/ZN (OAI22D1BWP)                                    0.03       0.13 f
+  genblk1.q2/full_indicator_reg[0]/D (DFD1BWP)            0.00       0.13 f
+  data arrival time                                                  0.13
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk1.q2/full_indicator_reg[0]/CP (DFD1BWP)           0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+1

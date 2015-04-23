@@ -1,0 +1,66 @@
+N = 8                                   Low           Uniquify            Ungroup               ultra
+add3_struct: Max delay                  0.91            0.91                0.91                 0.91
+Add3_struct: Total Area                 82.4            82.4               71.08                 63.8
+
+Add3_case: Max delay                    0.94            0.94               1.06                 1.14
+Add3_case: Total Area                   130.35         130.35             139.35               108.6
+
+Add3_pcase: Max delay                   0.94            0.94               1.06                 1.14                   
+Add3_pcase: Total Area                  130.35         130.35             139.35               108.6
+
+Add3_oper: Max delay                    0.76           0.76                0.76                 1.12
+Add3_oper: Total Area                   66.85          66.85              66.85                 61.5
+
+
+N = 32                                   Low           Uniquify           Ungroup               ultra
+add3_struct: Max delay                  3.23            3.23               3.43                 3.9
+Add3_struct: Total Area                 327.9           327.9              308.2               275.5
+
+Add3_case: Max delay                    2.92            2.92               3.73                 2.65
+Add3_case: Total Area                   519.85          519.85             638.9               491.27
+
+Add3_pcase: Max delay                   2.92            2.92               3.73                 2.65                   
+Add3_pcase: Total Area                  519.85          519.85             638.9               491.27
+
+Add3_oper: Max delay                    2.64            2.64               2.64                 4.07
+Add3_oper: Total Area                   278.5           278.5             278.5               273.24
+
+
+N = 128                                 Low           Uniquify            Ungroup               ultra
+add3_struct: Max delay                  12.52           12.52              13.54                15.67
+Add3_struct: Total Area                 1310.12        1310.12            1256.5               1122.2
+
+Add3_case: Max delay                    10.83           10.83              14.49               8.06
+Add3_case: Total Area                   2077.8         2077.8             2645.3              1771.28
+
+Add3_pcase: Max delay                   10.83           10.83              14.49               8.06                 
+Add3_pcase: Total Area                  2077.8         2077.8             2645.3              1771.28
+
+Add3_oper: Max delay                    10.15           10.15              10.15               15.89
+Add3_oper: Total Area                  1125.25         1125.25            1125.25             1119.96
+
+
+Ans.
+4 (a): The tools 
+
+(b): How did the synthesised versions for a specific N compare to each other?
+Ans: In case of Compile Ultra as well as uniquify synthesis option, the implementation in the form of gate level is shown in the schematic, the uniquify command creates a uniquely named copy of each instance and then each design is optimised separately  whereas in case of Compile low synthesis option, the schematic is implemented in the form of FAGP modules, which are then used to implement the ripple carry adder. In case of 'Ungroup' synthesis option, the implementation is replicated at the gate level at every instance of the FAGP module i.e it makes unique copies of the design of all the FAGP modules which are instantiated in the form of arrays to implement the module in the form of gates and removes levels of the hierarchy. 
+
+
+
+(c): How were delay and area affected by the change in N?
+ For'add3_struct'the max area is similar for 'low' and 'uniquify'. Area dips for 'ungroup' and becomes minimum in case of 'ultra'.The time delay remains almost similar for all the cases. For'add3_case 'the max area is lowest in case of 'ulta' and the time delay is maximium in case of 'ultra'. The time delay is increasing from low-uniquify-ungroup-ultra. The total area is worsti.e maximum for ungroup.
+The values of Total area and max delay for 'add3_parcase' are same as to that in 'add3_case' and shows that time delay is increasing from low to ultra and the total area is maximum for ungroup. 
+As 'N' increases from N =8 to 32 to 128, the area is increasing approximately by the factor of 4 and the time delay is also increasing by the factor of '3.5 - 4'
+
+How did the various synthesis options affect your results?
+(d) The results for Max Delay is maximum in case of ungroup synthesis option, when we consider all the given 4 cases except 'add3_struct' for all the 3 value of N. The results for Total Area is maximum for ungroup synthesis option and is the minimum for ulta synthesis option for all the three values of N.
+
+(e) Did you notice a difference in how long it took for synthesis to finish?
+Ans: It took the maximum time for synthesisng in Compile Ultra option as compared to compile.
+
+(f) Anything other items of itnerest?
+Ans: 
+
+
+

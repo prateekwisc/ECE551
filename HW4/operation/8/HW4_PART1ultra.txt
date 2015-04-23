@@ -1,0 +1,75 @@
+ 
+****************************************
+Report : area
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 17:56:21 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           32
+Number of nets:                            52
+Number of cells:                           16
+Number of combinational cells:             16
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       5
+
+Combinational area:                 61.563598
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                    61.563598
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_operator
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 17:56:22 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: c[0] (input port)
+  Endpoint: y[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_operator      ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  c[0] (in)                                0.00       0.00 f
+  U14/CO (FA1D0BWP)                        0.14       0.14 f
+  U13/CO (FA1D0BWP)                        0.11       0.26 f
+  U12/CO (FA1D0BWP)                        0.16       0.41 f
+  U11/CO (FA1D0BWP)                        0.12       0.53 f
+  U10/CO (FA1D0BWP)                        0.12       0.65 f
+  U9/CO (FA1D0BWP)                         0.12       0.77 f
+  U16/CO (FA1D0BWP)                        0.11       0.89 f
+  U1/ZN (XNR4D0BWP)                        0.15       1.04 f
+  U2/ZN (XNR2D0BWP)                        0.08       1.12 r
+  y[7] (out)                               0.00       1.12 r
+  data arrival time                                   1.12
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

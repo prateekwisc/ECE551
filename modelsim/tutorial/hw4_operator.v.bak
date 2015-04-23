@@ -1,0 +1,32 @@
+module add3_operator(y,a,b,c);
+  
+parameter N = 16;
+output [N-1:0]y;
+input [N-1:0]a,b,c;
+
+assign y = (a+b)+c;
+
+endmodule
+
+module t_add3_case();
+  
+  reg[15:0] a,b,c;
+  wire cout;
+  wire[15:0] y;
+  
+  add3_case fa1(y,a,b,c);
+  initial begin
+    
+    #5
+     a = 16'b0000_1010_1100_0011;
+     b = 16'b0001_1000_0101_1100;
+     c = 16'b0000_1011_0010_0001;
+     
+     #5
+     a = 16'b0000_1011_1100_0011;
+     b = 16'b0000_1000_0101_1100;
+     c = 16'b0000_1001_0010_0001;
+     
+     $monitor("a= %d, b= %d, c= %d, y= %d",a,b,c,y);
+   end
+  endmodule

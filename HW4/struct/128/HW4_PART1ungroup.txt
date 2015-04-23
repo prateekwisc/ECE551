@@ -1,0 +1,196 @@
+ 
+****************************************
+Report : area
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 14:02:45 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          512
+Number of nets:                          1147
+Number of cells:                          763
+Number of combinational cells:            763
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          1
+Number of references:                      10
+
+Combinational area:               1256.497241
+Buf/Inv area:                        0.529200
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1256.497241
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Fri Nov  1 14:02:45 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: A[1] (input port)
+  Endpoint: Y[127] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_struct        ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  A[1] (in)                                0.00       0.00 f
+  U1589/Z (CKXOR2D0BWP)                    0.08       0.08 r
+  U1293/Z (CKXOR2D0BWP)                    0.08       0.16 f
+  U1292/ZN (XNR2D0BWP)                     0.08       0.25 r
+  U1289/ZN (MAOI22D0BWP)                   0.09       0.34 r
+  U1287/ZN (MAOI22D0BWP)                   0.11       0.45 r
+  U1285/ZN (MAOI22D0BWP)                   0.11       0.55 r
+  U1283/ZN (MAOI22D0BWP)                   0.11       0.66 r
+  U1281/ZN (MAOI22D0BWP)                   0.11       0.76 r
+  U1279/ZN (MAOI22D0BWP)                   0.11       0.87 r
+  U1277/ZN (MAOI22D0BWP)                   0.11       0.97 r
+  U1275/ZN (MAOI22D0BWP)                   0.11       1.08 r
+  U1273/ZN (MAOI22D0BWP)                   0.11       1.18 r
+  U1271/ZN (MAOI22D0BWP)                   0.11       1.29 r
+  U1269/ZN (MAOI22D0BWP)                   0.11       1.39 r
+  U1267/ZN (MAOI22D0BWP)                   0.11       1.50 r
+  U1265/ZN (MAOI22D0BWP)                   0.11       1.60 r
+  U1263/ZN (MAOI22D0BWP)                   0.11       1.71 r
+  U1261/ZN (MAOI22D0BWP)                   0.11       1.81 r
+  U1259/ZN (MAOI22D0BWP)                   0.11       1.92 r
+  U1257/ZN (MAOI22D0BWP)                   0.11       2.03 r
+  U1255/ZN (MAOI22D0BWP)                   0.11       2.13 r
+  U1253/ZN (MAOI22D0BWP)                   0.11       2.24 r
+  U1251/ZN (MAOI22D0BWP)                   0.11       2.34 r
+  U1249/ZN (MAOI22D0BWP)                   0.11       2.45 r
+  U1247/ZN (MAOI22D0BWP)                   0.11       2.55 r
+  U1245/ZN (MAOI22D0BWP)                   0.11       2.66 r
+  U1243/ZN (MAOI22D0BWP)                   0.11       2.76 r
+  U1241/ZN (MAOI22D0BWP)                   0.11       2.87 r
+  U1239/ZN (MAOI22D0BWP)                   0.11       2.97 r
+  U1237/ZN (MAOI22D0BWP)                   0.11       3.08 r
+  U1235/ZN (MAOI22D0BWP)                   0.11       3.18 r
+  U1233/ZN (MAOI22D0BWP)                   0.11       3.29 r
+  U1231/ZN (MAOI22D0BWP)                   0.11       3.39 r
+  U1229/ZN (MAOI22D0BWP)                   0.11       3.50 r
+  U1227/ZN (MAOI22D0BWP)                   0.11       3.60 r
+  U1225/ZN (MAOI22D0BWP)                   0.11       3.71 r
+  U1223/ZN (MAOI22D0BWP)                   0.11       3.81 r
+  U1221/ZN (MAOI22D0BWP)                   0.11       3.92 r
+  U1219/ZN (MAOI22D0BWP)                   0.11       4.02 r
+  U1217/ZN (MAOI22D0BWP)                   0.11       4.13 r
+  U1215/ZN (MAOI22D0BWP)                   0.11       4.24 r
+  U1213/ZN (MAOI22D0BWP)                   0.11       4.34 r
+  U1211/ZN (MAOI22D0BWP)                   0.11       4.45 r
+  U1209/ZN (MAOI22D0BWP)                   0.11       4.55 r
+  U1207/ZN (MAOI22D0BWP)                   0.11       4.66 r
+  U1205/ZN (MAOI22D0BWP)                   0.11       4.76 r
+  U1203/ZN (MAOI22D0BWP)                   0.11       4.87 r
+  U1201/ZN (MAOI22D0BWP)                   0.11       4.97 r
+  U1199/ZN (MAOI22D0BWP)                   0.11       5.08 r
+  U1197/ZN (MAOI22D0BWP)                   0.11       5.18 r
+  U1195/ZN (MAOI22D0BWP)                   0.11       5.29 r
+  U1193/ZN (MAOI22D0BWP)                   0.11       5.39 r
+  U1191/ZN (MAOI22D0BWP)                   0.11       5.50 r
+  U1189/ZN (MAOI22D0BWP)                   0.11       5.60 r
+  U1187/ZN (MAOI22D0BWP)                   0.11       5.71 r
+  U1185/ZN (MAOI22D0BWP)                   0.11       5.81 r
+  U1183/ZN (MAOI22D0BWP)                   0.11       5.92 r
+  U1181/ZN (MAOI22D0BWP)                   0.11       6.02 r
+  U1179/ZN (MAOI22D0BWP)                   0.11       6.13 r
+  U1177/ZN (MAOI22D0BWP)                   0.11       6.24 r
+  U1175/ZN (MAOI22D0BWP)                   0.11       6.34 r
+  U1173/ZN (MAOI22D0BWP)                   0.11       6.45 r
+  U1171/ZN (MAOI22D0BWP)                   0.11       6.55 r
+  U1169/ZN (MAOI22D0BWP)                   0.11       6.66 r
+  U1167/ZN (MAOI22D0BWP)                   0.11       6.76 r
+  U1165/ZN (MAOI22D0BWP)                   0.11       6.87 r
+  U1163/ZN (MAOI22D0BWP)                   0.11       6.97 r
+  U1161/ZN (MAOI22D0BWP)                   0.11       7.08 r
+  U1159/ZN (MAOI22D0BWP)                   0.11       7.18 r
+  U1157/ZN (MAOI22D0BWP)                   0.11       7.29 r
+  U1155/ZN (MAOI22D0BWP)                   0.11       7.39 r
+  U1153/ZN (MAOI22D0BWP)                   0.11       7.50 r
+  U1151/ZN (MAOI22D0BWP)                   0.11       7.60 r
+  U1149/ZN (MAOI22D0BWP)                   0.11       7.71 r
+  U1147/ZN (MAOI22D0BWP)                   0.11       7.81 r
+  U1145/ZN (MAOI22D0BWP)                   0.11       7.92 r
+  U1143/ZN (MAOI22D0BWP)                   0.11       8.02 r
+  U1141/ZN (MAOI22D0BWP)                   0.11       8.13 r
+  U1139/ZN (MAOI22D0BWP)                   0.11       8.23 r
+  U1137/ZN (MAOI22D0BWP)                   0.11       8.34 r
+  U1135/ZN (MAOI22D0BWP)                   0.11       8.45 r
+  U1133/ZN (MAOI22D0BWP)                   0.11       8.55 r
+  U1131/ZN (MAOI22D0BWP)                   0.11       8.66 r
+  U1129/ZN (MAOI22D0BWP)                   0.11       8.76 r
+  U1127/ZN (MAOI22D0BWP)                   0.11       8.87 r
+  U1125/ZN (MAOI22D0BWP)                   0.11       8.97 r
+  U1123/ZN (MAOI22D0BWP)                   0.11       9.08 r
+  U1121/ZN (MAOI22D0BWP)                   0.11       9.18 r
+  U1119/ZN (MAOI22D0BWP)                   0.11       9.29 r
+  U1117/ZN (MAOI22D0BWP)                   0.11       9.39 r
+  U1115/ZN (MAOI22D0BWP)                   0.11       9.50 r
+  U1113/ZN (MAOI22D0BWP)                   0.11       9.60 r
+  U1111/ZN (MAOI22D0BWP)                   0.11       9.71 r
+  U1109/ZN (MAOI22D0BWP)                   0.11       9.81 r
+  U1107/ZN (MAOI22D0BWP)                   0.11       9.92 r
+  U1105/ZN (MAOI22D0BWP)                   0.11      10.02 r
+  U1103/ZN (MAOI22D0BWP)                   0.11      10.13 r
+  U1101/ZN (MAOI22D0BWP)                   0.11      10.23 r
+  U1099/ZN (MAOI22D0BWP)                   0.11      10.34 r
+  U1097/ZN (MAOI22D0BWP)                   0.11      10.45 r
+  U1095/ZN (MAOI22D0BWP)                   0.11      10.55 r
+  U1093/ZN (MAOI22D0BWP)                   0.11      10.66 r
+  U1087/ZN (MAOI22D0BWP)                   0.11      10.76 r
+  U1081/ZN (MAOI22D0BWP)                   0.11      10.87 r
+  U1075/ZN (MAOI22D0BWP)                   0.11      10.97 r
+  U1069/ZN (MAOI22D0BWP)                   0.11      11.08 r
+  U1063/ZN (MAOI22D0BWP)                   0.11      11.18 r
+  U1057/ZN (MAOI22D0BWP)                   0.11      11.29 r
+  U1051/ZN (MAOI22D0BWP)                   0.11      11.39 r
+  U1045/ZN (MAOI22D0BWP)                   0.11      11.50 r
+  U1039/ZN (MAOI22D0BWP)                   0.11      11.60 r
+  U1032/ZN (MAOI22D0BWP)                   0.11      11.71 r
+  U1026/ZN (MAOI22D0BWP)                   0.11      11.81 r
+  U1020/ZN (MAOI22D0BWP)                   0.11      11.92 r
+  U1014/ZN (MAOI22D0BWP)                   0.11      12.02 r
+  U1008/ZN (MAOI22D0BWP)                   0.11      12.13 r
+  U1002/ZN (MAOI22D0BWP)                   0.11      12.23 r
+  U996/ZN (MAOI22D0BWP)                    0.11      12.34 r
+  U990/ZN (MAOI22D0BWP)                    0.11      12.44 r
+  U984/ZN (MAOI22D0BWP)                    0.11      12.55 r
+  U978/ZN (MAOI22D0BWP)                    0.11      12.66 r
+  U971/ZN (MAOI22D0BWP)                    0.11      12.76 r
+  U965/ZN (MAOI22D0BWP)                    0.11      12.87 r
+  U959/ZN (MAOI22D0BWP)                    0.11      12.97 r
+  U953/ZN (MAOI22D0BWP)                    0.11      13.08 r
+  U947/ZN (MAOI22D0BWP)                    0.11      13.18 r
+  U941/ZN (MAOI22D0BWP)                    0.11      13.29 r
+  U935/ZN (MAOI22D0BWP)                    0.11      13.39 r
+  U926/ZN (OAI22D0BWP)                     0.06      13.45 f
+  U925/Z (XOR3D0BWP)                       0.08      13.54 r
+  Y[127] (out)                             0.00      13.54 r
+  data arrival time                                  13.54
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

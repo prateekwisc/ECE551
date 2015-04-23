@@ -1,0 +1,134 @@
+ 
+****************************************
+Report : area
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Thu Oct 31 13:37:44 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          128
+Number of nets:                           543
+Number of cells:                          449
+Number of combinational cells:            449
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         32
+Number of references:                      10
+
+Combinational area:                519.850815
+Buf/Inv area:                       16.934401
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   519.850815
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_case
+Version: H-2013.03-SP3
+Date   : Thu Oct 31 13:37:44 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: a[1] (input port)
+  Endpoint: y[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_case          ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  genblk1.fa0[0]/U14/ZN (CKND2D0BWP)       0.03       0.03 r
+  genblk1.fa0[0]/U13/ZN (OAI21D0BWP)       0.05       0.08 f
+  genblk1.fa0[0]/U11/Z (CKMUX2D0BWP)       0.08       0.16 f
+  genblk1.fa0[0]/U7/ZN (CKND2D0BWP)        0.03       0.18 r
+  genblk1.fa0[1]/U10/ZN (CKND0BWP)         0.04       0.22 f
+  genblk1.fa0[1]/U9/ZN (IAO21D0BWP)        0.05       0.27 r
+  genblk1.fa0[1]/U8/ZN (OAI21D0BWP)        0.05       0.32 f
+  genblk1.fa0[1]/U7/ZN (CKND2D0BWP)        0.03       0.34 r
+  genblk1.fa0[2]/U10/ZN (CKND0BWP)         0.04       0.38 f
+  genblk1.fa0[2]/U9/ZN (IAO21D0BWP)        0.05       0.43 r
+  genblk1.fa0[2]/U8/ZN (OAI21D0BWP)        0.05       0.48 f
+  genblk1.fa0[2]/U7/ZN (CKND2D0BWP)        0.03       0.51 r
+  genblk1.fa0[3]/U10/ZN (CKND0BWP)         0.04       0.55 f
+  genblk1.fa0[3]/U9/ZN (IAO21D0BWP)        0.05       0.60 r
+  genblk1.fa0[3]/U8/ZN (OAI21D0BWP)        0.05       0.64 f
+  genblk1.fa0[3]/U7/ZN (CKND2D0BWP)        0.03       0.67 r
+  genblk1.fa0[4]/U10/ZN (CKND0BWP)         0.04       0.71 f
+  genblk1.fa0[4]/U9/ZN (IAO21D0BWP)        0.05       0.76 r
+  genblk1.fa0[4]/U8/ZN (OAI21D0BWP)        0.05       0.81 f
+  genblk1.fa0[4]/U7/ZN (CKND2D0BWP)        0.03       0.84 r
+  genblk1.fa0[5]/U10/ZN (CKND0BWP)         0.04       0.88 f
+  genblk1.fa0[5]/U9/ZN (IAO21D0BWP)        0.05       0.93 r
+  genblk1.fa0[5]/U8/ZN (OAI21D0BWP)        0.05       0.97 f
+  genblk1.fa0[5]/U7/ZN (CKND2D0BWP)        0.03       1.00 r
+  genblk1.fa0[6]/U10/ZN (CKND0BWP)         0.04       1.04 f
+  genblk1.fa0[6]/U9/ZN (IAO21D0BWP)        0.05       1.09 r
+  genblk1.fa0[6]/U8/ZN (OAI21D0BWP)        0.05       1.14 f
+  genblk1.fa0[6]/U7/ZN (CKND2D0BWP)        0.03       1.17 r
+  genblk1.fa0[7]/U10/ZN (CKND0BWP)         0.04       1.21 f
+  genblk1.fa0[7]/U9/ZN (IAO21D0BWP)        0.05       1.26 r
+  genblk1.fa0[7]/U8/ZN (OAI21D0BWP)        0.05       1.30 f
+  genblk1.fa0[7]/U7/ZN (CKND2D0BWP)        0.03       1.33 r
+  genblk1.fa0[8]/U10/ZN (CKND0BWP)         0.04       1.37 f
+  genblk1.fa0[8]/U9/ZN (IAO21D0BWP)        0.05       1.42 r
+  genblk1.fa0[8]/U8/ZN (OAI21D0BWP)        0.05       1.47 f
+  genblk1.fa0[8]/U7/ZN (CKND2D0BWP)        0.03       1.50 r
+  genblk1.fa0[9]/U10/ZN (CKND0BWP)         0.04       1.54 f
+  genblk1.fa0[9]/U9/ZN (IAO21D0BWP)        0.05       1.59 r
+  genblk1.fa0[9]/U8/ZN (OAI21D0BWP)        0.05       1.63 f
+  genblk1.fa0[9]/U7/ZN (CKND2D0BWP)        0.03       1.66 r
+  genblk1.fa0[10]/U10/ZN (CKND0BWP)        0.04       1.70 f
+  genblk1.fa0[10]/U9/ZN (IAO21D0BWP)       0.05       1.75 r
+  genblk1.fa0[10]/U8/ZN (OAI21D0BWP)       0.05       1.80 f
+  genblk1.fa0[10]/U7/ZN (CKND2D0BWP)       0.03       1.83 r
+  genblk1.fa0[11]/U10/ZN (CKND0BWP)        0.04       1.86 f
+  genblk1.fa0[11]/U9/ZN (IAO21D0BWP)       0.05       1.92 r
+  genblk1.fa0[11]/U8/ZN (OAI21D0BWP)       0.05       1.96 f
+  genblk1.fa0[11]/U7/ZN (CKND2D0BWP)       0.03       1.99 r
+  genblk1.fa0[12]/U10/ZN (CKND0BWP)        0.04       2.03 f
+  genblk1.fa0[12]/U9/ZN (IAO21D0BWP)       0.05       2.08 r
+  genblk1.fa0[12]/U8/ZN (OAI21D0BWP)       0.05       2.13 f
+  genblk1.fa0[12]/U7/ZN (CKND2D0BWP)       0.03       2.16 r
+  genblk1.fa0[13]/U10/ZN (CKND0BWP)        0.04       2.19 f
+  genblk1.fa0[13]/U9/ZN (IAO21D0BWP)       0.05       2.25 r
+  genblk1.fa0[13]/U8/ZN (OAI21D0BWP)       0.05       2.29 f
+  genblk1.fa0[13]/U7/ZN (CKND2D0BWP)       0.03       2.32 r
+  genblk1.fa0[14]/U10/ZN (CKND0BWP)        0.04       2.36 f
+  genblk1.fa0[14]/U9/ZN (IAO21D0BWP)       0.05       2.41 r
+  genblk1.fa0[14]/U2/ZN (NR2D0BWP)         0.03       2.45 f
+  genblk1.fa0[14]/U1/Z (CKXOR2D0BWP)       0.08       2.53 r
+  genblk1.fa1[14]/U14/ZN (CKND2D0BWP)      0.05       2.58 f
+  genblk1.fa1[14]/U13/ZN (OAI21D0BWP)      0.04       2.62 r
+  genblk1.fa1[14]/U11/Z (CKMUX2D0BWP)      0.07       2.69 r
+  genblk1.fa1[14]/U7/ZN (CKND2D0BWP)       0.03       2.72 f
+  genblk1.fa1[15]/U10/ZN (CKND0BWP)        0.04       2.76 r
+  genblk1.fa1[15]/U9/ZN (IAO21D0BWP)       0.03       2.79 f
+  genblk1.fa1[15]/U2/ZN (NR2D0BWP)         0.05       2.84 r
+  genblk1.fa1[15]/U1/Z (CKXOR2D0BWP)       0.07       2.92 f
+  y[31] (out)                              0.00       2.92 f
+  data arrival time                                   2.92
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

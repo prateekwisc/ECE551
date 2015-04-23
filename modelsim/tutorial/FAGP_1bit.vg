@@ -1,0 +1,11 @@
+
+module FAGP_1bit ( C_out, S, G, P, InA, InB, C_in );
+  input InA, InB, C_in;
+  output C_out, S, G, P;
+
+
+  CKAN2D0BWP U9 ( .A1(InA), .A2(InB), .Z(G) );
+  OR2XD1BWP U10 ( .A1(InA), .A2(InB), .Z(P) );
+  FA1D0BWP U11 ( .A(InA), .B(C_in), .CI(InB), .CO(C_out), .S(S) );
+endmodule
+

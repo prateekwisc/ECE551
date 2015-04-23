@@ -1,0 +1,49 @@
+
+module add3_struct ( Y, A, B, C );
+  output [7:0] Y;
+  input [7:0] A;
+  input [7:0] B;
+  input [7:0] C;
+  wire   \fa1[0]/c1 , \intadd_0/B[5] , \intadd_0/B[4] , \intadd_0/B[3] ,
+         \intadd_0/B[2] , \intadd_0/B[1] , \intadd_0/B[0] , \intadd_0/CI ,
+         \intadd_0/n6 , \intadd_0/n5 , \intadd_0/n4 , \intadd_0/n3 ,
+         \intadd_0/n2 , \intadd_0/n1 , \intadd_1/CI , \intadd_1/n6 ,
+         \intadd_1/n5 , \intadd_1/n4 , \intadd_1/n3 , \intadd_1/n2 ,
+         \intadd_1/n1 , n43, n44, n45, n46;
+  assign Y[0] = \fa1[0]/c1 ;
+
+  FA1D0BWP \intadd_0/U7  ( .A(C[1]), .B(\intadd_0/B[0] ), .CI(\intadd_0/CI ), 
+        .CO(\intadd_0/n6 ), .S(Y[1]) );
+  FA1D0BWP \intadd_0/U6  ( .A(C[2]), .B(\intadd_0/B[1] ), .CI(\intadd_0/n6 ), 
+        .CO(\intadd_0/n5 ), .S(Y[2]) );
+  FA1D0BWP \intadd_0/U5  ( .A(C[3]), .B(\intadd_0/B[2] ), .CI(\intadd_0/n5 ), 
+        .CO(\intadd_0/n4 ), .S(Y[3]) );
+  FA1D0BWP \intadd_0/U4  ( .A(C[4]), .B(\intadd_0/B[3] ), .CI(\intadd_0/n4 ), 
+        .CO(\intadd_0/n3 ), .S(Y[4]) );
+  FA1D0BWP \intadd_0/U3  ( .A(C[5]), .B(\intadd_0/B[4] ), .CI(\intadd_0/n3 ), 
+        .CO(\intadd_0/n2 ), .S(Y[5]) );
+  FA1D0BWP \intadd_0/U2  ( .A(C[6]), .B(\intadd_0/B[5] ), .CI(\intadd_0/n2 ), 
+        .CO(\intadd_0/n1 ), .S(Y[6]) );
+  FA1D0BWP \intadd_1/U7  ( .A(A[1]), .B(B[1]), .CI(\intadd_1/CI ), .CO(
+        \intadd_1/n6 ), .S(\intadd_0/B[0] ) );
+  FA1D0BWP \intadd_1/U6  ( .A(A[2]), .B(B[2]), .CI(\intadd_1/n6 ), .CO(
+        \intadd_1/n5 ), .S(\intadd_0/B[1] ) );
+  FA1D0BWP \intadd_1/U5  ( .A(A[3]), .B(B[3]), .CI(\intadd_1/n5 ), .CO(
+        \intadd_1/n4 ), .S(\intadd_0/B[2] ) );
+  FA1D0BWP \intadd_1/U4  ( .A(A[4]), .B(B[4]), .CI(\intadd_1/n4 ), .CO(
+        \intadd_1/n3 ), .S(\intadd_0/B[3] ) );
+  FA1D0BWP \intadd_1/U3  ( .A(A[5]), .B(B[5]), .CI(\intadd_1/n3 ), .CO(
+        \intadd_1/n2 ), .S(\intadd_0/B[4] ) );
+  FA1D0BWP \intadd_1/U2  ( .A(A[6]), .B(B[6]), .CI(\intadd_1/n2 ), .CO(
+        \intadd_1/n1 ), .S(\intadd_0/B[5] ) );
+  XNR4D0BWP U52 ( .A1(\intadd_0/n1 ), .A2(\intadd_1/n1 ), .A3(B[7]), .A4(C[7]), 
+        .ZN(n44) );
+  AOI21D0BWP U53 ( .A1(n46), .A2(n45), .B(\intadd_0/CI ), .ZN(\fa1[0]/c1 ) );
+  NR2D1BWP U54 ( .A1(n45), .A2(n46), .ZN(\intadd_0/CI ) );
+  CKND1BWP U55 ( .I(n43), .ZN(\intadd_1/CI ) );
+  ND2D1BWP U56 ( .A1(B[0]), .A2(A[0]), .ZN(n43) );
+  INVD1BWP U57 ( .I(C[0]), .ZN(n45) );
+  XNR2D1BWP U58 ( .A1(A[7]), .A2(n44), .ZN(Y[7]) );
+  OAI21D1BWP U59 ( .A1(B[0]), .A2(A[0]), .B(n43), .ZN(n46) );
+endmodule
+

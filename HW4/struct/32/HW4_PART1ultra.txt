@@ -1,0 +1,101 @@
+ 
+****************************************
+Report : area
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 19:01:27 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          128
+Number of nets:                           224
+Number of cells:                           68
+Number of combinational cells:             68
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          2
+Number of references:                       8
+
+Combinational area:                275.536791
+Buf/Inv area:                        1.058400
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   275.536791
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 19:01:27 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: B[0] (input port)
+  Endpoint: Y[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_struct        ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  B[0] (in)                                0.00       0.00 f
+  U224/ZN (CKND2D0BWP)                     0.03       0.03 r
+  U223/ZN (CKND0BWP)                       0.03       0.05 f
+  U228/S (FA1D0BWP)                        0.09       0.15 r
+  U255/CO (FA1D0BWP)                       0.12       0.27 r
+  U276/CO (FA1D0BWP)                       0.12       0.39 r
+  U281/CO (FA1D0BWP)                       0.12       0.52 r
+  U282/CO (FA1D0BWP)                       0.12       0.64 r
+  U283/CO (FA1D0BWP)                       0.12       0.76 r
+  U284/CO (FA1D0BWP)                       0.12       0.88 r
+  U285/CO (FA1D0BWP)                       0.12       1.01 r
+  U286/CO (FA1D0BWP)                       0.12       1.12 r
+  U287/CO (FA1D0BWP)                       0.07       1.19 r
+  U237/CO (FA1D0BWP)                       0.12       1.32 r
+  U239/CO (FA1D0BWP)                       0.12       1.44 r
+  U241/CO (FA1D0BWP)                       0.12       1.56 r
+  U243/CO (FA1D0BWP)                       0.12       1.69 r
+  U245/CO (FA1D0BWP)                       0.12       1.81 r
+  U247/CO (FA1D0BWP)                       0.12       1.93 r
+  U249/CO (FA1D0BWP)                       0.12       2.06 r
+  U251/CO (FA1D0BWP)                       0.12       2.18 r
+  U253/CO (FA1D0BWP)                       0.12       2.30 r
+  U256/CO (FA1D0BWP)                       0.12       2.43 r
+  U258/CO (FA1D0BWP)                       0.12       2.55 r
+  U260/CO (FA1D0BWP)                       0.12       2.67 r
+  U262/CO (FA1D0BWP)                       0.12       2.80 r
+  U264/CO (FA1D0BWP)                       0.12       2.92 r
+  U266/CO (FA1D0BWP)                       0.12       3.04 r
+  U268/CO (FA1D0BWP)                       0.12       3.16 r
+  U270/CO (FA1D0BWP)                       0.12       3.29 r
+  U272/CO (FA1D0BWP)                       0.12       3.41 r
+  U275/CO (FA1D0BWP)                       0.12       3.53 r
+  U278/CO (FA1D0BWP)                       0.06       3.59 r
+  U279/CO (FA1D0BWP)                       0.07       3.66 r
+  U220/ZN (XNR4D0BWP)                      0.16       3.82 f
+  U221/ZN (XNR2D0BWP)                      0.08       3.90 r
+  Y[31] (out)                              0.00       3.90 r
+  data arrival time                                   3.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

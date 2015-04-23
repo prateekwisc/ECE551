@@ -1,0 +1,9 @@
+module multiply(a,b,c,d,e,f,prod);
+output [15:0]e,f,prod;
+input [15:0]a,b,c,d;
+assign e = a*b;
+assign f = c*d;
+assign prod = e * f;
+endmodule
+
+

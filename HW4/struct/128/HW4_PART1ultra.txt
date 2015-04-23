@@ -1,0 +1,197 @@
+ 
+****************************************
+Report : area
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:54:17 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2011/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                          512
+Number of nets:                           896
+Number of cells:                          260
+Number of combinational cells:            260
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          2
+Number of references:                       8
+
+Combinational area:               1122.256762
+Buf/Inv area:                        1.058400
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1122.256762
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : add3_struct
+Version: H-2013.03-SP3
+Date   : Wed Oct 30 18:54:17 2013
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: B[0] (input port)
+  Endpoint: Y[127] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  add3_struct        ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  B[0] (in)                                0.00       0.00 f
+  U896/ZN (CKND2D0BWP)                     0.03       0.03 r
+  U895/ZN (CKND0BWP)                       0.03       0.05 f
+  U901/S (FA1D0BWP)                        0.09       0.15 r
+  U1063/CO (FA1D0BWP)                      0.12       0.27 r
+  U1074/CO (FA1D0BWP)                      0.12       0.39 r
+  U1085/CO (FA1D0BWP)                      0.12       0.52 r
+  U1096/CO (FA1D0BWP)                      0.12       0.64 r
+  U1107/CO (FA1D0BWP)                      0.12       0.76 r
+  U1118/CO (FA1D0BWP)                      0.12       0.88 r
+  U1129/CO (FA1D0BWP)                      0.12       1.01 r
+  U1140/CO (FA1D0BWP)                      0.12       1.12 r
+  U1151/CO (FA1D0BWP)                      0.07       1.19 r
+  U1017/CO (FA1D0BWP)                      0.12       1.32 r
+  U1038/CO (FA1D0BWP)                      0.12       1.44 r
+  U1055/CO (FA1D0BWP)                      0.12       1.56 r
+  U1056/CO (FA1D0BWP)                      0.12       1.69 r
+  U1057/CO (FA1D0BWP)                      0.12       1.81 r
+  U1058/CO (FA1D0BWP)                      0.12       1.93 r
+  U1059/CO (FA1D0BWP)                      0.12       2.06 r
+  U1060/CO (FA1D0BWP)                      0.12       2.18 r
+  U1061/CO (FA1D0BWP)                      0.12       2.30 r
+  U1062/CO (FA1D0BWP)                      0.12       2.43 r
+  U1064/CO (FA1D0BWP)                      0.12       2.55 r
+  U1065/CO (FA1D0BWP)                      0.12       2.67 r
+  U1066/CO (FA1D0BWP)                      0.12       2.80 r
+  U1067/CO (FA1D0BWP)                      0.12       2.92 r
+  U1068/CO (FA1D0BWP)                      0.12       3.04 r
+  U1069/CO (FA1D0BWP)                      0.12       3.16 r
+  U1070/CO (FA1D0BWP)                      0.12       3.29 r
+  U1071/CO (FA1D0BWP)                      0.12       3.41 r
+  U1072/CO (FA1D0BWP)                      0.12       3.53 r
+  U1073/CO (FA1D0BWP)                      0.12       3.66 r
+  U1075/CO (FA1D0BWP)                      0.12       3.78 r
+  U1076/CO (FA1D0BWP)                      0.12       3.90 r
+  U1077/CO (FA1D0BWP)                      0.12       4.03 r
+  U1078/CO (FA1D0BWP)                      0.12       4.15 r
+  U1079/CO (FA1D0BWP)                      0.12       4.27 r
+  U1080/CO (FA1D0BWP)                      0.12       4.40 r
+  U1081/CO (FA1D0BWP)                      0.12       4.52 r
+  U1082/CO (FA1D0BWP)                      0.12       4.64 r
+  U1083/CO (FA1D0BWP)                      0.12       4.77 r
+  U1084/CO (FA1D0BWP)                      0.12       4.89 r
+  U1086/CO (FA1D0BWP)                      0.12       5.01 r
+  U1087/CO (FA1D0BWP)                      0.12       5.13 r
+  U1088/CO (FA1D0BWP)                      0.12       5.26 r
+  U1089/CO (FA1D0BWP)                      0.12       5.38 r
+  U1090/CO (FA1D0BWP)                      0.12       5.50 r
+  U1091/CO (FA1D0BWP)                      0.12       5.63 r
+  U1092/CO (FA1D0BWP)                      0.12       5.75 r
+  U1093/CO (FA1D0BWP)                      0.12       5.87 r
+  U1094/CO (FA1D0BWP)                      0.12       6.00 r
+  U1095/CO (FA1D0BWP)                      0.12       6.12 r
+  U1097/CO (FA1D0BWP)                      0.12       6.24 r
+  U1098/CO (FA1D0BWP)                      0.12       6.37 r
+  U1099/CO (FA1D0BWP)                      0.12       6.49 r
+  U1100/CO (FA1D0BWP)                      0.12       6.61 r
+  U1101/CO (FA1D0BWP)                      0.12       6.74 r
+  U1102/CO (FA1D0BWP)                      0.12       6.86 r
+  U1103/CO (FA1D0BWP)                      0.12       6.98 r
+  U1104/CO (FA1D0BWP)                      0.12       7.10 r
+  U1105/CO (FA1D0BWP)                      0.12       7.23 r
+  U1106/CO (FA1D0BWP)                      0.12       7.35 r
+  U1108/CO (FA1D0BWP)                      0.12       7.47 r
+  U1109/CO (FA1D0BWP)                      0.12       7.60 r
+  U1110/CO (FA1D0BWP)                      0.12       7.72 r
+  U1111/CO (FA1D0BWP)                      0.12       7.84 r
+  U1112/CO (FA1D0BWP)                      0.12       7.97 r
+  U1113/CO (FA1D0BWP)                      0.12       8.09 r
+  U1114/CO (FA1D0BWP)                      0.12       8.21 r
+  U1115/CO (FA1D0BWP)                      0.12       8.34 r
+  U1116/CO (FA1D0BWP)                      0.12       8.46 r
+  U1117/CO (FA1D0BWP)                      0.12       8.58 r
+  U1119/CO (FA1D0BWP)                      0.12       8.71 r
+  U1120/CO (FA1D0BWP)                      0.12       8.83 r
+  U1121/CO (FA1D0BWP)                      0.12       8.95 r
+  U1122/CO (FA1D0BWP)                      0.12       9.08 r
+  U1123/CO (FA1D0BWP)                      0.12       9.20 r
+  U1124/CO (FA1D0BWP)                      0.12       9.32 r
+  U1125/CO (FA1D0BWP)                      0.12       9.44 r
+  U1126/CO (FA1D0BWP)                      0.12       9.57 r
+  U1127/CO (FA1D0BWP)                      0.12       9.69 r
+  U1128/CO (FA1D0BWP)                      0.12       9.81 r
+  U1130/CO (FA1D0BWP)                      0.12       9.94 r
+  U1131/CO (FA1D0BWP)                      0.12      10.06 r
+  U1132/CO (FA1D0BWP)                      0.12      10.18 r
+  U1133/CO (FA1D0BWP)                      0.12      10.31 r
+  U1134/CO (FA1D0BWP)                      0.12      10.43 r
+  U1135/CO (FA1D0BWP)                      0.12      10.55 r
+  U1136/CO (FA1D0BWP)                      0.12      10.68 r
+  U1137/CO (FA1D0BWP)                      0.12      10.80 r
+  U1138/CO (FA1D0BWP)                      0.12      10.92 r
+  U1139/CO (FA1D0BWP)                      0.12      11.05 r
+  U1141/CO (FA1D0BWP)                      0.12      11.17 r
+  U1142/CO (FA1D0BWP)                      0.12      11.29 r
+  U1143/CO (FA1D0BWP)                      0.12      11.41 r
+  U1144/CO (FA1D0BWP)                      0.12      11.54 r
+  U1145/CO (FA1D0BWP)                      0.12      11.66 r
+  U1146/CO (FA1D0BWP)                      0.12      11.78 r
+  U1147/CO (FA1D0BWP)                      0.12      11.91 r
+  U1148/CO (FA1D0BWP)                      0.12      12.03 r
+  U1149/CO (FA1D0BWP)                      0.12      12.15 r
+  U1150/CO (FA1D0BWP)                      0.07      12.22 r
+  U999/CO (FA1D0BWP)                       0.12      12.34 r
+  U1001/CO (FA1D0BWP)                      0.12      12.46 r
+  U1003/CO (FA1D0BWP)                      0.12      12.59 r
+  U1005/CO (FA1D0BWP)                      0.12      12.71 r
+  U1007/CO (FA1D0BWP)                      0.12      12.83 r
+  U1009/CO (FA1D0BWP)                      0.12      12.96 r
+  U1011/CO (FA1D0BWP)                      0.12      13.08 r
+  U1013/CO (FA1D0BWP)                      0.12      13.20 r
+  U1015/CO (FA1D0BWP)                      0.12      13.33 r
+  U1018/CO (FA1D0BWP)                      0.12      13.45 r
+  U1020/CO (FA1D0BWP)                      0.12      13.57 r
+  U1022/CO (FA1D0BWP)                      0.12      13.69 r
+  U1024/CO (FA1D0BWP)                      0.12      13.82 r
+  U1026/CO (FA1D0BWP)                      0.12      13.94 r
+  U1028/CO (FA1D0BWP)                      0.12      14.06 r
+  U1030/CO (FA1D0BWP)                      0.12      14.19 r
+  U1032/CO (FA1D0BWP)                      0.12      14.31 r
+  U1034/CO (FA1D0BWP)                      0.12      14.43 r
+  U1036/CO (FA1D0BWP)                      0.12      14.56 r
+  U1039/CO (FA1D0BWP)                      0.12      14.68 r
+  U1041/CO (FA1D0BWP)                      0.12      14.80 r
+  U1043/CO (FA1D0BWP)                      0.12      14.93 r
+  U1045/CO (FA1D0BWP)                      0.12      15.05 r
+  U1047/CO (FA1D0BWP)                      0.12      15.17 r
+  U1050/CO (FA1D0BWP)                      0.12      15.29 r
+  U1052/CO (FA1D0BWP)                      0.06      15.35 r
+  U1053/CO (FA1D0BWP)                      0.07      15.42 r
+  U892/ZN (XNR4D0BWP)                      0.16      15.58 f
+  U893/ZN (XNR2D0BWP)                      0.08      15.67 r
+  Y[127] (out)                             0.00      15.67 r
+  data arrival time                                  15.67
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

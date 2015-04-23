@@ -1,0 +1,53 @@
+BOOTH MULTIPLIER
+Introduction :
+ Multiplication is more complicated than addition, being implemented by shifting as well as addition.
+ Multiplication: Partial products generation + accumulation
+ Because of the partial products involved in most multiplication algorithms, more time and more circuit area is required to compute, allocate, and sum the partial products to obtain the multiplication result.
+ A Booth multiplier is a hardware multiplier that performs multiplication of two signed (two's complement) binary numbers (integers)
+ Booth algorithm, which encodes a binary number one bit-pair at a time to the signed-digit set S = {-2, —1,0,1,2},is often used to encode one of the multiplier inputs to reduce
+the number of partial products that need to be added.
+Multiplication Example :
+ Example: 12x5
+Multiply Signed Numbers :
+• Multiply Signed Numbers (cont..)
+• 1 0 1 1 -5x
+• 1 1 0 1 -3
+• Booth Multiplication:
+• Booth Recoding Table :
+i+1 i i-1 add
+0 0 0 0*M
+0 0 1 1*M
+0 1 0 1*M
+0 1 1 2*M
+1 0 0 –2*M
+1 0 1 –1*M
+1 1 0 –1*M
+1 1 1 0*M
+• 8-Bit Simple Multiplication:
+• 8-Bit Booth2 Multiplication :
+• 8-Bit Booth 2 Example:
+Block Diagram of Booth Multiplier :
+Project Floor Plan :
+8 Bit Partial Product Selector Logic:
+Advantages and Disadvantages:
+• Depends on the Architecture
+– Potential advantage: might reduce the no. of 1’s in multiplier
+• In the multipliers that we have seen so far:
+– Doesn’t save in speed
+-still have to wait for the critical path,
+– e.g., the shift-add delay in sequential multiplier
+– Increases area: Recoding circuitry AND subtraction
+Summary :
+ The Booth 2 algorithm is the fastest, but is also quite power and area hungry.
+ The fastest version of this algorithm is as fast as the Booth 2 algorithm, but provides modest decreases in both Power and Area .
+ Input delay variations are important when designing summation networks, if the highest possible performance is desired.
+Conclusion :
+ The primary objective of this thesis has been to present a new type of partial product generation algorithm.
+ i.e., Booth to reduce the implementation and to show through simulation and design.
+ This algorithm is competitive with other more commonly used algorithms. which used for high performance implementations.
+ Modest improvements in area and power over more conventional algorithms have been shown using this algorithm.
+ Secondarily, this thesis has shown that algorithms based upon the Booth partial product method are distinctly superior in power and area when compared to non-Booth encoded methods.
+ This result must be used carefully if applied to other technologies, since different trade-offs may apply.
+ The summation network and partial product generation logic consume most of the power and area of a multiplier.
+ So there may be more opportunities for improving multipliers by optimizing summation networks to try to minimize these factors.
+ Reducing the number of partial products and creating efficient ways of driving the long wires needed in controlling and providing multiples to the partial product generators are areas where further work may prove fruitful.
